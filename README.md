@@ -73,7 +73,7 @@ Source: [`data/analysis/aspect_presence_final_test_evaluation.txt`](data/analysi
 ## Quick start
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ormnslm-sketch/venue-review-analyzer.git
 cd venue-review-analyzer
 
 python -m venv .venv
