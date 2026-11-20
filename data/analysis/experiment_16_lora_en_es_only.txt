@@ -1,0 +1,907 @@
+EXPERIMENT 16 — EN+ES-ONLY CORRECTED WEIGHTED LORA EPOCH 1
+
+Condition: expanded
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Random seed: 42
+Epoch shuffle seed: 42
+Epoch permutation SHA256: b272ebbe753cdb71fd183fd4ed101d2fcf84add645e070e5d4a350f13ed6682b
+Config signature: 4d9bc13dcdb62d5cee29d431f5889985600011693787d37a4792b13a0a9c091a
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Sample weights: None
+Accuracy: 0.6506
+Macro F1: 0.2628
+Epoch train loss: 1.098048
+
+SENTIMENT
+positive: precision=0.6506 | recall=1.0000 | F1=0.7883 | support=391
+neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=38
+negative: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=172
+
+PREDICTED COUNTS
+positive: 601
+neutral: 0
+negative: 0
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              391        0         0
+neutral                38        0         0
+negative              172        0         0
+
+NEUTRAL CONFUSION
+true neutral -> predicted neutral: 0
+positive -> neutral: 0
+negative -> neutral: 0
+total false-neutral: 0
+
+LANGUAGE — Macro F1 and neutral P/R/F1/support
+EN: Macro F1=0.2629 | Neutral=0.0000/0.0000/0.0000/19
+ES: Macro F1=0.2626 | Neutral=0.0000/0.0000/0.0000/19
+
+ASPECT — Macro F1 and neutral F1
+taste: Macro F1=0.2874 | Neutral F1=0.0000
+atmosphere: Macro F1=0.3008 | Neutral F1=0.0000
+service: Macro F1=0.2184 | Neutral F1=0.0000
+value: Macro F1=0.1830 | Neutral F1=0.0000
+
+Historical reference:
+Accuracy=0.8457 | Macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820 | neutral predictions=0
+This reference is background only, not architecture-controlled.
+Epoch 2 was not started automatically.
+
+LANGUAGE SCOPE
+Train: EN+ES only
+Dev evaluation: EN+ES only
+
+CONTROLLED COMPARISON: EXP16 - EXP15_EN_ES_BASELINE
+Accuracy delta: -0.1564
+Macro F1 delta: -0.3736
+Positive F1 delta: -0.1338
+Neutral F1 delta: -0.2521
+Negative F1 delta: -0.7348
+Neutral precision delta: -0.1852
+Neutral recall delta: -0.3947
+False-neutral delta: -66
+
+LANGUAGE DELTAS
+EN Macro F1: -0.3870
+EN Neutral F1: -0.2593
+ES Macro F1: -0.3597
+ES Neutral F1: -0.2462
+
+ASPECT MACRO F1 DELTAS
+taste: -0.4074
+atmosphere: -0.2451
+service: -0.4087
+value: -0.3910
+
+All three classes predicted: False
+>90% single-class collapse: True
+Preliminary language-ablation result: C) NO SUPPORT
+Epoch 2 was not started automatically.
+
+TRAINING CHUNK RESULT
+Epoch: 1/1
+Optimizer steps completed this run: 38
+Current optimizer step: 588
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: True
+Dev Accuracy: 0.6506
+Dev Macro F1: 0.2628
+Best epoch: 1
+Best Macro F1: 0.2628
+Best checkpoint: ./models/experiment_16_lora_en_es_only/best/epoch_1
+Epoch 2 was not started automatically.
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 0
+Target optimizer step: 50
+Remaining optimizer steps in epoch: 588
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 50
+Epoch progress percentage: 8.50%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 50
+Target optimizer step: 100
+Remaining optimizer steps in epoch: 538
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 100
+Epoch progress percentage: 17.01%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 100
+Target optimizer step: 150
+Remaining optimizer steps in epoch: 488
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 150
+Epoch progress percentage: 25.51%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 150
+Target optimizer step: 200
+Remaining optimizer steps in epoch: 438
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 200
+Epoch progress percentage: 34.01%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 200
+Target optimizer step: 250
+Remaining optimizer steps in epoch: 388
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 250
+Epoch progress percentage: 42.52%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 250
+Target optimizer step: 300
+Remaining optimizer steps in epoch: 338
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 300
+Epoch progress percentage: 51.02%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 300
+Target optimizer step: 350
+Remaining optimizer steps in epoch: 288
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 350
+Epoch progress percentage: 59.52%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 350
+Target optimizer step: 400
+Remaining optimizer steps in epoch: 238
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 400
+Epoch progress percentage: 68.03%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 400
+Target optimizer step: 450
+Remaining optimizer steps in epoch: 188
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 450
+Epoch progress percentage: 76.53%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 450
+Target optimizer step: 500
+Remaining optimizer steps in epoch: 138
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 500
+Epoch progress percentage: 85.03%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 500
+Target optimizer step: 550
+Remaining optimizer steps in epoch: 88
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 550
+Epoch progress percentage: 93.54%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 550
+Target optimizer step: 588
+Remaining optimizer steps in epoch: 38
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Experiment 16 total optimizer steps after Epoch 2: 1176
+Experiment 16 has 586 fewer updates than Experiment 15 after Epoch 2 (33.26%).
+Entering training loop for epoch 2
+Starting first training batch
+
+EXPERIMENT 16 — EN+ES-ONLY CORRECTED WEIGHTED LORA EPOCH 2
+
+Condition: expanded
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Random seed: 42
+Epoch shuffle seed: 43
+Epoch permutation SHA256: a640311dda3b65cf2cdaea160d1762d7c49da89fba656943002fe8e385d90013
+Config signature: 4d9bc13dcdb62d5cee29d431f5889985600011693787d37a4792b13a0a9c091a
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Sample weights: None
+Accuracy: 0.8286
+Macro F1: 0.6185
+Epoch train loss: 0.929760
+
+SENTIMENT
+positive: precision=0.9362 | recall=0.9003 | F1=0.9179 | support=391
+neutral: precision=0.1622 | recall=0.1579 | F1=0.1600 | support=38
+negative: precision=0.7447 | recall=0.8140 | F1=0.7778 | support=172
+
+PREDICTED COUNTS
+positive: 376
+neutral: 37
+negative: 188
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              352       12        27
+neutral                11        6        21
+negative               13       19       140
+
+NEUTRAL CONFUSION
+true neutral -> predicted neutral: 6
+positive -> neutral: 12
+negative -> neutral: 19
+total false-neutral: 31
+
+LANGUAGE — Macro F1 and neutral P/R/F1/support
+EN: Macro F1=0.6236 | Neutral=0.1765/0.1579/0.1667/19
+ES: Macro F1=0.6136 | Neutral=0.1500/0.1579/0.1538/19
+
+ASPECT — Macro F1 and neutral F1
+taste: Macro F1=0.6213 | Neutral F1=0.1600
+atmosphere: Macro F1=0.5521 | Neutral F1=0.0000
+service: Macro F1=0.6316 | Neutral F1=0.2308
+value: Macro F1=0.6002 | Neutral F1=0.1176
+
+Historical vanilla full XLM-R cleaned reference (different architecture):
+Accuracy=0.8457 | Macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820 | neutral predictions=0
+This reference is background only, not architecture-controlled.
+Epoch 3 was not started automatically.
+
+LANGUAGE SCOPE
+Train: EN+ES only
+Dev evaluation: EN+ES only
+
+COLLAPSE CHECK
+All three classes predicted: True
+Single-class collapse above 90%: False
+Dominant class: positive (62.56%)
+Positive prediction rate: 62.56%
+Neutral predictions: 37
+Negative predictions: 188
+
+OPTIMIZER-STEP COMPARISON
+Experiment 16 train rows: 2350
+Experiment 16 optimizer steps per epoch: 588
+Experiment 16 total after Epoch 1: 588
+Experiment 16 total after Epoch 2: 1176
+Experiment 15 train rows: 3523
+Experiment 15 optimizer steps per epoch: 881
+Experiment 15 total after Epoch 2: 1762
+Experiment 16 fewer updates after Epoch 2: 586 (33.26%)
+
+EPOCH 2 MINUS EPOCH 1
+Accuracy delta: +0.1780
+Macro F1 delta: +0.3558
+Positive F1 delta: +0.1296
+Neutral F1 delta: +0.1600
+Negative F1 delta: +0.7778
+Neutral precision delta: +0.1622
+Neutral recall delta: +0.1579
+Predicted neutral delta: +37
+Predicted negative delta: +188
+False-neutral delta: +31
+
+EXP16 EPOCH 2 MINUS EXP15 EN+ES BASELINE
+Accuracy delta: +0.0216
+Macro F1 delta: -0.0178
+Positive F1 delta: -0.0042
+Neutral F1 delta: -0.0921
+Negative F1 delta: +0.0430
+Neutral precision delta: -0.0230
+Neutral recall delta: -0.2368
+
+LANGUAGE DELTAS VS EXP15 EN+ES BASELINE
+EN Macro F1: -0.0264
+EN Neutral F1: -0.0926
+ES Macro F1: -0.0087
+ES Neutral F1: -0.0923
+
+ASPECT MACRO F1 DELTAS VS EXP15 EN+ES BASELINE
+taste: -0.0735
+atmosphere: +0.0062
+service: +0.0045
+value: +0.0262
+
+LANGUAGE HYPOTHESIS DECISION: B) MIXED / INCONCLUSIVE
+Interpretation rule: under this training setup and current data, removing Turkish training data did not improve EN+ES performance if the result is C; this does not prove Turkish data is universally beneficial.
+Optimizer-step limitation: Experiment 16 receives 33.26% fewer updates than Experiment 15 after two epochs.
+Epoch 3 was not started automatically.
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 38
+Current optimizer step: 588
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: True
+Dev Accuracy: 0.8286
+Dev Macro F1: 0.6185
+Best epoch: 2
+Best Macro F1: 0.6185
+Best checkpoint updated: ./models/experiment_16_lora_en_es_only/best/epoch_2
+Epoch 3 was not started automatically.
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 0
+Target optimizer step: 50
+Remaining optimizer steps in epoch: 588
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 50
+Epoch progress percentage: 8.50%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 50
+Target optimizer step: 100
+Remaining optimizer steps in epoch: 538
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 100
+Epoch progress percentage: 17.01%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 100
+Target optimizer step: 150
+Remaining optimizer steps in epoch: 488
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 150
+Epoch progress percentage: 25.51%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 150
+Target optimizer step: 200
+Remaining optimizer steps in epoch: 438
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 200
+Epoch progress percentage: 34.01%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 200
+Target optimizer step: 250
+Remaining optimizer steps in epoch: 388
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 250
+Epoch progress percentage: 42.52%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 250
+Target optimizer step: 300
+Remaining optimizer steps in epoch: 338
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 300
+Epoch progress percentage: 51.02%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 300
+Target optimizer step: 350
+Remaining optimizer steps in epoch: 288
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 350
+Epoch progress percentage: 59.52%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 350
+Target optimizer step: 400
+Remaining optimizer steps in epoch: 238
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 400
+Epoch progress percentage: 68.03%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 400
+Target optimizer step: 450
+Remaining optimizer steps in epoch: 188
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 450
+Epoch progress percentage: 76.53%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 450
+Target optimizer step: 500
+Remaining optimizer steps in epoch: 138
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 500
+Epoch progress percentage: 85.03%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 500
+Target optimizer step: 550
+Remaining optimizer steps in epoch: 88
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 50
+Current optimizer step: 550
+Epoch progress percentage: 93.54%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 16
+Device: mps
+Epoch: 3/3
+Starting optimizer step: 550
+Target optimizer step: 588
+Remaining optimizer steps in epoch: 38
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Final optimizer budget: Exp16=1764, Exp15=1762, difference=2
+Entering training loop for epoch 3
+Starting first training batch
+
+EXPERIMENT 16 — EN+ES-ONLY FINAL BUDGET-MATCHED LORA EPOCH 3
+
+Condition: expanded
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Random seed: 42
+Epoch shuffle seed: 44
+Epoch permutation SHA256: a2c32ebe21f3b5e050349fe89f5880c0743d691aa62c6fb2f0749b2c51f70dd6
+Config signature: 4d9bc13dcdb62d5cee29d431f5889985600011693787d37a4792b13a0a9c091a
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Sample weights: None
+Accuracy: 0.7787
+Macro F1: 0.6225
+Epoch train loss: 0.697868
+
+SENTIMENT
+positive: precision=0.9520 | recall=0.8619 | F1=0.9047 | support=391
+neutral: precision=0.1650 | recall=0.4474 | F1=0.2411 | support=38
+negative: precision=0.7917 | recall=0.6628 | F1=0.7215 | support=172
+
+PREDICTED COUNTS
+positive: 354
+neutral: 103
+negative: 144
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              337       38        16
+neutral                 7       17        14
+negative               10       48       114
+
+NEUTRAL CONFUSION
+true neutral -> predicted neutral: 17
+positive -> neutral: 38
+negative -> neutral: 48
+total false-neutral: 86
+
+LANGUAGE — Macro F1 and neutral P/R/F1/support
+EN: Macro F1=0.6412 | Neutral=0.1860/0.4211/0.2581/19
+ES: Macro F1=0.6039 | Neutral=0.1500/0.4737/0.2278/19
+
+ASPECT — Macro F1 and neutral F1
+taste: Macro F1=0.6677 | Neutral F1=0.2609
+atmosphere: Macro F1=0.5275 | Neutral F1=0.1905
+service: Macro F1=0.6147 | Neutral F1=0.2727
+value: Macro F1=0.5810 | Neutral F1=0.2000
+
+Historical vanilla full XLM-R cleaned reference (different architecture):
+Accuracy=0.8457 | Macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820 | neutral predictions=0
+This reference is background only, not architecture-controlled.
+Epoch 4 was not started automatically.
+
+LANGUAGE SCOPE
+Train: EN+ES only
+Dev evaluation: EN+ES only
+
+FINAL OPTIMIZER-BUDGET CHECK
+Experiment 16 steps per epoch: 588
+Experiment 16 total after Epoch 1: 588
+Experiment 16 total after Epoch 2: 1176
+Experiment 16 total after Epoch 3: 1764
+Experiment 15 final total: 1762
+Absolute difference: 2
+Percentage difference: 0.1135%
+Training budgets practically matched: True
+
+COLLAPSE CHECK
+All three classes predicted: True
+Single-class collapse above 90%: False
+Dominant class: positive (58.90%)
+
+EPOCH 3 MINUS EPOCH 2
+Accuracy delta: -0.0499
+Macro F1 delta: +0.0039
+Positive F1 delta: -0.0132
+Neutral F1 delta: +0.0811
+Negative F1 delta: -0.0563
+Neutral precision delta: +0.0029
+Neutral recall delta: +0.2895
+Predicted neutral delta: +66
+False-neutral delta: +55
+
+FINAL MODEL B MINUS MODEL A
+Accuracy delta: -0.0283
+Macro F1 delta: -0.0139
+Positive F1 delta: -0.0174
+Neutral F1 delta: -0.0110
+Negative F1 delta: -0.0133
+Neutral precision delta: -0.0201
+Neutral recall delta: +0.0526
+
+LANGUAGE DELTAS VS EXP15 EN+ES BASELINE
+EN Macro F1: -0.0087
+EN Neutral F1: -0.0012
+ES Macro F1: -0.0184
+ES Neutral F1: -0.0183
+
+ASPECT MACRO F1 DELTAS VS EXP15 EN+ES BASELINE
+taste: -0.0271
+atmosphere: -0.0184
+service: -0.0124
+value: +0.0070
+
+FINAL LANGUAGE HYPOTHESIS DECISION: B) NO MEANINGFUL BENEFIT
+Product rule applied: a small Macro F1 gain alone is insufficient; neutral performance and class balance must also be preserved.
+Epoch 4 was not started automatically.
+Experiment 16 language ablation is closed.
+
+TRAINING CHUNK RESULT
+Epoch: 3/3
+Optimizer steps completed this run: 38
+Current optimizer step: 588
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/experiment_16_lora_en_es_only/resume/slot_b
+Epoch finished: True
+Dev Accuracy: 0.7787
+Dev Macro F1: 0.6225
+Best epoch: 3
+Best Macro F1: 0.6225
+Best checkpoint updated: ./models/experiment_16_lora_en_es_only/best/epoch_3
+Epoch 4 was not started automatically.
+Experiment 16 language ablation is closed.
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+Epoch 3 is already complete. No training was started.
+Epoch 4 is outside the Experiment 16 budget.

@@ -1,0 +1,89 @@
+EXPERIMENT 04 — CLASS-WEIGHTED XLM-ROBERTA-BASE
+
+STAGE 0 — PREPARATION ONLY
+Training started: NO
+Train rows: 3316
+Train class counts:
+  negative: 1050
+  neutral: 93
+  positive: 2173
+Calculated balanced class weights in tensor order [negative, neutral, positive]:
+  negative (id=0): count=1050 | weight=1.05269841
+  neutral (id=1): count=93 | weight=11.88530466
+  positive (id=2): count=2173 | weight=0.50866697
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Weight tensor order verified: [negative(id=0), neutral(id=1), positive(id=2)]
+PyTorch version: 2.8.0
+Transformers version: 4.57.6
+Device: cpu
+Train batch size: 4
+Eval batch size: 8
+Learning rate: 2e-05
+Max length: 128
+Total target epochs: 3
+Optimizer: torch.optim.AdamW
+Scheduler: none
+Loss: weighted CrossEntropyLoss
+Resume checkpoint status: checkpoint yok; sıradaki epoch=1
+Resume checkpoint path: ./models/xlmr-sentiment-v2-weighted/resume/training_state.pt
+Best checkpoint path: ./models/xlmr-sentiment-v2-weighted/best
+Stage 0 complete. No model training was run.
+
+STAGE 0B — MEMORY-SAFE PREPARATION ONLY
+Training started: NO
+Train rows: 3316
+Train class counts:
+  negative: 1050
+  neutral: 93
+  positive: 2173
+Calculated balanced class weights in tensor order [negative, neutral, positive]:
+  negative (id=0): count=1050 | weight=1.05269841
+  neutral (id=1): count=93 | weight=11.88530466
+  positive (id=2): count=2173 | weight=0.50866697
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Weight tensor order verified: [negative(id=0), neutral(id=1), positive(id=2)]
+PyTorch version: 2.8.0
+Transformers version: 4.57.6
+Device requirement: mps (CPU training is blocked)
+MPS currently available in this process: False
+Physical train batch size: 1
+Gradient accumulation steps: 4
+Effective batch size: 4
+Eval batch size: 1
+Learning rate: 2e-05
+Max length: 128
+Total target epochs: 3
+Optimizer: torch.optim.AdamW
+Scheduler: none
+Loss: weighted CrossEntropyLoss
+Gradient checkpointing: not used
+Optimizer step schedule: every 4 micro-batches; a final partial group is stepped instead of discarded
+Controlled experiment note: Experiment 03 physical batch=4; Experiment 04 physical batch=1 with accumulation=4; effective batch=4
+Resume checkpoint status: checkpoint yok; sıradaki epoch=1
+Resume checkpoint path: ./models/xlmr-sentiment-v2-weighted/resume/training_state.pt
+Best checkpoint path: ./models/xlmr-sentiment-v2-weighted/best
+Stage 0 complete. No model training was run.
+Training device: mps
+
+TRAIN ONE EPOCH — epoch 1/3
+Physical train batch size: 1
+Gradient accumulation steps: 4
+Effective train batch size: 4
+Eval batch size: 1
+Controlled experiment note: Experiment 03 physical batch=4; Experiment 04 physical batch=1 with accumulation=4; effective batch=4
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Class weights [negative, neutral, positive]: [1.05269841, 11.88530466, 0.50866697]
+Train class counts: {'positive': 2173, 'neutral': 93, 'negative': 1050}
+Oversampling / undersampling / SMOTE / focal loss: not used
+Preparing tokenizer and model for epoch 1
+Tokenizer loaded
+Creating model, data loaders, and optimizer
+Model, data loaders, and optimizer ready
+Entering training loop for epoch 1
+Starting first training batch
+MPS out-of-memory: epoch tamamlanmadı; completed_epoch artırılmadı; checkpoint kaydedilmedi; CPU fallback yapılmadı.
+Run failed: RuntimeError: MPS backend out of memory (MPS allocated: 4.96 GiB, other allocations: 15.06 GiB, max allowed: 20.13 GiB). Tried to allocate 732.43 MiB on private pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).
+
+FINAL STATUS
+Weighted full fine-tuning attempt: NOT COMPLETED — MPS OOM
+No performance result was produced for Experiment 04.

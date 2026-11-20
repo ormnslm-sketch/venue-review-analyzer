@@ -1,0 +1,20 @@
+EN_NEUTRAL_EXPANSION_V1 = COMPLETE
+Verified EN:
+taste: 26
+atmosphere: 25
+service: 28
+value: 29
+TR candidates prepared:
+taste: 10
+atmosphere: 18
+service: 22
+value: 19
+ES candidates prepared:
+taste: 10
+atmosphere: 18
+service: 22
+value: 19
+TR Batch 1: 19
+ES Batch 1: 19
+translation human decisions assigned: 0
+training rows added: 0

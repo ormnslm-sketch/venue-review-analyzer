@@ -1,0 +1,289 @@
+EXPERIMENT 08 — NEUTRAL FALSE POSITIVE & DOMAIN ANALYSIS
+
+CONTROLLED SETTINGS
+Main train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Pipeline: unchanged TF-IDF + Logistic Regression
+Fixed weights: {'positive': 0.54042031, 'neutral': 11.88530466, 'negative': 1.1184127}
+
+1. EXPERIMENT 07 REPRODUCTION
+Expanded best configuration:
+Accuracy: 0.7159
+Macro F1: 0.5805
+Neutral precision: 0.2066
+Neutral recall: 0.4386
+Neutral F1: 0.2809
+Pred neutral: 121
+Reproduction check: PASS
+
+Historical cleaned baseline reproduction:
+Old cleaned dynamic-balanced model:
+Accuracy: 0.7603
+Macro F1: 0.5891
+Neutral precision: 0.3667
+Neutral recall: 0.1930
+Neutral F1: 0.2529
+Pred neutral: 30
+
+2. NEUTRAL PREDICTION GROUPS
+All predicted neutral: 121
+A) True neutral -> neutral: 25
+B) Positive -> neutral: 48
+C) Negative -> neutral: 48
+D) Neutral -> positive: 12
+E) Neutral -> negative: 20
+
+3. FALSE-NEUTRAL BREAKDOWN
+Language x false-neutral count:
+TR: 25
+EN: 31
+ES: 40
+
+Aspect x false-neutral count:
+taste: 21
+atmosphere: 32
+service: 19
+value: 24
+
+Aspect x true-label x false-neutral count:
+taste: positive=13, negative=8
+atmosphere: positive=23, negative=9
+service: positive=4, negative=15
+value: positive=8, negative=16
+
+4. MODEL FEATURE ANALYSIS
+Top 50 positive coefficients for positive:
+harika (2.3125), great (2.2487), excelente (1.8647), harikaydı (1.6183), genial (1.5767), güzel (1.5310), delicious (1.4902), lezzetli (1.4135), çok (1.4017), good (1.3359), excellent (1.2948), and (1.2700), nice (1.1293), muhteşem (1.0991), iyi (1.0801), deliciosa (1.0602), amazing (1.0269), bueno (0.9988), sep great (0.9812), rápido (0.9254), son (0.9182), atento (0.8852), very (0.8774), sep harika (0.8747), todos (0.8718), hızlı (0.8715), delicioso (0.8616), increíble (0.8571), servis (0.8321), best (0.8271), agradable (0.8089), wine (0.8048), attentive (0.8010), mükemmel (0.7978), aspect taste (0.7944), taste sep (0.7944), friendly (0.7936), taste (0.7894), sea (0.7799), ucuz (0.7787), the best (0.7738), muy (0.7650), es (0.7634), cheap (0.7582), pizza (0.7516), all (0.7412), taze (0.7396), mükemmeldi (0.7386), york (0.7355), sep genial (0.7217)
+Top 50 positive coefficients for neutral:
+ortalama (3.6237), average (3.4535), normal (2.6685), masada (2.4021), şey değildi (2.0314), masaya (1.9944), yemekler (1.9837), nothing (1.9591), la (1.9432), ok (1.9249), bien (1.9126), table (1.8751), comida normal (1.8620), sonra (1.8588), girişte (1.8391), atmosphere sep (1.7597), aspect atmosphere (1.7597), the (1.7484), değildi (1.7461), sep food (1.7418), the table (1.7299), mesa (1.6655), promedio (1.6626), önce (1.6417), average food (1.6237), atmosphere (1.6013), was good (1.5860), en la (1.5848), at the (1.5626), nyc (1.5490), tezgahta (1.5394), yemek fena (1.5141), fena (1.5013), pero no (1.4968), nada (1.4873), is decent (1.4606), is average (1.4508), tepsileri (1.4500), número (1.4453), es decente (1.4441), sep servicio (1.4332), loş (1.4319), los precios (1.4311), fiyatlar (1.4219), platos (1.4161), la mesa (1.3925), de este (1.3895), trays (1.3808), other (1.3765), birkaç (1.3626)
+Top 50 positive coefficients for negative:
+no (2.6910), not (1.9167), que (1.4725), aspect service (1.4552), service sep (1.4552), pahalı (1.3853), horrible (1.3517), that (1.3055), si (1.1529), hiçbir (1.1318), fazla (1.1106), poco (1.1026), caro (1.0692), değil (1.0557), hiç (1.0415), overpriced (1.0308), interior (1.0157), they (1.0008), tan (0.9997), daha (0.9834), was (0.9832), roxy (0.9723), tatsız (0.9530), ni (0.9436), soggy (0.9344), ser (0.9261), me (0.9245), ki (0.9014), is not (0.8989), porque (0.8943), iğrençti (0.8938), simplemente (0.8663), to (0.8612), berbattı (0.8466), biraz (0.8455), you (0.8415), so (0.8345), era (0.8323), tatlı (0.8277), az (0.8273), kaba (0.8258), ambiance (0.8238), hayal (0.8193), sanki (0.7958), kadar (0.7955), one (0.7829), got (0.7806), on (0.7771), such (0.7628), service (0.7604)
+
+Requested cue terms in neutral top-50:
+average: rank=2, coefficient=3.4535
+normal: rank=3, coefficient=2.6685
+fine: not in neutral top-50
+similar: not in neutral top-50
+same: not in neutral top-50
+expected: not in neutral top-50
+usual: not in neutral top-50
+typical: not in neutral top-50
+around: not in neutral top-50
+standard: not in neutral top-50
+minutes: not in neutral top-50
+table: rank=12, coefficient=1.8751
+menu: not in neutral top-50
+price: not in neutral top-50
+restaurant: not in neutral top-50
+service: not in neutral top-50
+waited: not in neutral top-50
+ordered: not in neutral top-50
+
+5. OLD VS NEW NEUTRAL LEXICAL ANALYSIS
+OLD_NEUTRAL:
+  rows: 93
+  average sentence length (tokens): 11.72
+  median sentence length (tokens): 10.00
+  vocabulary size (all normalized tokens): 578
+  unique content unigrams: 508
+  unique content bigrams: 588
+  top content unigrams: food (12), comida (12), değildi (11), no (11), yemek (10), bien (9), fena (8), şey (7), not (7), good (7), estaba (6), nada (6), değil (5), service (5), ok (5), nothing (5), servicio (5), servis (4), harika (4), yemekler (4)
+  top content bigrams: şey değildi (5), fena değildi (4), fena değil (4), yemek fena (3), yemekler fena (3), dim sum (3), food ok (3), food okay (3), good not (3), comida estaba (3), estaba bien (3), harika şey (2), yemek iyiydi (2), güzeldi olağanüstü (2), değil buradaki (2), buradaki fiyatlar (2), fiyatlar vasat (2), not what (2), what would (2), service average (2)
+NEW_MAMS_NEUTRAL:
+  rows: 42
+  average sentence length (tokens): 23.05
+  median sentence length (tokens): 23.50
+  vocabulary size (all normalized tokens): 566
+  unique content unigrams: 502
+  unique content bigrams: 600
+  top content unigrams: average (12), ortalama (10), comida (10), normal (10), food (9), no (8), yemekler (8), cuenta (3), poco (3), service (3), servicio (3), waiter (3), drinks (3), garson (3), aunque (3), ambiente (3), camarero (3), parte (3), 300 (3), büyük (3)
+  top content bigrams: comida normal (7), average food (5), yemekler ortalama (4), average average (2), ortalama ortalama (2), normal normal (2), ortalama yemekler (2), dakika sonra (2), bien aunque (2), aunque no (2), minutos después (2), food average (2), prices high (2), house radio (2), modern mission (2), luz tenue (2), throughout whole (1), whole meal (1), meal all (1), all kept (1)
+NEW_HUMAN_AUTHORED_NEUTRAL:
+  rows: 165
+  average sentence length (tokens): 12.75
+  median sentence length (tokens): 12.00
+  vocabulary size (all normalized tokens): 836
+  unique content unigrams: 778
+  unique content bigrams: 1119
+  top content unigrams: yemek (13), precios (11), mesa (10), platos (10), table (9), range (8), main (7), ana (7), about (7), nos (7), zona (7), önce (7), prices (7), restaurantes (7), room (6), yemeği (6), tables (6), mesas (6), estaban (6), sonra (6)
+  top content bigrams: platos principales (5), dining room (4), akşam yemeği (4), restaurantes cercanos (4), price range (4), ana yemek (3), desde nos (3), más menos (3), dentro rango (3), plato fideos (3), este tipo (3), fiyat aralığındaydı (3), about what (3), suelo pagar (3), yemek salonunda (2), duvar boyunca (2), boyunca localar (2), iki kişilik (2), hay bancos (2), bancos corridos (2)
+
+6. HUMAN-AUTHORED TEMPLATE / LEXICAL SIMILARITY
+Top repeated three-token sentence openings:
+los precios de (3), ana yemek fiyatları (2), bu noodle yemeğinin (2), el precio de (2), i paid about (2), bu tür bir (2), los precios eran (2), the dining room (1), yemek salonunda öğle (1), durante el almuerzo (1), instrumental music plays (1), akşam yemeği boyunca (1), durante la cena (1), conversation noise increases (1), masalar doldukça konuşma (1), el ruido de (1), booths line one (1), bir duvar boyunca (1), hay bancos corridos (1), the patio opens (1)
+Top repeated content trigrams:
+duvar boyunca localar (2), hay bancos corridos (2), bancos corridos junto (2), corridos junto pared (2), mesas estaban ocupadas (2), primero pedido bebidas (2), desde nos apuntamos (2), confirmar número personas (2), ana yemek fiyatları (2), precios platos principales (2), restaurante precio medio (2), noodle yemeğinin fiyatı (2), este plato fideos (2), price range expected (2), esperaba cena tres (2), cena tres platos (2), paid about what (2), about what normally (2), más menos suelo (2), menos suelo pagar (2), around local average (2), estaban alrededor media (2)
+Top repeated content four-grams:
+hay bancos corridos junto (2), bancos corridos junto pared (2), esperaba cena tres platos (2), más menos suelo pagar (2)
+Near-duplicate lexical threshold (char TF-IDF cosine): 0.78
+Near-duplicate lexical clusters: 0
+These clusters indicate lexical/template similarity, not semantic duplication.
+
+7. FALSE-POSITIVE CUE MATCHING
+Shared positive neutral-contribution features also present in human-authored neutral train rows:
+la: false-positive examples=26, summed contribution=8.4975, human-authored document frequency=38
+the: false-positive examples=23, summed contribution=8.0698, human-authored document frequency=52
+atmosphere: false-positive examples=34, summed contribution=7.6427, human-authored document frequency=42
+aspect atmosphere: false-positive examples=32, summed contribution=7.3020, human-authored document frequency=42
+atmosphere sep: false-positive examples=32, summed contribution=7.3020, human-authored document frequency=42
+aspect value: false-positive examples=24, summed contribution=3.5327, human-authored document frequency=57
+value sep: false-positive examples=24, summed contribution=3.5327, human-authored document frequency=57
+value: false-positive examples=20, summed contribution=2.6465, human-authored document frequency=57
+de: false-positive examples=18, summed contribution=2.3994, human-authored document frequency=39
+las: false-positive examples=9, summed contribution=1.9614, human-authored document frequency=12
+average: false-positive examples=2, summed contribution=1.8476, human-authored document frequency=3
+were: false-positive examples=7, summed contribution=1.7527, human-authored document frequency=11
+ortalama: false-positive examples=2, summed contribution=1.7017, human-authored document frequency=1
+los: false-positive examples=7, summed contribution=1.3216, human-authored document frequency=15
+los precios: false-positive examples=4, summed contribution=1.3090, human-authored document frequency=8
+our: false-positive examples=5, summed contribution=1.2915, human-authored document frequency=9
+sep la: false-positive examples=9, summed contribution=1.2379, human-authored document frequency=5
+sep yemek: false-positive examples=3, summed contribution=1.2226, human-authored document frequency=4
+yemek: false-positive examples=6, summed contribution=1.1297, human-authored document frequency=13
+for: false-positive examples=8, summed contribution=1.0877, human-authored document frequency=15
+table: false-positive examples=3, summed contribution=1.0657, human-authored document frequency=10
+de la: false-positive examples=5, summed contribution=1.0550, human-authored document frequency=10
+se: false-positive examples=4, summed contribution=0.9713, human-authored document frequency=9
+prices: false-positive examples=4, summed contribution=0.9229, human-authored document frequency=7
+masada: false-positive examples=1, summed contribution=0.8894, human-authored document frequency=2
+fiyatları: false-positive examples=2, summed contribution=0.8799, human-authored document frequency=5
+yemekler: false-positive examples=1, summed contribution=0.8629, human-authored document frequency=3
+precios: false-positive examples=4, summed contribution=0.8335, human-authored document frequency=11
+en la: false-positive examples=2, summed contribution=0.8270, human-authored document frequency=11
+comida: false-positive examples=14, summed contribution=0.7699, human-authored document frequency=6
+
+Top 30 highest-neutral-probability false positives:
+1. probability=0.9346 | es | atmosphere | true=negative | old=neutral
+   Sentence: Servicio ok pero antipático, sucio baño.
+   Neutral features: ok:0.850601; sep servicio:0.733241; aspect atmosphere:0.339720; atmosphere sep:0.339720; atmosphere:0.306230; pero:0.183966; servicio:0.026861; aspect:0.007623; sep:0.007623
+2. probability=0.8684 | tr | atmosphere | true=negative | old=neutral
+   Sentence: Servis fena değil ama kaba, pis banyo.
+   Neutral features: fena:0.541102; fena değil:0.505008; aspect atmosphere:0.288165; atmosphere sep:0.288165; atmosphere:0.259757; değil ama:0.212278; ama:0.112264; değil:0.006522; aspect:0.006466; sep:0.006466
+3. probability=0.8283 | tr | taste | true=positive | old=positive
+   Sentence: yemekler ortalama veya üzeriydi, aralarında şaşırtıcı derecede lezzetli yemekler de vardı.
+   Neutral features: ortalama:0.962682; yemekler:0.862928; yemekler ortalama:0.383140; sep yemekler:0.286077; de:0.102516; veya:0.097449; aspect:0.004678; sep:0.004678
+4. probability=0.7951 | en | atmosphere | true=negative | old=neutral
+   Sentence: Service ok but unfriendly , filthy bathroom .
+   Neutral features: ok:0.714527; aspect atmosphere:0.285374; atmosphere sep:0.285374; atmosphere:0.257241; ok but:0.251977; but:0.116845; sep service:0.023403; aspect:0.006403; sep:0.006403
+5. probability=0.7385 | es | service | true=positive | old=negative
+   Sentence: Honraron muy bien la reserva el domingo por la tarde.
+   Neutral features: la:0.584017; bien:0.510777; la reserva:0.256874; reserva:0.206560; muy bien:0.127853; tarde:0.091899; por:0.051821; el:0.016517; aspect:0.005633; sep:0.005633
+6. probability=0.7220 | en | taste | true=positive | old=neutral
+   Sentence: The food was average or above including some surprising tasty dishes .
+   Neutral features: average:1.032675; the:0.224431; dishes:0.210796; food was:0.198245; was average:0.192044; or:0.149720; food:0.106737; sep the:0.014030; aspect:0.005698; sep:0.005698
+7. probability=0.7195 | es | service | true=negative | old=neutral
+   Sentence: Servicio ok pero antipático, sucio baño.
+   Neutral features: ok:0.867297; sep servicio:0.747633; pero:0.187577; servicio:0.027388; aspect:0.007772; sep:0.007772
+8. probability=0.7193 | es | taste | true=positive | old=neutral
+   Sentence: La comida estaba buena.
+   Neutral features: estaba buena:0.589710; la:0.401015; comida estaba:0.253880; sep la:0.196853; estaba:0.181514; buena:0.148013; comida:0.079169; la comida:0.075172; aspect:0.007736; sep:0.007736
+9. probability=0.7185 | es | taste | true=positive | old=positive
+   Sentence: La comida era normal o superior, incluidos algunos platos sorprendentemente sabrosos.
+   Neutral features: normal:0.822533; platos:0.375666; la:0.281368; comida era:0.156866; era normal:0.138952; sep la:0.138120; comida:0.055548; la comida:0.052744; aspect:0.005428; sep:0.005428
+10. probability=0.7167 | en | atmosphere | true=positive | old=positive
+   Sentence: The atmosphere is unheralded , the service impecible , and the food magnificant .
+   Neutral features: the:0.753082; atmosphere:0.512106; aspect atmosphere:0.284056; atmosphere sep:0.284056; food:0.119386; the atmosphere:0.082559; and the:0.034460; sep the:0.015693; aspect:0.006374; sep:0.006374
+11. probability=0.6844 | es | service | true=negative | old=neutral
+   Sentence: A veces me va mal comida y mal servicio, a veces me va mal bien bien y mal servicio.
+   Neutral features: bien:0.434453; mal:0.350749; me va:0.196177; veces me:0.196177; va:0.174165; mal servicio:0.125936; sep veces:0.075894; comida:0.024517; servicio:0.016884; aspect:0.002396
+12. probability=0.6815 | tr | taste | true=negative | old=neutral
+   Sentence: bar içecekleri Eh, en azından fena değildi.
+   Neutral features: değildi:0.740489; fena:0.715727; fena değildi:0.223132; bar:0.195352; aspect:0.008552; sep:0.008552; en:0.008349
+13. probability=0.6707 | tr | atmosphere | true=positive | old=neutral
+   Sentence: ortam güzeldi, ama servis pek iyi değildi.
+   Neutral features: değildi:0.451207; pek:0.310803; aspect atmosphere:0.232256; atmosphere sep:0.232256; atmosphere:0.209360; güzeldi:0.171065; ama:0.090483; ortam:0.044700; aspect:0.005211; sep:0.005211
+14. probability=0.6571 | en | value | true=negative | old=negative
+   Sentence: However , our $ 14 drinks were were horrible !
+   Neutral features: were:0.497861; 14:0.277956; our:0.244203; drinks:0.187548; aspect value:0.148020; value sep:0.148020; value:0.121666; aspect:0.005909; sep:0.005909; however:0.000332
+15. probability=0.6536 | en | atmosphere | true=negative | old=positive
+   Sentence: The atmosphere is n't the greatest , but I suppose that 's how they keep the prices down .
+   Neutral features: the:0.565993; atmosphere:0.384884; prices:0.281720; aspect atmosphere:0.213488; atmosphere sep:0.213488; the prices:0.107880; but:0.087412; the atmosphere:0.062049; sep the:0.011794; down:0.009250
+16. probability=0.6403 | en | taste | true=negative | old=positive
+   Sentence: The bar drinks were Eh , ok to say the least .
+   Neutral features: ok:0.587629; the:0.414806; were:0.221848; drinks:0.167144; bar:0.120284; the least:0.044922; the bar:0.031078; sep the:0.012966; to say:0.012921; aspect:0.005266
+17. probability=0.6322 | en | atmosphere | true=positive | old=positive
+   Sentence: I don ’ t usually visit the same establishment more than once , what more twice , but I ’ ll come to Zenkichi anytime for a quiet , unhurried and memorable dinner .
+   Neutral features: same:0.217786; the same:0.217786; visit:0.173251; aspect atmosphere:0.162544; atmosphere sep:0.162544; atmosphere:0.146520; the:0.143644; what:0.133314; for:0.115362; but:0.066553
+18. probability=0.6293 | tr | service | true=negative | old=negative
+   Sentence: Yaptığımız şey, 3 saatimizi bir masada oturup yemek, içecek ve nargile gelmesini bekleyerek geçirmek oldu... Bunların bir kısmını asla alamadık!
+   Neutral features: masada:0.889410; içecek:0.313249; şey:0.163218; yemek:0.148007; bir:0.096211; aspect:0.005358; sep:0.005358
+19. probability=0.6289 | en | atmosphere | true=negative | old=positive
+   Sentence: The tables are crammed way too close , the menu is typical of any Italian restaurant , and the wine list is simply overpriced .
+   Neutral features: the:0.390334; tables:0.245473; menu:0.170015; aspect atmosphere:0.147231; atmosphere sep:0.147231; atmosphere:0.132717; the menu:0.129480; any:0.118857; list:0.114461; of:0.103870
+20. probability=0.6067 | es | value | true=negative | old=negative
+   Sentence: Son caros y puedes conseguir otros mejores a la vuelta de la esquina:
+   Neutral features: la:0.546980; otros:0.320485; de la:0.235531; aspect value:0.132166; value sep:0.132166; de:0.115614; value:0.108635; aspect:0.005276; sep:0.005276
+21. probability=0.5915 | tr | value | true=negative | old=negative
+   Sentence: Masraflı
+   Neutral features: aspect value:0.511162; value sep:0.511162; value:0.420154; aspect:0.020405; sep:0.020405
+22. probability=0.5878 | en | service | true=positive | old=negative
+   Sentence: At first we were a little taken aback , as this seemed to present a problem , although the restaurant looked fairly empty , but they hastily put the table together for us .
+   Neutral features: the table:0.339116; table:0.325468; the:0.249476; looked:0.201648; were:0.133426; for:0.100178; as:0.085407; at:0.067695; we:0.062822; but:0.057793
+23. probability=0.5855 | en | atmosphere | true=positive | old=neutral
+   Sentence: Downstairs lounge is always a good attraction
+   Neutral features: is always:0.381078; aspect atmosphere:0.358820; atmosphere sep:0.358820; atmosphere:0.323446; always:0.165807; good:0.025283; aspect:0.008051; sep:0.008051
+24. probability=0.5831 | en | atmosphere | true=positive | old=positive
+   Sentence: With the theater 2 blocks away we had a delicious meal in a beautiful room .
+   Neutral features: room:0.307500; aspect atmosphere:0.207226; atmosphere sep:0.207226; atmosphere:0.186797; the:0.183131; we had:0.157280; we:0.092230; meal:0.077416; with:0.060806; in:0.042390
+25. probability=0.5828 | en | value | true=negative | old=positive
+   Sentence: The tables are crammed way too close , the menu is typical of any Italian restaurant , and the wine list is simply overpriced .
+   Neutral features: the:0.389630; tables:0.245030; menu:0.169708; the menu:0.129247; any:0.118642; list:0.114254; of:0.103682; the tables:0.097141; aspect value:0.082607; value sep:0.082607
+26. probability=0.5777 | es | atmosphere | true=positive | old=positive
+   Sentence: El salón de la planta baja siempre es una buena atracción.
+   Neutral features: la:0.297468; de la:0.256180; aspect atmosphere:0.255750; atmosphere sep:0.255750; atmosphere:0.230538; de:0.125751; buena:0.109794; siempre:0.104027; el:0.016826; una:0.007836
+27. probability=0.5751 | es | value | true=negative | old=negative
+   Sentence: ¿Y 11$ por un plato de soso guacamole?
+   Neutral features: plato:0.202006; aspect value:0.173401; value sep:0.173401; de:0.151686; value:0.142528; plato de:0.138325; un plato:0.081613; por:0.063677; por un:0.061510; aspect:0.006922
+28. probability=0.5691 | en | service | true=negative | old=negative
+   Sentence: A gentleman , maybe the manager , came to our table , and without so much as a smile or greeting asked for our order .
+   Neutral features: table:0.350969; our:0.282295; came:0.236616; the:0.134512; order:0.125465; without:0.120751; for:0.108027; as:0.092099; or:0.089734; our table:0.036583
+29. probability=0.5657 | es | service | true=positive | old=negative
+   Sentence: La comida se prepara de forma rápida y eficiente.
+   Neutral features: la:0.387607; se:0.348931; sep la:0.190272; de:0.163856; comida:0.076522; la comida:0.072659; aspect:0.007477; sep:0.007477
+30. probability=0.5632 | es | service | true=negative | old=negative
+   Sentence: En nuestra última visita, omitieron nuestro nombre en la lista, dejándonos esperando una hora extra por una mesa.
+   Neutral features: mesa:0.331074; en la:0.294326; la:0.188016; nombre:0.166274; nombre en:0.141648; la lista:0.114006; lista:0.089223; por una:0.035007; por:0.033366; una mesa:0.027975
+
+8. OLD VS EXPANDED PREDICTION CHANGES
+A) Old correct -> Expanded wrong-neutral: 56
+B) Old wrong -> Expanded correct-neutral: 14
+C) Old wrong-neutral -> Expanded correct: 1
+
+9. SOURCE-TYPE ABLATION DIAGNOSTIC
+Verified MAMS additions used: 42
+Verified human-authored additions used: 165
+Old + MAMS verified additions:
+Accuracy: 0.7536
+Macro F1: 0.5821
+Neutral precision: 0.2553
+Neutral recall: 0.2105
+Neutral F1: 0.2308
+Pred neutral: 47
+
+Old + human-authored verified additions:
+Accuracy: 0.7192
+Macro F1: 0.5661
+Neutral precision: 0.1895
+Neutral recall: 0.3158
+Neutral F1: 0.2368
+Pred neutral: 95
+
+Old + all selected additions (Expanded v1):
+Accuracy: 0.7159
+Macro F1: 0.5805
+Neutral precision: 0.2066
+Neutral recall: 0.4386
+Neutral F1: 0.2809
+Pred neutral: 121
+
+EVIDENCE SUMMARY
+MAIN PROBLEM MOST CONSISTENT WITH: combination of human-authored lexical/style shortcut and high neutral weighting, concentrated especially in atmosphere and Spanish.
+Evidence: the human-authored-only diagnostic predicted neutral 95 times with neutral precision 0.1895; MAMS-only predicted neutral 47 times with precision 0.2553.
+Evidence: 56 examples changed from old-correct to expanded wrong-neutral, while 14 changed from old-wrong to expanded correct-neutral.
+Evidence: false-neutral counts were highest for Spanish (40) and atmosphere (32).
+Evidence: neutral coefficients include average/ortalama/normal and structural features such as aspect atmosphere, atmosphere, table, and multilingual function-word patterns.
+Domain mismatch is not the strongest explanation because MAMS is restaurant-domain and caused materially less neutral overprediction than the human-authored source group.
+The high neutral weight amplifies these learned cues, but weight alone is insufficient as an explanation because the historical cleaned model used a similarly high neutral weight with higher precision and only 30 neutral predictions.
+Near-duplicate analysis found no char-TF-IDF clusters at the stated 0.78 threshold; the issue is broader repeated lexical/structural cue learning rather than exact or near-exact sentence duplication.
+No data or model settings were changed.

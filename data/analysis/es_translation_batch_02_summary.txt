@@ -1,0 +1,18 @@
+Verified ES coverage:
+taste: 22
+atmosphere: 17
+service: 15
+value: 16
+Remaining ES gap:
+taste: 3
+atmosphere: 8
+service: 10
+value: 9
+ES Batch 3:
+taste: 3
+atmosphere: 5
+service: 6
+value: 6
+total: 20
+Batch 3 human decisions assigned: 0
+training rows added: 0

@@ -1,0 +1,134 @@
+{
+  "checkpoint_id": "15-best-epoch2",
+  "config_signature": "d45023a2c912c8f7e5b684d3473260d1a336a773a3171a1cea5a14908e011955",
+  "condition": "expanded",
+  "best_epoch": 2,
+  "metrics": {
+    "accuracy": 0.7902330743618202,
+    "macro_f1": 0.61493257155577,
+    "train_loss": 0.7680769669007813,
+    "per_class": {
+      "positive": {
+        "precision": 0.9340463458110517,
+        "recall": 0.89419795221843,
+        "f1": 0.9136878814298169,
+        "support": 586
+      },
+      "neutral": {
+        "precision": 0.15625,
+        "recall": 0.3508771929824561,
+        "f1": 0.21621621621621623,
+        "support": 57
+      },
+      "negative": {
+        "precision": 0.7924528301886793,
+        "recall": 0.6511627906976745,
+        "f1": 0.7148936170212766,
+        "support": 258
+      }
+    },
+    "confusion_matrix": [
+      [
+        524,
+        38,
+        24
+      ],
+      [
+        17,
+        20,
+        20
+      ],
+      [
+        20,
+        70,
+        168
+      ]
+    ],
+    "predicted_counts": {
+      "positive": 561,
+      "neutral": 128,
+      "negative": 212
+    },
+    "neutral_confusion": {
+      "true_neutral_predicted_neutral": 20,
+      "positive_to_neutral": 38,
+      "negative_to_neutral": 70,
+      "false_neutral_total": 108
+    },
+    "languages": {
+      "TR": {
+        "n": 300,
+        "macro_f1": 0.5744087037739575,
+        "neutral": {
+          "precision": 0.10638297872340426,
+          "recall": 0.2631578947368421,
+          "f1": 0.15151515151515152,
+          "support": 19
+        }
+      },
+      "EN": {
+        "n": 301,
+        "macro_f1": 0.6499551951494692,
+        "neutral": {
+          "precision": 0.2,
+          "recall": 0.3684210526315789,
+          "f1": 0.25925925925925924,
+          "support": 19
+        }
+      },
+      "ES": {
+        "n": 300,
+        "macro_f1": 0.6223687423687424,
+        "neutral": {
+          "precision": 0.17391304347826086,
+          "recall": 0.42105263157894735,
+          "f1": 0.24615384615384617,
+          "support": 19
+        }
+      }
+    },
+    "aspects": {
+      "taste": {
+        "n": 421,
+        "macro_f1": 0.6716449500200646,
+        "neutral": {
+          "precision": 0.23333333333333334,
+          "recall": 0.3333333333333333,
+          "f1": 0.27450980392156865,
+          "support": 21
+        }
+      },
+      "atmosphere": {
+        "n": 135,
+        "macro_f1": 0.49831465991074614,
+        "neutral": {
+          "precision": 0.09090909090909091,
+          "recall": 0.3333333333333333,
+          "f1": 0.14285714285714285,
+          "support": 6
+        }
+      },
+      "service": {
+        "n": 234,
+        "macro_f1": 0.6174067762630312,
+        "neutral": {
+          "precision": 0.20930232558139536,
+          "recall": 0.42857142857142855,
+          "f1": 0.28125,
+          "support": 21
+        }
+      },
+      "value": {
+        "n": 111,
+        "macro_f1": 0.5462640340689121,
+        "neutral": {
+          "precision": 0.06060606060606061,
+          "recall": 0.2222222222222222,
+          "f1": 0.09523809523809523,
+          "support": 9
+        }
+      }
+    },
+    "epoch": 2
+  }
+}

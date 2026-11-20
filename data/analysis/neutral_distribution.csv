@@ -1,0 +1,13 @@
+language,aspect,current_count,target_count,needed_count
+tr,taste,15,25,10
+tr,atmosphere,7,25,18
+tr,service,3,25,22
+tr,value,6,25,19
+en,taste,15,25,10
+en,atmosphere,7,25,18
+en,service,3,25,22
+en,value,6,25,19
+es,taste,15,25,10
+es,atmosphere,7,25,18
+es,service,3,25,22
+es,value,6,25,19

@@ -1,0 +1,471 @@
+NEUTRAL EXAMPLES
+Source: ./data/cleaned/train.csv
+Maximum examples per aspect × language cell: 5
+
+========================================================================
+taste × TR — 5 shown
+========================================================================
+Example 1
+Sentence: Yemek fena değildi.
+Language: tr
+Aspect: taste
+Source category: food quality
+Aspect term: Yemek
+Sentiment: neutral
+
+Example 2
+Sentence: yemek fena değil.
+Language: tr
+Aspect: taste
+Source category: food quality
+Aspect term: yemek
+Sentiment: neutral
+
+Example 3
+Sentence: Özü itibariyle mükemmel bir dilim NYC pizzası.
+Language: tr
+Aspect: taste
+Source category: food quality
+Aspect term: bir dilim NYC pizzası
+Sentiment: neutral
+
+Example 4
+Sentence: Yediğimiz her şey iyi veya ortaydı... ama kesinlikle harika bir şey değildi.
+Language: tr
+Aspect: taste
+Source category: food quality
+Aspect term: NULL
+Sentiment: neutral
+
+Example 5
+Sentence: yemekler fena değildi ve ortaydı, abartılacak bir şey yoktu.
+Language: tr
+Aspect: taste
+Source category: food quality
+Aspect term: yemekler
+Sentiment: neutral
+
+========================================================================
+taste × EN — 5 shown
+========================================================================
+Example 1
+Sentence: Food was OK .
+Language: en
+Aspect: taste
+Source category: food quality
+Aspect term: Food
+Sentiment: neutral
+
+Example 2
+Sentence: the food is decent .
+Language: en
+Aspect: taste
+Source category: food quality
+Aspect term: food
+Sentiment: neutral
+
+Example 3
+Sentence: A quintessential slice of NYC pizza .
+Language: en
+Aspect: taste
+Source category: food quality
+Aspect term: slice of NYC pizza
+Sentiment: neutral
+
+Example 4
+Sentence: Everything we had was good or ok ... but definitely nothing great .
+Language: en
+Aspect: taste
+Source category: food quality
+Aspect term: NULL
+Sentiment: neutral
+
+Example 5
+Sentence: The food was ok and fair nothing to go crazy .
+Language: en
+Aspect: taste
+Source category: food quality
+Aspect term: food
+Sentiment: neutral
+
+========================================================================
+taste × ES — 5 shown
+========================================================================
+Example 1
+Sentence: La comida estaba bien.
+Language: es
+Aspect: taste
+Source category: food quality
+Aspect term: La comida
+Sentiment: neutral
+
+Example 2
+Sentence: La comida es decente.
+Language: es
+Aspect: taste
+Source category: food quality
+Aspect term: comida
+Sentiment: neutral
+
+Example 3
+Sentence: Un clásico (1 porción de pizza neoyorquina).
+Language: es
+Aspect: taste
+Source category: food quality
+Aspect term: slice of NYC pizza
+Sentiment: neutral
+
+Example 4
+Sentence: Todo lo que comimos estuvo bien o aceptable… pero definitivamente nada del otro mundo.
+Language: es
+Aspect: taste
+Source category: food quality
+Aspect term: NULL
+Sentiment: neutral
+
+Example 5
+Sentence: La comida estaba bien y justa, nada para volverse loco.
+Language: es
+Aspect: taste
+Source category: food quality
+Aspect term: comida
+Sentiment: neutral
+
+========================================================================
+atmosphere × TR — 5 shown
+========================================================================
+Example 1
+Sentence: çevre oldukça lükstür ve kupa eşleri olan veya sadece yüksek ücret alan eskortlarla birlikte olan bir sürü zengin adam göreceksiniz.
+Language: tr
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: çevre
+Sentiment: neutral
+
+Example 2
+Sentence: servis güler yüzlüydü ve atmosfer rahattı.
+Language: tr
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: atmosfer
+Sentiment: neutral
+
+Example 3
+Sentence: dekor ise dikkat dağıtıcı gibi görünüyor, bu yüzden 2 lanet olası saat süren soğuk patlıcan için 300 dolar ödediğinizi fark etmiyorsunuz!!!
+Language: tr
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: dekor
+Sentiment: neutral
+
+Example 4
+Sentence: konum ve ortam fena değil ama yemekler bunu telafi ediyor.
+Language: tr
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: ortam
+Sentiment: neutral
+
+Example 5
+Sentence: İçerisi biraz sıkışık ama beklenen bir durum.
+Language: tr
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: NULL
+Sentiment: neutral
+
+========================================================================
+atmosphere × EN — 5 shown
+========================================================================
+Example 1
+Sentence: The environment is very upscale and you will see a lot of rich guys with trophy wives or just highly paid escorts .
+Language: en
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: environment
+Sentiment: neutral
+
+Example 2
+Sentence: The service was friendly and the atmosphere was casual .
+Language: en
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: atmosphere
+Sentiment: neutral
+
+Example 3
+Sentence: The decor however seems to be the distraction so you wo n't notice that you just payed 300 bucks for some cold eggplant that took 2 FRICKIN HOURS TO COME ! ! ! !
+Language: en
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: decor
+Sentiment: neutral
+
+Example 4
+Sentence: The location and ambience is Ok but the food is what makes up for it .
+Language: en
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: ambience
+Sentiment: neutral
+
+Example 5
+Sentence: Inside is a little cramped , but to be expected .
+Language: en
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: NULL
+Sentiment: neutral
+
+========================================================================
+atmosphere × ES — 5 shown
+========================================================================
+Example 1
+Sentence: El ambiente es muy exclusivo y verás muchos tipos ricos con esposas trofeo o simplemente acompañantes muy bien pagadas.
+Language: es
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: ambiente
+Sentiment: neutral
+
+Example 2
+Sentence: El servicio fue amable y el ambiente fue informal.
+Language: es
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: ambiente
+Sentiment: neutral
+
+Example 3
+Sentence: Sin embargo, la decoración parece ser la distracción, por lo que no notarás que acabas de pagar 300 dólares por una berenjena fría que tardó 2 MALDITAS HORAS EN LLEGARSE.
+Language: es
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: decoración
+Sentiment: neutral
+
+Example 4
+Sentence: La ubicación y ambiente están bien, pero la comida es lo que lo compensa.
+Language: es
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: ambiente
+Sentiment: neutral
+
+Example 5
+Sentence: El interior es un poco estrecho, pero es de esperar.
+Language: es
+Aspect: atmosphere
+Source category: ambience general
+Aspect term: NULL
+Sentiment: neutral
+
+========================================================================
+service × TR — 3 shown
+========================================================================
+Example 1
+Sentence: bazen iyi yemek ve idare eder servis alıyorum.
+Language: tr
+Aspect: service
+Source category: service general
+Aspect term: servis
+Sentiment: neutral
+
+Example 2
+Sentence: Diğer birçok yorumcunun da fark ettiği gibi, siparişiniz genellikle yavaş geliyor; bu özellikle akşamları geçerli ancak öğle yemeği saatlerinde bir sorun teşkil etmiyor.
+Language: tr
+Aspect: service
+Source category: service general
+Aspect term: NULL
+Sentiment: neutral
+
+Example 3
+Sentence: Hizmet ortalama.
+Language: tr
+Aspect: service
+Source category: service general
+Aspect term: Hizmet
+Sentiment: neutral
+
+========================================================================
+service × EN — 3 shown
+========================================================================
+Example 1
+Sentence: sometimes i get good food and ok service .
+Language: en
+Aspect: service
+Source category: service general
+Aspect term: service
+Sentiment: neutral
+
+Example 2
+Sentence: As many other reviewers noticed , your order is often slow to arrive - this is particularly true in the evening but is not a problem during lunch time .
+Language: en
+Aspect: service
+Source category: service general
+Aspect term: NULL
+Sentiment: neutral
+
+Example 3
+Sentence: Service is average .
+Language: en
+Aspect: service
+Source category: service general
+Aspect term: Service
+Sentiment: neutral
+
+========================================================================
+service × ES — 3 shown
+========================================================================
+Example 1
+Sentence: A veces me va bien comida y aceptable servicio.
+Language: es
+Aspect: service
+Source category: service general
+Aspect term: servicio
+Sentiment: neutral
+
+Example 2
+Sentence: Como muchos otros revisores notaron, su pedido a menudo tarda en llegar; esto es particularmente cierto en la noche, pero no es un problema durante la hora del almuerzo.
+Language: es
+Aspect: service
+Source category: service general
+Aspect term: NULL
+Sentiment: neutral
+
+Example 3
+Sentence: Servicio es promedio.
+Language: es
+Aspect: service
+Source category: service general
+Aspect term: Servicio
+Sentiment: neutral
+
+========================================================================
+value × TR — 5 shown
+========================================================================
+Example 1
+Sentence: Bu fiyata ve prestije göre beklediğim gibi değil konum.
+Language: tr
+Aspect: value
+Source category: restaurant prices
+Aspect term: konum
+Sentiment: neutral
+
+Example 2
+Sentence: Yardımsever servis ve ortalama fiyat yemek başına 10 dolar.
+Language: tr
+Aspect: value
+Source category: food prices
+Aspect term: yemek
+Sentiment: neutral
+
+Example 3
+Sentence: Yine de, faturayla ilgili tüm itirazlar, mekanın nezaketi olan kendi içkinizi koyma (3 ölçü likör) uygulamasıyla telafi ediliyordu...
+Language: tr
+Aspect: value
+Source category: restaurant prices
+Aspect term: NULL
+Sentiment: neutral
+
+Example 4
+Sentence: Bir pound Pastırma için 14 dolar fena değildi ama pek de tadı yoktu. Başka yerlerde daha ucuza daha iyisini yemiştim!
+Language: tr
+Aspect: value
+Source category: food prices
+Aspect term: NULL
+Sentiment: neutral
+
+Example 5
+Sentence: Fiyatlar uygun.
+Language: tr
+Aspect: value
+Source category: restaurant prices
+Aspect term: NULL
+Sentiment: neutral
+
+========================================================================
+value × EN — 5 shown
+========================================================================
+Example 1
+Sentence: Not what I would expect for the price and prestige of this location .
+Language: en
+Aspect: value
+Source category: restaurant prices
+Aspect term: location
+Sentiment: neutral
+
+Example 2
+Sentence: Helpful service and average price per dish $ 10 .
+Language: en
+Aspect: value
+Source category: food prices
+Aspect term: dish
+Sentiment: neutral
+
+Example 3
+Sentence: Still , any quibbles about the bill were off-set by the pour-your-own measures of liquers which were courtesey of the house ...
+Language: en
+Aspect: value
+Source category: restaurant prices
+Aspect term: NULL
+Sentiment: neutral
+
+Example 4
+Sentence: It was $ 14 not really bad for a pound of Pastrami-but it did n't have much taste-I 've had better for less elsewhere !
+Language: en
+Aspect: value
+Source category: food prices
+Aspect term: NULL
+Sentiment: neutral
+
+Example 5
+Sentence: Prices are in line .
+Language: en
+Aspect: value
+Source category: restaurant prices
+Aspect term: NULL
+Sentiment: neutral
+
+========================================================================
+value × ES — 5 shown
+========================================================================
+Example 1
+Sentence: No es lo que esperaba por el precio y el prestigio de este ubicación.
+Language: es
+Aspect: value
+Source category: restaurant prices
+Aspect term: ubicación
+Sentiment: neutral
+
+Example 2
+Sentence: Útil servicio y precio promedio por plato $ 10.
+Language: es
+Aspect: value
+Source category: food prices
+Aspect term: plato
+Sentiment: neutral
+
+Example 3
+Sentence: Aún así, cualquier queja sobre la cuenta fue compensada por la opción de servirse uno mismo (3 medidas de licores) cortesía de la casa...
+Language: es
+Aspect: value
+Source category: restaurant prices
+Aspect term: NULL
+Sentiment: neutral
+
+Example 4
+Sentence: Costaba 14 dólares, no estaba nada mal para una libra de pastrami, pero no tenía mucho sabor. ¡He comido cosas mejores por menos en otros lugares!
+Language: es
+Aspect: value
+Source category: food prices
+Aspect term: NULL
+Sentiment: neutral
+
+Example 5
+Sentence: Los precios están en línea.
+Language: es
+Aspect: value
+Source category: restaurant prices
+Aspect term: NULL
+Sentiment: neutral

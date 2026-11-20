@@ -1,0 +1,255 @@
+EXPERIMENT 07 — EXPANDED NEUTRAL CLASS-WEIGHT CALIBRATION
+
+CONTROLLED SETTINGS
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Input: aspect=<aspect> [SEP] <sentence>
+TF-IDF: ngram_range=(1, 2), min_df=2, max_df=1.0, max_features=None
+LogisticRegression: solver=lbfgs, max_iter=1000, random_state=42, warm_start=False
+Fixed positive weight: 0.54042031
+Fixed negative weight: 1.11841270
+Only neutral class weight changes.
+Primary selection metric: Dev Macro F1
+Tie-breaks: neutral F1, neutral precision, then lower neutral weight
+
+DATA VALIDATION
+Train: positive=2173, neutral=300, negative=1050, total=3523
+Dev: positive=586, neutral=57, negative=258, total=901
+
+NEUTRAL WEIGHT = 2
+Accuracy: 0.7636
+Macro F1: 0.5461
+positive: precision=0.8679 | recall=0.8294 | F1=0.8482 | support=586
+neutral: precision=0.3077 | recall=0.0702 | F1=0.1143 | support=57
+negative: precision=0.6037 | recall=0.7674 | F1=0.6758 | support=258
+Predicted: positive=560, neutral=13, negative=328
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              486        4        96
+neutral                19        4        34
+negative               55        5       198
+
+NEUTRAL WEIGHT = 3
+Accuracy: 0.7536
+Macro F1: 0.5438
+positive: precision=0.8696 | recall=0.8191 | F1=0.8436 | support=586
+neutral: precision=0.1786 | recall=0.0877 | F1=0.1176 | support=57
+negative: precision=0.6044 | recall=0.7519 | F1=0.6701 | support=258
+Predicted: positive=552, neutral=28, negative=321
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              480       11        95
+neutral                20        5        32
+negative               52       12       194
+
+NEUTRAL WEIGHT = 3.91444444
+Accuracy: 0.7469
+Macro F1: 0.5493
+positive: precision=0.8764 | recall=0.8106 | F1=0.8422 | support=586
+neutral: precision=0.1667 | recall=0.1228 | F1=0.1414 | support=57
+negative: precision=0.6025 | recall=0.7403 | F1=0.6643 | support=258
+Predicted: positive=542, neutral=42, negative=317
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              475       17        94
+neutral                18        7        32
+negative               49       18       191
+
+NEUTRAL WEIGHT = 5
+Accuracy: 0.7414
+Macro F1: 0.5685
+positive: precision=0.8799 | recall=0.8003 | F1=0.8382 | support=586
+neutral: precision=0.2069 | recall=0.2105 | F1=0.2087 | support=57
+negative: precision=0.6032 | recall=0.7248 | F1=0.6585 | support=258
+Predicted: positive=533, neutral=58, negative=310
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              469       23        94
+neutral                16       12        29
+negative               48       23       187
+
+NEUTRAL WEIGHT = 6
+Accuracy: 0.7336
+Macro F1: 0.5590
+positive: precision=0.8828 | recall=0.7969 | F1=0.8377 | support=586
+neutral: precision=0.1739 | recall=0.2105 | F1=0.1905 | support=57
+negative: precision=0.6007 | recall=0.7054 | F1=0.6488 | support=258
+Predicted: positive=529, neutral=69, negative=303
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              467       28        91
+neutral                15       12        30
+negative               47       29       182
+
+NEUTRAL WEIGHT = 7
+Accuracy: 0.7270
+Macro F1: 0.5604
+positive: precision=0.8834 | recall=0.7884 | F1=0.8332 | support=586
+neutral: precision=0.1728 | recall=0.2456 | F1=0.2029 | support=57
+negative: precision=0.6027 | recall=0.6938 | F1=0.6450 | support=258
+Predicted: positive=523, neutral=81, negative=297
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              462       34        90
+neutral                15       14        28
+negative               46       33       179
+
+NEUTRAL WEIGHT = 8
+Accuracy: 0.7225
+Macro F1: 0.5656
+positive: precision=0.8861 | recall=0.7833 | F1=0.8315 | support=586
+neutral: precision=0.1828 | recall=0.2982 | F1=0.2267 | support=57
+negative: precision=0.6034 | recall=0.6783 | F1=0.6387 | support=258
+Predicted: positive=518, neutral=93, negative=290
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              459       38        89
+neutral                14       17        26
+negative               45       38       175
+
+NEUTRAL WEIGHT = 9
+Accuracy: 0.7214
+Macro F1: 0.5725
+positive: precision=0.8911 | recall=0.7816 | F1=0.8327 | support=586
+neutral: precision=0.1942 | recall=0.3509 | F1=0.2500 | support=57
+negative: precision=0.6056 | recall=0.6667 | F1=0.6347 | support=258
+Predicted: positive=514, neutral=103, negative=284
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              458       40        88
+neutral                13       20        24
+negative               43       43       172
+
+NEUTRAL WEIGHT = 10
+Accuracy: 0.7192
+Macro F1: 0.5760
+positive: precision=0.8922 | recall=0.7765 | F1=0.8303 | support=586
+neutral: precision=0.1982 | recall=0.3860 | F1=0.2619 | support=57
+negative: precision=0.6107 | recall=0.6628 | F1=0.6357 | support=258
+Predicted: positive=510, neutral=111, negative=280
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              455       44        87
+neutral                13       22        22
+negative               42       45       171
+
+NEUTRAL WEIGHT = 11
+Accuracy: 0.7159
+Macro F1: 0.5751
+positive: precision=0.8935 | recall=0.7730 | F1=0.8289 | support=586
+neutral: precision=0.1983 | recall=0.4035 | F1=0.2659 | support=57
+negative: precision=0.6079 | recall=0.6550 | F1=0.6306 | support=258
+Predicted: positive=507, neutral=116, negative=278
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              453       46        87
+neutral                12       23        22
+negative               42       47       169
+
+NEUTRAL WEIGHT = 11.88530466
+Accuracy: 0.7159
+Macro F1: 0.5805
+positive: precision=0.8948 | recall=0.7696 | F1=0.8275 | support=586
+neutral: precision=0.2066 | recall=0.4386 | F1=0.2809 | support=57
+negative: precision=0.6123 | recall=0.6550 | F1=0.6330 | support=258
+Predicted: positive=504, neutral=121, negative=276
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              451       48        87
+neutral                12       25        20
+negative               41       48       169
+
+NEUTRAL WEIGHT = 13
+Accuracy: 0.7092
+Macro F1: 0.5733
+positive: precision=0.8978 | recall=0.7645 | F1=0.8258 | support=586
+neutral: precision=0.1938 | recall=0.4386 | F1=0.2688 | support=57
+negative: precision=0.6081 | recall=0.6434 | F1=0.6252 | support=258
+Predicted: positive=499, neutral=129, negative=273
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              448       51        87
+neutral                12       25        20
+negative               39       53       166
+
+NEUTRAL WEIGHT = 15
+Accuracy: 0.6970
+Macro F1: 0.5614
+positive: precision=0.9002 | recall=0.7543 | F1=0.8208 | support=586
+neutral: precision=0.1761 | recall=0.4386 | F1=0.2513 | support=57
+negative: precision=0.6007 | recall=0.6240 | F1=0.6122 | support=258
+Predicted: positive=491, neutral=142, negative=268
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              442       58        86
+neutral                11       25        21
+negative               38       59       161
+
+TOP 3 MACRO F1 CONFIGURATIONS
+
+Rank 1: neutral_weight=11.88530466
+Accuracy=0.7159 | Macro F1=0.5805
+Language Macro F1 / Neutral F1:
+TR: macro F1=0.5886 | neutral F1=0.3077
+EN: macro F1=0.5998 | neutral F1=0.3051
+ES: macro F1=0.5555 | neutral F1=0.2388
+Aspect Macro F1 / Neutral F1:
+taste: macro F1=0.6127 | neutral F1=0.4151
+atmosphere: macro F1=0.3329 | neutral F1=0.1000
+service: macro F1=0.5819 | neutral F1=0.2609
+value: macro F1=0.5531 | neutral F1=0.3077
+
+Rank 2: neutral_weight=10
+Accuracy=0.7192 | Macro F1=0.5760
+Language Macro F1 / Neutral F1:
+TR: macro F1=0.5868 | neutral F1=0.2917
+EN: macro F1=0.5787 | neutral F1=0.2500
+ES: macro F1=0.5639 | neutral F1=0.2500
+Aspect Macro F1 / Neutral F1:
+taste: macro F1=0.5811 | neutral F1=0.3265
+atmosphere: macro F1=0.3412 | neutral F1=0.1081
+service: macro F1=0.5904 | neutral F1=0.2791
+value: macro F1=0.5531 | neutral F1=0.3077
+
+Rank 3: neutral_weight=11
+Accuracy=0.7159 | Macro F1=0.5751
+Language Macro F1 / Neutral F1:
+TR: macro F1=0.5821 | neutral F1=0.2857
+EN: macro F1=0.5897 | neutral F1=0.2807
+ES: macro F1=0.5555 | neutral F1=0.2388
+Aspect Macro F1 / Neutral F1:
+taste: macro F1=0.5927 | neutral F1=0.3600
+atmosphere: macro F1=0.3356 | neutral F1=0.1026
+service: macro F1=0.5825 | neutral F1=0.2667
+value: macro F1=0.5531 | neutral F1=0.3077
+
+SORTED SUMMARY
+Weight | Accuracy | Macro F1 | Neutral P | Neutral R | Neutral F1 | Pred Neutral
+2 | 0.7636 | 0.5461 | 0.3077 | 0.0702 | 0.1143 | 13
+3 | 0.7536 | 0.5438 | 0.1786 | 0.0877 | 0.1176 | 28
+3.91444444 | 0.7469 | 0.5493 | 0.1667 | 0.1228 | 0.1414 | 42
+5 | 0.7414 | 0.5685 | 0.2069 | 0.2105 | 0.2087 | 58
+6 | 0.7336 | 0.5590 | 0.1739 | 0.2105 | 0.1905 | 69
+7 | 0.7270 | 0.5604 | 0.1728 | 0.2456 | 0.2029 | 81
+8 | 0.7225 | 0.5656 | 0.1828 | 0.2982 | 0.2267 | 93
+9 | 0.7214 | 0.5725 | 0.1942 | 0.3509 | 0.2500 | 103
+10 | 0.7192 | 0.5760 | 0.1982 | 0.3860 | 0.2619 | 111
+11 | 0.7159 | 0.5751 | 0.1983 | 0.4035 | 0.2659 | 116
+11.88530466 | 0.7159 | 0.5805 | 0.2066 | 0.4386 | 0.2809 | 121
+13 | 0.7092 | 0.5733 | 0.1938 | 0.4386 | 0.2688 | 129
+15 | 0.6970 | 0.5614 | 0.1761 | 0.4386 | 0.2513 | 142
+
+BEST WEIGHT: 11.88530466
+Best Accuracy: 0.7159
+Best Macro F1: 0.5805
+Best Neutral P: 0.2066
+Best Neutral R: 0.4386
+Best Neutral F1: 0.2809
+Pred Neutral: 121
+
+DELTA VS CLEANED BASELINE
+Macro F1: -0.0086
+Neutral P: -0.1601
+Neutral R: +0.2456
+Neutral F1: +0.0280

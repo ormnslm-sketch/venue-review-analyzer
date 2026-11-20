@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Go?</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="meta.indexTitle">
+  <header class="site-header">
+    <div class="site-header-top">
+      <div>
+        <h1 class="site-name" data-i18n="site.name">Why Go?</h1>
+        <p data-i18n="site.tagline">Discover Kadıköy's venues through scores.</p>
+      </div>
+      <div class="language-switcher" role="group" data-i18n-aria-label="language.label" aria-label="Interface language">
+        <button type="button" data-ui-language="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-ui-language="tr" aria-pressed="false">TR</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-heading">
+      <p class="eyebrow" data-i18n="page.eyebrow">Venue guide</p>
+      <h2 data-i18n="page.heading">Venues worth discovering</h2>
+    </div>
+
+    <section class="review-analyzer" aria-labelledby="review-analyzer-title">
+      <div class="review-analyzer-heading">
+        <div>
+          <p class="eyebrow" data-i18n="analyzer.eyebrow">Review analysis</p>
+          <h2 id="review-analyzer-title" data-i18n="analyzer.title">Analyze a restaurant review</h2>
+        </div>
+        <p data-i18n="analyzer.description">Explore opinions about taste, atmosphere, service and value.</p>
+      </div>
+
+      <label class="review-input-label" for="review-text" data-i18n="analyzer.inputLabel">Restaurant review</label>
+      <textarea
+        id="review-text"
+        rows="6"
+        placeholder="Paste a restaurant review"
+        data-i18n-placeholder="analyzer.placeholder"
+      ></textarea>
+
+      <div class="review-actions">
+        <button id="analyze-review-button" type="button" data-i18n="analyzer.button">Analyze Review</button>
+        <span id="analysis-status" role="status" aria-live="polite"></span>
+      </div>
+
+      <p id="analysis-error" class="analysis-error" role="alert" hidden></p>
+
+      <div id="analysis-results" class="analysis-results" hidden>
+        <div id="aspect-results" class="aspect-results"></div>
+        <details class="analysis-details">
+          <summary data-i18n="analyzer.details">Analysis details</summary>
+          <div id="analysis-details-content"></div>
+        </details>
+      </div>
+    </section>
+
+    <div class="filters">
+      <label>
+        <span data-i18n="filters.search">Search venues</span>
+        <input type="search" id="search-input" placeholder="Search venues..." data-i18n-placeholder="filters.searchPlaceholder">
+      </label>
+
+      <label>
+        <span data-i18n="filters.category">Category</span>
+        <select id="category-filter">
+          <option value="all" data-i18n="filters.allCategories">All</option>
+          <option value="Cafe" data-i18n="category.cafe">Cafe</option>
+          <option value="Bakery Cafe" data-i18n="category.bakeryCafe">Bakery Cafe</option>
+          <option value="Restaurant" data-i18n="category.restaurant">Restaurant</option>
+          <option value="Pub" data-i18n="category.pub">Pub</option>
+        </select>
+      </label>
+
+      <label>
+        <span data-i18n="filters.district">District</span>
+        <select id="district-filter">
+          <option value="all" data-i18n="filters.allDistricts">All districts</option>
+          <option value="Kadıköy">Kadıköy</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="places-container" class="places-container"></div>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/analyzer.js"></script>
+</body>
+</html>

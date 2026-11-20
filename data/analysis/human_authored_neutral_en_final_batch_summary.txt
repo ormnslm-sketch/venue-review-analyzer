@@ -1,0 +1,18 @@
+FINAL ENGLISH NEUTRAL CANDIDATE BATCH
+=====================================
+Verified coverage:
+taste: 26
+atmosphere: 25
+service: 21
+value: 18
+Remaining EN gap:
+service: 4
+value: 7
+Final review batch:
+service candidates: 7
+value candidates: 11
+total: 18
+exact duplicates: 0
+high lexical overlap warnings: 0
+human decisions assigned: 0
+training rows added: 0

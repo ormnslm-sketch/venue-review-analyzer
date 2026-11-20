@@ -1,0 +1,78 @@
+NEUTRAL EXPANSION V1 AUDIT
+
+ES_NEUTRAL_EXPANSION_V1 = COMPLETE
+
+Base train rows: 3316
+Added rows: 207
+Final train rows: 3523
+
+Sentiments (train):
+positive: 2173
+neutral: 300
+negative: 1050
+
+Sentiment distribution by split:
+train: positive=2173, neutral=300, negative=1050, total=3523
+dev: positive=586, neutral=57, negative=258, total=901
+test: positive=923, neutral=69, negative=324, total=1316
+
+Neutral matrix by language/aspect:
+language,taste,atmosphere,service,value,total
+tr,25,25,25,25,100
+en,25,25,25,25,100
+es,25,25,25,25,100
+
+Selected semantic groups:
+taste: 10
+atmosphere: 18
+service: 22
+value: 19
+total: 69
+
+English verified reserve count: 8
+English reserve IDs:
+- HA-CAND-EN-SERVICE-0047
+- HA-CAND-EN-SERVICE-0051
+- HA-CAND-EN-VALUE-0035
+- HA-CAND-EN-VALUE-0037
+- MAMS-EN-000636-SERVICE
+- MAMS-EN-001449-PRICE
+- MAMS-EN-002214-PRICE
+- MAMS-EN-002379-FOOD
+
+Provenance counts by source_type:
+mams_gold_annotation: 42
+synthetic_candidate: 165
+Provenance counts by original_source_dataset:
+human_authored_neutral_candidates_en: 165
+justinsiow/mams-acsa: 42
+Provenance counts by language:
+en: 69
+es: 69
+tr: 69
+Provenance counts by aspect:
+atmosphere: 54
+service: 66
+taste: 30
+value: 57
+
+Duplicates:
+train: 0
+dev: 0
+test: 0
+Conflicts:
+train: 0
+dev: 0
+test: 0
+Train-dev leakage: 0
+Train-test leakage: 0
+Dev-test leakage: 0
+Parallel-group split leakage: 0
+Unverified added rows: 0
+Dev unchanged: True
+Test unchanged: True
+
+Limitation:
+The original M-ABSA rows do not contain a reliable language-independent source_example_id, so zero cross-language semantic leakage cannot be claimed for the original dataset. For the 207 newly added rows, parallel_source_group_id confirms that every EN/TR/ES version is assigned only to train.
+
+Overall audit: PASS

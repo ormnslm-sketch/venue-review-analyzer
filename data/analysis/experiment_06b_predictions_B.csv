@@ -1,0 +1,902 @@
+sentence,language,aspect,true_sentiment,predicted_sentiment
+Menü istedim ve aynı garson bana deliymişim gibi baktı.,tr,service,negative,negative
+sahibi gerçekten tüm ihtiyaçlarınızı karşılıyor.,tr,service,positive,negative
+"Ben arkadaş canlısı bir insanım, bu yüzden onun bu kadar kötü davranmaması ve kişisel olmaması umurumda olmazdı.",tr,service,negative,negative
+"Sahibi ve çalışanları da tamamen Japon, bu da tüm ortama ayrı bir hava katıyor.",tr,atmosphere,positive,positive
+garnitürler fena değildi ve isteğim üzerine tekrar doldurttum.,tr,taste,neutral,negative
+"Harika, güler yüzlü servis, Hızlı oturma, Hızlı Teslimat, Mükemmel suşi.",tr,service,positive,positive
+"Harika, güler yüzlü servis, Hızlı oturma, Hızlı Teslimat, Mükemmel suşi.",tr,taste,positive,positive
+öğle yemeği için oraya gittim ve okuduğum yorumlara göre beklediğim kadar iyi değildi.,tr,taste,negative,positive
+tilapia korkunçtu... karton gibiydi tadı.,tr,taste,negative,positive
+İnce yemek ve servis,tr,taste,positive,positive
+İnce yemek ve servis,tr,service,positive,positive
+Hizmet harikaydı;,tr,service,positive,positive
+Buradaki yemek ismine (Kantonca yani ...) büyük hizmet ediyor.,tr,taste,positive,positive
+Hiçbiri yapılmadı bu yüzden kapattım.,tr,service,negative,negative
+Bu yer çok iyi bir fırsat.,tr,value,positive,positive
+harika sosisli sandviç .,tr,taste,positive,positive
+Yemek de güzeldi.,tr,taste,positive,positive
+Winnie ve o personel size hizmet eden bulabileceğiniz en iyi mürettebattır.,tr,service,positive,positive
+"Servis hızlı, güler yüzlü ve harikaydı.",tr,service,positive,positive
+"ortam çok eğlenceliydi ve fiyatlar harikaydı, üstelik yemekler gerçekten lezzetliydi.",tr,atmosphere,positive,positive
+"ortam çok eğlenceliydi ve fiyatlar harikaydı, üstelik yemekler gerçekten lezzetliydi.",tr,value,positive,positive
+"ortam çok eğlenceliydi ve fiyatlar harikaydı, üstelik yemekler gerçekten lezzetliydi.",tr,taste,positive,positive
+yemek her zaman tazedir ...,tr,taste,positive,positive
+Mükemmel sashimi ve millennium roll ise çok lezzetli.,tr,taste,positive,positive
+"simit her zaman sıcak, içi yumuşak, dışı çıtır ve devasa büyüklüktedir.",tr,taste,positive,positive
+Çok kaba !!!,tr,service,negative,negative
+Bu güzel bir pizza mekanı ve iyi ince hamurlu pizza seçkisi Fesleğen dilimi dahil.,tr,taste,positive,positive
+"Yemek çok vasat... Tay füzyon yemekleri biraz fazla tatlı, burada servis ettikleri her şey çok tatlı.",tr,taste,negative,positive
+Garsonumuz kötü biri değildi ama özellikle sıcakkanlı ya da dikkatli de değildi.,tr,service,neutral,negative
+sos iyi bir Kore yemeğinden çok Çin fast food'una benziyordu.,tr,taste,negative,positive
+Midye ve kalamar Cumartesi akşamı harikaydı.,tr,taste,positive,positive
+"Yemekler harika, lezzetli ve doyurucu, Servis ise profesyonel ve güler yüzlü.",tr,taste,positive,positive
+"Yemekler harika, lezzetli ve doyurucu, Servis ise profesyonel ve güler yüzlü.",tr,service,positive,positive
+hizmet berbat.,tr,service,negative,negative
+"Simit tamam, ancak özel bir istekte bulunmayın!",tr,taste,neutral,positive
+"Simit tamam, ancak özel bir istekte bulunmayın!",tr,service,negative,negative
+İyi Yemek,tr,taste,positive,positive
+"Yemek harikaydı ve Servis hızlı ve yardımseverdi, ancak baskıcı veya aceleci değildi.",tr,taste,positive,positive
+"Yemek harikaydı ve Servis hızlı ve yardımseverdi, ancak baskıcı veya aceleci değildi.",tr,service,positive,positive
+Sos suluydu ve yemek pek lezzetli değildi.,tr,taste,negative,positive
+Pizza için burada değildim bu yüzden henüz yorum yapamam ama yediğim çok lezzetliydi.,tr,taste,positive,positive
+"Ölmeye değer harika bir kokteylleri var Citrus Vodka, limon ve misket limonu suyu ve nane yapraklarıyla yapılmış!",tr,taste,positive,positive
+"yemekler ortalama veya üzeriydi, aralarında şaşırtıcı derecede lezzetli yemekler de vardı.",tr,taste,positive,positive
+"bazen kötü yemek ve kötü servis alıyorum, bazen iyi iyi ve kötü servis alıyorum.",tr,service,negative,positive
+Şehrin en iyisi pilav üstü baget ve ekşi baharatlı çorba!,tr,taste,positive,positive
+"Birkaç ipucu: şalgam keki, kızarmış domuz etli çörekler ve yumurtalı muhallebi tariflerini atlayın.",tr,taste,negative,positive
+Değmez.,tr,value,negative,negative
+Vanison iyiydi ama muhteşem değildi.,tr,taste,neutral,positive
+"İlk başta biraz şaşırdık, çünkü bu bir sorun teşkil ediyor gibi göründü, restoran oldukça boş görünmesine rağmen, hemen masayı bizim için hazırladılar.",tr,service,positive,negative
+Ama Shabu Shabu için NY'da bundan daha iyisini bulamazsınız.,tr,taste,positive,positive
+"Restoranlarda çalıştım ve çok yemek pişirdim, iyi hazırlanmış yemek bir kurtçuğun içine girmesi mümkün olmamalı.",tr,taste,negative,positive
+"Güzel ve sakin, küçük ama 6 (veya daha fazla) kişiye yetecek kadar.",tr,atmosphere,positive,positive
+"yemek güzel, yalan söyleyemem.",tr,taste,positive,positive
+Hizmet ise mükemmeldi... ve ortam/atmosfer çok hoşuma gitti.,tr,service,positive,positive
+Hizmet ise mükemmeldi... ve ortam/atmosfer çok hoşuma gitti.,tr,atmosphere,positive,positive
+Benim partimde BBE 29$ sabit fiyatlı menü vardı ve bu harika bir fırsattı çünkü yanında bir de sake ikram edilmişti!,tr,value,positive,positive
+Yemek güvenilir ve fiyatı makul.,tr,taste,positive,positive
+Yemek güvenilir ve fiyatı makul.,tr,value,neutral,positive
+"Eğer müziğinizin patlamasını seviyorsanız ve sistem çok iyi değilse ve en azından 100 dolar şişe minimum ödemek istiyorsanız, o zaman burayı seveceksiniz.",tr,value,negative,positive
+"Eğer müziğinizin patlamasını seviyorsanız ve sistem çok iyi değilse ve en azından 100 dolar şişe minimum ödemek istiyorsanız, o zaman burayı seveceksiniz.",tr,atmosphere,negative,positive
+Şimdiye kadar yediğim en iyi pad thai yemekti.,tr,taste,positive,positive
+Bize 10-15 dakika demişlerdi ama aslında 45 dakikaya yakındı.,tr,service,negative,negative
+"Her gittiğimizde, resepsiyon personeli ( garsonlar değil - onlar harika - ama sizi karşılayan ve oturtan kişiler) bize o kadar iğrenç geldi ki, olağanüstü balık yemekleri olmasa asla geri dönmezdim.",tr,taste,positive,positive
+Muhtemelen Şehrin En Romantik Restoran,tr,atmosphere,positive,positive
+Normal marul ve ceviz aradığımız halde gelen salata harikaydı.,tr,taste,positive,positive
+"Hizmet tam olarak beş yıldızlı değil, ama bu çok da büyük bir sorun değil.",tr,service,neutral,negative
+Yemek harika ve Ortam daha da harika.,tr,taste,positive,positive
+Yemek harika ve Ortam daha da harika.,tr,atmosphere,positive,positive
+"Yediklerimin hepsi güzeldi, ben de yiyenlerdenim.",tr,taste,positive,positive
+Teslimat da hızlı.,tr,service,positive,positive
+En iyisi. Suşi. Her zaman.,tr,taste,positive,positive
+"İyi ezmeler, harika içecek seçenekleri ve simitler gerçekten lezzetli.",tr,taste,positive,positive
+Herkes onun seçimlerinden fazlasıyla memnundu.,tr,service,positive,positive
+Sophia pizza 'yı şiddetle tavsiye ediyorum.,tr,taste,positive,positive
+"servis mükemmel, dekor harika ve yemek lezzetli ve büyük porsiyonlar geliyor.",tr,service,positive,positive
+"servis mükemmel, dekor harika ve yemek lezzetli ve büyük porsiyonlar geliyor.",tr,atmosphere,positive,positive
+"servis mükemmel, dekor harika ve yemek lezzetli ve büyük porsiyonlar geliyor.",tr,taste,positive,positive
+"ayrıca çok romantik ve rahat bir yer de akşam yemeği yemek harikaydı, servis mükemmeldi... o kadar cana yakınlar ki yer de kalmak istemiyoruz!",tr,atmosphere,positive,positive
+"ayrıca çok romantik ve rahat bir yer de akşam yemeği yemek harikaydı, servis mükemmeldi... o kadar cana yakınlar ki yer de kalmak istemiyoruz!",tr,service,positive,positive
+Ve bir tabak tatsız yemek için 11 dolar guacamole ?,tr,taste,negative,negative
+Ve bir tabak tatsız yemek için 11 dolar guacamole ?,tr,value,negative,negative
+"İçerikler organiktir, bu benim için gerçek bir artıdır.",tr,taste,positive,positive
+"yemekler çok lezzetli, özellikle de mükemmel pişirilmişleri baharatlı domates soslu midyeler ve çıtır çıtır patates kızartmaları patates kızartması.",tr,taste,positive,positive
+Maitre-D- `` Ye ve çık ``,tr,service,negative,positive
+"Sözlük bilimciler dikkat: Kabalığın yeni ve ilgi çekici bir tanımı tam burada, Brooklyn'de canlı ve gelişmektedir.",tr,service,negative,positive
+taze restoran harikaydı ... ... .. yemek lezzetliydi ve tabii ki tazeydi.,tr,taste,positive,positive
+"Lezzetli, yaratıcı ve eğlenceli.",tr,taste,positive,positive
+Çünkü o kadar lezzetli ki mutlaka tatmalısınız!!!,tr,taste,positive,positive
+Korkunç yemek karşısında dilim tutuldu.,tr,taste,negative,positive
+Çok güzeldi.,tr,taste,positive,positive
+Ama ben buranın yer takılmak için iyi bir yer olduğunu düşünüyorum.,tr,atmosphere,positive,positive
+" Buradaki dekor çok lokanta tarzı ve East Village'da beklediğiniz türden - romantik değil, sadece basit, küçük ve sade.",tr,atmosphere,neutral,positive
+Pad Thai'yi deneyin veya meze menüsünde herhangi bir şeyi deneyin... hepsi lezzetli.,tr,taste,positive,positive
+Ess-A-Bagel (Sty-town veya Midtown'da) NY'daki en iyi bagel mekandır.,tr,taste,positive,positive
+Ve pub atmosferine rağmen çocuklarıma karşı da harikalardı!,tr,service,positive,negative
+Gerçekten harika.,tr,taste,positive,positive
+Red Dragon Roll - Herhangi bir yiyecek grubu arasında en sevdiğim yemek - tartışmasız,tr,taste,positive,positive
+İnanılmaz fiyatlara orijinal Hint ürünleri var.,tr,taste,positive,positive
+İnanılmaz fiyatlara orijinal Hint ürünleri var.,tr,value,positive,positive
+"Babamın yediği dana bifteği çok lezzetliydi, annemin yediği ise kılıç balığıydı.",tr,taste,positive,positive
+Muhteşem yemek - eğer ön büro personeli sizi caydırmazsa –,tr,taste,positive,positive
+Muhteşem yemek - eğer ön büro personeli sizi caydırmazsa –,tr,service,negative,positive
+Manhattan'daki açık ara en iyisi pizza.,tr,taste,positive,positive
+Çok pahalı ve lezzetli değil,tr,value,negative,negative
+Çok pahalı ve lezzetli değil,tr,taste,negative,positive
+"Pizza harika, ev yapımı makarna da öyle.",tr,taste,positive,positive
+"Raga's romantik, samimi bir restorandır.",tr,atmosphere,positive,positive
+Masraflı,tr,value,negative,negative
+"masalar birbirine çok yakın, menü herhangi bir İtalyan restoranında bulabileceğiniz türden ve şarap listesi ise aşırı pahalı.",tr,atmosphere,negative,positive
+"masalar birbirine çok yakın, menü herhangi bir İtalyan restoranında bulabileceğiniz türden ve şarap listesi ise aşırı pahalı.",tr,value,negative,positive
+yemek oldukça gelenekseldi ama sıcaktı ve büyük porsiyonlardı .,tr,taste,positive,negative
+"açık büfe fırsatı hakkında çekincelerim var, ancak seçenekler oldukça sınırlı ve muhtemelen menüden seçim yaparak 18 dolardan daha az bir ücretle yiyebileceğinizden daha fazla yemek sipariş edebilirsiniz.",tr,value,negative,negative
+Burada hiç hayal kırıklığı yaratan yemek bir şey yaşamadığımı söylemeliyim.,tr,taste,positive,positive
+Simit dışında bir şey almayın! . .,tr,taste,negative,positive
+"ıspanak taze, kesinlikle dondurulmuş değil ...",tr,taste,positive,positive
+Tay usulü kızarmış levrek yedim... çok lezzetliydi.,tr,taste,positive,positive
+Manzara nefes kesici servis birinci sınıf ... ortam harika.,tr,service,positive,positive
+Manzara nefes kesici servis birinci sınıf ... ortam harika.,tr,atmosphere,positive,positive
+"ortam güzeldi, ama servis pek iyi değildi.",tr,atmosphere,positive,positive
+"ortam güzeldi, ama servis pek iyi değildi.",tr,service,negative,negative
+Bu yer fiyatlara değmez.,tr,value,negative,negative
+"arka verandada dışarıda yemek yedik, buna değerdi çünkü orası serindi ve müzik orada iyi duyuluyordu.",tr,atmosphere,positive,positive
+Havyarını denemedim ama somon ve yengeç salatasını denedim (hepsi güzel),tr,taste,positive,positive
+Dışarıda oturuyorduk ve garson bana ve randevuma kırmızı şarap ve sıcak çay döktü.,tr,service,negative,positive
+İçecek istedik ama gelmedi.,tr,service,negative,negative
+Harika Hint yemeği ve servis inanılmaz.,tr,taste,positive,positive
+Harika Hint yemeği ve servis inanılmaz.,tr,service,positive,positive
+"Tamam, yağlı kısmı umursamıyorum (çünkü çoğu bu şekilde pişiriliyor) ama çok tatsızdı.",tr,taste,negative,positive
+atmosfer gürültülü ve garsonlar olabildiğince hızlı bir şekilde işlerini yaparak etrafta dolaşıyorlar.,tr,atmosphere,negative,positive
+atmosfer gürültülü ve garsonlar olabildiğince hızlı bir şekilde işlerini yaparak etrafta dolaşıyorlar.,tr,service,positive,positive
+Hint yemeği harika bir yemek yemek için mükemmel bir yer.,tr,taste,positive,positive
+"En taze, en iyi çeşit ve en hızlı teslimat.",tr,taste,positive,positive
+"En taze, en iyi çeşit ve en hızlı teslimat.",tr,service,positive,positive
+"Oraya her gittiğimde yemek, servis ve değer öğelerini olağanüstü buldum.",tr,taste,positive,positive
+"Oraya her gittiğimde yemek, servis ve değer öğelerini olağanüstü buldum.",tr,service,positive,positive
+"Oraya her gittiğimde yemek, servis ve değer öğelerini olağanüstü buldum.",tr,value,positive,positive
+"Ne yazık ki düzgün yemeklerin eksik olduğu Tayland yemekleri bir bölgede, burası en iyi yerlerden biri.",tr,taste,positive,positive
+cheesecake harika bir parça aldım ve birkaç tane daha güzel pasta yedik.,tr,taste,positive,positive
+"İşte tam burada işler gerçekten kötüye gidiyor: yönetici dedi ki, yapabileceğimiz hiçbir şey yok, bu onun beğenmemesinin bir zevk meselesi olduğunu ve ben bunu telafi edemem.",tr,service,negative,negative
+"Servis fena değil ama kaba, pis banyo.",tr,service,negative,negative
+"Servis fena değil ama kaba, pis banyo.",tr,atmosphere,negative,positive
+"personel yardımseverdi, yemek kesinlikle lezzetliydi ve mekan harikaydı.",tr,service,positive,positive
+"personel yardımseverdi, yemek kesinlikle lezzetliydi ve mekan harikaydı.",tr,taste,positive,positive
+"personel yardımseverdi, yemek kesinlikle lezzetliydi ve mekan harikaydı.",tr,atmosphere,positive,positive
+"iyi müzik, harika yemek, hızlı servis uygun fiyatlar.",tr,atmosphere,positive,positive
+"iyi müzik, harika yemek, hızlı servis uygun fiyatlar.",tr,taste,positive,positive
+"iyi müzik, harika yemek, hızlı servis uygun fiyatlar.",tr,service,positive,positive
+"iyi müzik, harika yemek, hızlı servis uygun fiyatlar.",tr,value,positive,positive
+Tatlı almayı planlıyorduk ama garson sipariş vermemize fırsat vermeden hesabı önümüze fırlattı.,tr,service,negative,negative
+yemek otantik İtalyan - lezzetli!,tr,taste,positive,positive
+Özetlemek gerekirse: Hizmet hangi garsonla karşılaştığınıza bağlı olarak iyi ile vasat arasında değişir; genellikle ortalamadır.,tr,service,neutral,positive
+"yemek taze değildi, soslar tatsız ve çok yağlıydı.",tr,taste,negative,negative
+"Casa La Femme ziyaretimden yeni döndüm ve ziyaretimden o kadar rahatsız oldum ki, paralarına ve zamanlarına değer veren diğer müşterileri uyarmaya çalışmam gerektiğini düşündüm.",tr,value,negative,negative
+"Burayı seven her kimse yağlı, kuru ve tatsız her şeyin birbirini tamamladığı başka bir gezegenden olmalı.",tr,taste,negative,positive
+Rao's NYC'deki en iyi servis ve atmosfer mekanlara sahip.,tr,service,positive,positive
+Rao's NYC'deki en iyi servis ve atmosfer mekanlara sahip.,tr,atmosphere,positive,positive
+"Basitçe söylemek gerekirse, Manhattan'dan çıkıp bir huzur cennetine adım atmak gibi.",tr,atmosphere,positive,positive
+yer çok eğlenceli.,tr,atmosphere,positive,positive
+"ortam çok rahat ve konforluydu, servis harikaydı ve yemek mükemmeldi!",tr,atmosphere,positive,positive
+"ortam çok rahat ve konforluydu, servis harikaydı ve yemek mükemmeldi!",tr,service,positive,positive
+"ortam çok rahat ve konforluydu, servis harikaydı ve yemek mükemmeldi!",tr,taste,positive,positive
+Japonya'da 7 yıldır yaşıyorum ve restoranın tadı yemek ve hissi sanki Japonya'daymışım gibi.,tr,taste,positive,positive
+Japonya'da 7 yıldır yaşıyorum ve restoranın tadı yemek ve hissi sanki Japonya'daymışım gibi.,tr,atmosphere,positive,positive
+Eğer baharatlı yiyecekleri seviyorsanız tavuk vindaloo alın.,tr,taste,positive,positive
+Dekor güzel ama servis biraz sıkıntılı olabilir.,tr,atmosphere,positive,positive
+Dekor güzel ama servis biraz sıkıntılı olabilir.,tr,service,negative,positive
+"atmosfer harika değil, ama sanırım fiyatları düşük tutmanın yolu bu.",tr,atmosphere,negative,positive
+"atmosfer harika değil, ama sanırım fiyatları düşük tutmanın yolu bu.",tr,value,positive,negative
+New York'ta bu kadar iğrenç yemek bir şey yediğimi hatırlamıyorum.,tr,taste,negative,positive
+Yorumlara bakarak bu Tayland restoranında yemek yedik ama yemeklerden hiç memnun kalmadık.,tr,taste,negative,negative
+"pesto pizza mükemmeldi, ince hamurlu pizzada daha önce hiç duymadığım kadar bol miktarda baharatlı İtalyan peyniri vardı.",tr,taste,positive,positive
+"Yemek Hazırlanması biraz zaman aldı, beklemeye değdi.",tr,taste,positive,positive
+"Yemek Hazırlanması biraz zaman aldı, beklemeye değdi.",tr,service,neutral,negative
+"Leon East Village'ın gözdesi: rahat ama şık, iyi hazırlanmış temel Fransız bistro yemekleri, iyi spesiyaller, sıcak ve canlı atmosfer.",tr,atmosphere,positive,positive
+"Leon East Village'ın gözdesi: rahat ama şık, iyi hazırlanmış temel Fransız bistro yemekleri, iyi spesiyaller, sıcak ve canlı atmosfer.",tr,taste,positive,positive
+Uzun zamandır yediğim en iyi yemek!,tr,taste,positive,positive
+Beklerken her zamanki gibi harika bir kadeh şarap içtik.,tr,taste,positive,positive
+Hurley's Herkesin adınızı bildiği ve sizin gelmenize GERÇEKTEN sevindikleri Cheers gibidir.,tr,service,positive,negative
+pahalı japon yemeği ve vasat servis,tr,value,negative,positive
+pahalı japon yemeği ve vasat servis,tr,service,neutral,positive
+Pam'in özel kızarmış balığı yedik ve harikaydı.,tr,taste,positive,positive
+Menü sınırlı ama yemeklerin hemen hepsi mükemmel.,tr,taste,positive,positive
+Her bir yemek için 1/2 saat ile 45 dakika arasında bekledik ve bize hiçbir zaman içecek teklif edilmedi.,tr,service,negative,negative
+"Rezervasyon saatimize geç kaldık, bu yüzden masa için bekleme konusunda çok fazla şikayetim yok.",tr,service,neutral,negative
+kötü personel,tr,service,negative,negative
+bu küçük yer sevimli iç dekor ve şehir fiyatlarına uygun.,tr,atmosphere,positive,positive
+bu küçük yer sevimli iç dekor ve şehir fiyatlarına uygun.,tr,value,positive,positive
+Ama iki kişilik akşam yemeği için 500 dolar Şarap dahil değil?,tr,value,negative,negative
+Deneyin sebzeli yeşil köri.,tr,taste,positive,positive
+"Erkek arkadaşım New England Chowder içti, güzeldi ama ödülün Lobster Bisque'e gitmesi gerektiğini düşünüyorum.",tr,taste,positive,positive
+Zayıf hizmet ve yönetim,tr,service,negative,positive
+Ve Tom Kha çorbası acınasıydı.,tr,taste,negative,positive
+Uygun fiyatlar.,tr,value,neutral,neutral
+hostes ve garson inanılmaz derecede kaba davrandılar ve bizi dışarı atmak için ellerinden geleni yaptılar.,tr,service,negative,negative
+Onların atmosfer beni neredeyse her hafta geri gelmeye iten bir şey var.,tr,atmosphere,positive,positive
+Harika Hint yemeği,tr,taste,positive,positive
+"arka bahçe oturma alanı çok hoş, burada kendi bitki bahçelerini görebilirsiniz.",tr,atmosphere,positive,positive
+"servis berbattı, her şeyi beklemek zorunda kaldık ve servis almadan önce aynı şeyi birkaç farklı kişiden istemek zorunda kaldık.",tr,service,negative,positive
+Çok gösterişli bir yer değil mekan ama çok iyi Çin tarzı Hint yemekleri.,tr,atmosphere,neutral,positive
+Çok gösterişli bir yer değil mekan ama çok iyi Çin tarzı Hint yemekleri.,tr,taste,positive,positive
+Harika çilekli daiquiri de!,tr,taste,positive,positive
+yemek berbattı - çok tatlı veya çok tuzluydu ve porsiyonlar çok küçüktü.,tr,taste,negative,positive
+"lezzetli simit, özellikle fırından yeni çıkmışsa.",tr,taste,positive,positive
+Tipik olarak ne tür su istediğinize dair sorular sorsalar da servis iyiydi ve genel olarak yemek yemek için çok rahatlatıcıydı yer.,tr,service,positive,positive
+Tipik olarak ne tür su istediğinize dair sorular sorsalar da servis iyiydi ve genel olarak yemek yemek için çok rahatlatıcıydı yer.,tr,atmosphere,positive,positive
+Yorum yazmaktan neredeyse çekiniyordum çünkü atmosfer o kadar harikaydı ki ve çok kalabalık olmasını istemezdim.,tr,atmosphere,positive,positive
+Cafe St. Bart's'a ilk gidişimdi ve hem yemeklerin hem de servisin ne kadar lezzetli olduğunu söylemeliyim.,tr,taste,positive,positive
+servis mükemmeldi ve yemek lezzetliydi.,tr,service,positive,positive
+servis mükemmeldi ve yemek lezzetliydi.,tr,taste,positive,positive
+"bar içecekleri Eh, en azından fena değildi.",tr,taste,negative,negative
+Son müşteriler olmamıza ve kapanış saatinden sonra olmamıza rağmen garson bize hiç acele ettirmedi ve kendimizi rahat ve huzurlu hissetmemizi sağladı.,tr,service,positive,negative
+"Harika atmosfer, çok sayıda insan.",tr,atmosphere,positive,positive
+Şüphesiz ki bu benim en sevdiğim modern Japon brasserie'si (suşi servis etmeyen) ve bence şehrin en romantik restoranlarından biri!,tr,atmosphere,positive,positive
+Aldığımız ekmek korkunçtu - taş gibi sert ve soğuktu - ve ``ücretsiz`` zeytin mezesi hayal kırıklığıydı.,tr,taste,negative,negative
+Aldığımız ekmek korkunçtu - taş gibi sert ve soğuktu - ve ``ücretsiz`` zeytin mezesi hayal kırıklığıydı.,tr,value,neutral,negative
+Her mekanın farklı olması anlaşılabilir bir durum ancak müşterilere karşı nezaketsiz ve kaba olmaya gerek yoktu.,tr,service,negative,negative
+nakgi-bokum korkunçtu.,tr,taste,negative,positive
+Bir hafta önce burada yemek yedim ve çoğunun yemek en iyi ihtimalle ortalama ve çok pahalı olduğunu gördüm.,tr,taste,negative,positive
+Bir hafta önce burada yemek yedim ve çoğunun yemek en iyi ihtimalle ortalama ve çok pahalı olduğunu gördüm.,tr,value,negative,negative
+Pazar öğleden sonra rezervasyonumuzu çok güzel karşıladılar.,tr,service,positive,positive
+ev sahibi çok hoştu.,tr,service,positive,positive
+"Hizmet çok iyiydi - hızlı, dikkatli ve müdahaleci değildi.",tr,service,positive,positive
+La Rosa vals yapıyor ve bence bunu en iyi şekilde yapıyorlar.,tr,taste,positive,positive
+Toons yakın zamanda yenilenmiş olduğundan artık çok çekici bir mekan.,tr,atmosphere,positive,positive
+Suşi Nişanlımla yaşadığım deneyim inanılmazdı.,tr,taste,positive,positive
+"Genellikle aynı mekana birden fazla gitmem, iki kereden fazla ne olur ki, ama sakin, telaşsız ve unutulmaz bir akşam yemeği için Zenkichi'ye her zaman gelirim.",tr,atmosphere,positive,positive
+"Lezzetli, üst düzey havyar ve harika servis bir şey isteyen herkese Caviar Russe'u şiddetle tavsiye ediyorum.",tr,taste,positive,positive
+"Lezzetli, üst düzey havyar ve harika servis bir şey isteyen herkese Caviar Russe'u şiddetle tavsiye ediyorum.",tr,service,positive,positive
+Bunlar pahalıdır ve hemen köşede daha iyisini bulabilirsiniz:,tr,value,negative,negative
+Bunlar pahalıdır ve hemen köşede daha iyisini bulabilirsiniz:,tr,taste,negative,positive
+"insanlar'ı seviyorum, yanlış anlamayın, sadece orada çalışan insanlar kötü ve beceriksiz!!",tr,service,negative,negative
+Çok baharatlı ama rahatsız edici değil.,tr,taste,positive,negative
+Öncelikle Dal Buhara Kayalar.,tr,taste,positive,positive
+Ancak ödediğimiz 14$ içecek korkunçtu!,tr,taste,negative,positive
+Ancak ödediğimiz 14$ içecek korkunçtu!,tr,value,negative,negative
+"Tatlı menüsü yok, özür yok, hiçbir şey yok!!!",tr,service,negative,negative
+Bunlar gerçekten çok iyi ve ucuz suşi.,tr,taste,positive,positive
+Bunlar gerçekten çok iyi ve ucuz suşi.,tr,value,positive,positive
+Annemi Anneler Günü'ne götürdüm ve maitre d' oldukça kabaydı.,tr,service,negative,negative
+Ancak ambiyansa önem verin ve yemeği dünya turunda sadece bir arkadaş olarak düşünün!,tr,taste,neutral,positive
+bonfile yemeği harikaydı!,tr,taste,positive,positive
+"hizmet fena değil, bazı kişiler istediklerini alamadılar.",tr,service,neutral,negative
+Daha önce hiç 40 parça nispeten iyi nigiri yememiştim.,tr,taste,neutral,positive
+Pahalı ama parasına değer.,tr,value,negative,negative
+Mekanın dekoru ve gizli banyoları çok eğlenceliydi.,tr,atmosphere,positive,positive
+ıstakoz sandviçi 24 dolar ve her ne kadar iyi olsa da bu fiyatı hak edecek kadar değildi.,tr,taste,positive,positive
+ıstakoz sandviçi 24 dolar ve her ne kadar iyi olsa da bu fiyatı hak edecek kadar değildi.,tr,value,negative,negative
+"Yemek çok iyi, ama olağanüstü değil.",tr,taste,neutral,positive
+Alt kattaki salon her zaman iyi bir cazibe merkezidir,tr,atmosphere,positive,positive
+baharatlı ton balığı rulosu çok büyük ve muhtemelen bu fiyat aralığında yediğim en iyisi.,tr,taste,positive,positive
+baharatlı ton balığı rulosu çok büyük ve muhtemelen bu fiyat aralığında yediğim en iyisi.,tr,value,positive,positive
+Bunun hakkında tartışamam ama açıkça aşırı pahalılar.,tr,value,negative,negative
+"Bir özel rulo ve bir normal rulo sizi doyurmaya yeter, ancak tatlı için yer bırakın!",tr,taste,positive,negative
+Daha sonra bizi içeriye kovdular.,tr,service,negative,negative
+"Ucuz, gösterişsiz, harika vakit!",tr,value,positive,positive
+"Ucuz, gösterişsiz, harika vakit!",tr,atmosphere,positive,positive
+"askı bifteği lastik gibiydi ve ton balığı tatsızdı, ayrıca yeni çözülmüş gibi bir tadı vardı.",tr,taste,negative,negative
+"İlahi bir lezzetti, ağzınızda eriyor.",tr,taste,positive,positive
+Korkunç para israfı . . dolandırıcılar,tr,value,negative,negative
+Yemekler ortalamaydı... Fiyatları biraz daha düşürseler daha büyük ilgi görecekti.,tr,taste,neutral,positive
+"Son birkaç yılda eklenen yeni lezzetlere de hayran kaldım: Yeni Jazz Bar, en fantastik Dining Garden, en iyi İnce Kabuklu Pizzalar ve şimdi de ölmeye değer Lazanya Menüsü (bunlar sıradan lazanyalar değil)!",tr,atmosphere,positive,positive
+"Son birkaç yılda eklenen yeni lezzetlere de hayran kaldım: Yeni Jazz Bar, en fantastik Dining Garden, en iyi İnce Kabuklu Pizzalar ve şimdi de ölmeye değer Lazanya Menüsü (bunlar sıradan lazanyalar değil)!",tr,taste,positive,positive
+"Akşam yemeğinden sonra müdür erkek arkadaşımı yakaladı, ona sordu: Nerelisin... belki Amerika'da işlerin nasıl yürüdüğünü bilmiyorsun... ve sonunda neredeyse gözyaşları içinde bahşişlerle geçindiklerini bağırarak uzaklaştı.",tr,service,negative,negative
+restoran biraz gürültülü ama oturup harika bir yemeğin tadını çıkardığınızda bunu göz ardı edebilirsiniz.,tr,taste,positive,positive
+restoran biraz gürültülü ama oturup harika bir yemeğin tadını çıkardığınızda bunu göz ardı edebilirsiniz.,tr,atmosphere,negative,positive
+yemek güzeldi.,tr,taste,positive,positive
+"atmosfer övgüye değer, hizmet kusursuz ve yemek muhteşem.",tr,atmosphere,positive,positive
+"atmosfer övgüye değer, hizmet kusursuz ve yemek muhteşem.",tr,service,positive,positive
+"atmosfer övgüye değer, hizmet kusursuz ve yemek muhteşem.",tr,taste,positive,positive
+"6 dolar ve çok lezzetli yemek, hepsi taze ve sürekli olarak yenileniyor.",tr,taste,positive,positive
+"6 dolar ve çok lezzetli yemek, hepsi taze ve sürekli olarak yenileniyor.",tr,value,positive,positive
+egzotik yiyecekler güzelce sunuluyor ve lezzetli kombinasyonlarla bir zevk.,tr,taste,positive,positive
+"Bir beyefendi belki de müdürdü, masamıza geldi ve hiç gülümsemeden veya selam vermeden siparişimizi istedi.",tr,service,negative,negative
+"Yaptığımız şey, 3 saatimizi bir masada oturup yemek, içecek ve nargile gelmesini bekleyerek geçirmek oldu... Bunların bir kısmını asla alamadık!",tr,service,negative,positive
+Ama pizza çok pahalı.,tr,value,negative,negative
+"Sadece ucuz, iyi yemek.",tr,taste,positive,positive
+"Sadece ucuz, iyi yemek.",tr,value,positive,positive
+Bu yemek benim favorim ve oraya her gittiğimde alıyorum ve asla bıkmıyorum.,tr,taste,positive,positive
+20 dolara sınırsız suşi rakipsiz.,tr,value,positive,negative
+Hatta Müdür bile gelip eğlenip eğlenmediğimizden emin olmak istedi.,tr,service,positive,positive
+garson ``Yardımcı olabilir miyim `` ve ``Kaç kişisiniz `` dedikten sonra arkadaşlarımın kalmak istemesine şaşırdım.,tr,service,negative,negative
+paket servisi de harika çünkü kaliteli tupperware da veriyorlar.,tr,service,positive,positive
+yengeç etli lazanya'yı bu dünyadan olmayan bir lezzet olarak ve çikolatalı ekmek pudingini tatlı olarak mutlaka denemelisiniz.,tr,taste,positive,negative
+Personel çok yardımsever.,tr,service,positive,positive
+Bana daha önce hiç yemediğim bir Uni Hand roll servis etti ve size söyleyeyim... CENNETTİ!,tr,taste,positive,positive
+yiyecek ise beklenebilecek bir şeydir.,tr,taste,negative,negative
+Harika sushi deneyimi.,tr,taste,positive,positive
+Harika pizza ve fantastik servis.,tr,taste,positive,positive
+Harika pizza ve fantastik servis.,tr,service,positive,positive
+"Son ziyaretimizde, adımızı listede atladılar ve bu da bizi bir masa için bir saat daha bekletti.",tr,service,negative,negative
+Kesinlikle şimdiye kadar yediğim en kötü sotelenmiş kalamar yemek.,tr,taste,negative,positive
+Tiyatro 2 blok ötede olduğundan güzel bir odada odada lezzetli bir yemek yedik.,tr,taste,positive,positive
+Tiyatro 2 blok ötede olduğundan güzel bir odada odada lezzetli bir yemek yedik.,tr,atmosphere,positive,positive
+"Ama yine de -- harika mekan, harika yemek.",tr,taste,positive,positive
+Oraya yaptığımız ziyaret en hafif tabirle tatsız ve masraflı bir deneyimdi!,tr,value,negative,negative
+Sürekli olarak iyi Japon Tapas'ı.,tr,taste,positive,positive
+Yemekler hızlı ve etkili bir şekilde hazırlanıyor.,tr,service,positive,positive
+Gerçekten inanılmaz.,tr,taste,positive,positive
+"Eğer giderseniz marinara/arrabiatta sosunu deneyin, Carozza'da mozzarella mmmmmmmm ... .. her şey çok lezzetli.",tr,taste,positive,positive
+pizza oldukça iyiydi ve çok büyüktü.,tr,taste,positive,positive
+I asked for a menu and the same waitress looked at my like I was insane .,en,service,negative,negative
+The owner truly caters to all your needs .,en,service,positive,positive
+"I 'm a friendly person , so I wouldn 't mind had she not been so nasty and gotten so personal .",en,service,negative,negative
+The owner and staff are all Japanese as well and that adds to the entire ambiance .,en,atmosphere,positive,positive
+"The side dishes were passable , and I did get a refill upon request .",en,taste,neutral,positive
+"Great friendly service , Fast seating , Fast Delivery , Excellent sushi .",en,service,positive,positive
+"Great friendly service , Fast seating , Fast Delivery , Excellent sushi .",en,taste,positive,positive
+I went there for lunch and it was not as good as I expected from the reviews I read .,en,taste,negative,positive
+The stuff tilapia was horrid ... tasted like cardboard .,en,taste,negative,negative
+Subtle food and service,en,taste,positive,positive
+Subtle food and service,en,service,positive,positive
+Service was wonderful ;,en,service,positive,positive
+The food here does a great service to the name ( Cantonese that is ... ) .,en,taste,positive,positive
+None was made so i hung up .,en,service,negative,negative
+This place is a great bargain .,en,value,positive,positive
+great hot dogs .,en,taste,positive,positive
+The food was good too .,en,taste,positive,positive
+Winnie and her staff are the best crew you can find serving you .,en,service,positive,positive
+"Service was prompt , friendly and great .",en,service,positive,positive
+"The ambience was so fun , and the prices were great , on top of the fact that the food was really tasty .",en,atmosphere,positive,positive
+"The ambience was so fun , and the prices were great , on top of the fact that the food was really tasty .",en,value,positive,positive
+"The ambience was so fun , and the prices were great , on top of the fact that the food was really tasty .",en,taste,positive,positive
+the food is always fresh ...,en,taste,positive,positive
+"Excellent sashimi , and the millennium roll is beyond delicious .",en,taste,positive,positive
+"The bagels always warm , soft on the inside , crispy on the outside and enormous in size .",en,taste,positive,positive
+So rude ! ! !,en,service,negative,negative
+This is a nice pizza place with good selection of thin crust pizza including the Basil slice .,en,taste,positive,positive
+"The food is very average ... the Thai fusion stuff is a bit too sweet , every thing they serve is too sweet here .",en,taste,negative,positive
+"Our waitress was n't mean , but not especially warm or attentive either .",en,service,neutral,negative
+The sauce tasted more like Chinese fast food than decent Korean .,en,taste,negative,positive
+Mussles and calamari were superb Saturday evening .,en,taste,positive,positive
+"The food is wonderful , tasty and filling , and the service is professional and friendly .",en,taste,positive,positive
+"The food is wonderful , tasty and filling , and the service is professional and friendly .",en,service,positive,positive
+The service is awful .,en,service,negative,positive
+"Bagels are ok , but be sure not to make any special requests !",en,taste,neutral,negative
+"Bagels are ok , but be sure not to make any special requests !",en,service,negative,negative
+Good Food,en,taste,positive,positive
+"The food was amazing , and the service was prompt and helpful , but not over-bearing or rushed .",en,taste,positive,positive
+"The food was amazing , and the service was prompt and helpful , but not over-bearing or rushed .",en,service,positive,positive
+Sauce was watery and the food did n't have much flavor .,en,taste,negative,positive
+I was n't here for the pizza so I can 't comment on that yet but what I had was very good .,en,taste,positive,positive
+The have a great cocktail with Citrus Vodka and lemon and lime juice and mint leaves that is to die for !,en,taste,positive,positive
+The food was average or above including some surprising tasty dishes .,en,taste,positive,positive
+"sometimes i get bad food and bad service , sometimes i get good good and bad service .",en,service,negative,positive
+Best drumsticks over rice and sour spicy soup in town !,en,taste,positive,positive
+"A few tips : skip the turnip cake , roast pork buns and egg custards .",en,taste,negative,positive
+Not worth it .,en,value,negative,negative
+Vanison was good but not amazing .,en,taste,neutral,positive
+"At first we were a little taken aback , as this seemed to present a problem , although the restaurant looked fairly empty , but they hastily put the table together for us .",en,service,positive,negative
+"But for the Shabu Shabu , you won 't find much better in NY .",en,taste,positive,positive
+"I have worked in restaurants and cook a lot , and there is no way a maggot should be able to get into well prepared food .",en,taste,negative,positive
+"There 's nice and quiet , small but enough for 6 ( or more ) .",en,atmosphere,positive,positive
+"The food is good , I ca n't lie .",en,taste,positive,positive
+"Service , however , was excellent ... and I liked the setting/atmosphere a lot .",en,service,positive,positive
+"Service , however , was excellent ... and I liked the setting/atmosphere a lot .",en,atmosphere,positive,positive
+"My party had the BBE $ 29 fixe prix menu , which was such a wonderful deal since it also came with a flight of sake !",en,value,positive,positive
+The food is reliable and the price is moderate .,en,taste,positive,positive
+The food is reliable and the price is moderate .,en,value,neutral,positive
+If you like your music blasted and the system isnt that great and if you want to pay at least 100 dollar bottle minimun then you 'll love it here .,en,value,negative,positive
+If you like your music blasted and the system isnt that great and if you want to pay at least 100 dollar bottle minimun then you 'll love it here .,en,atmosphere,negative,positive
+The best pad thai i 've ever had .,en,taste,positive,positive
+Although we were told 10-15 minutes and it was more like 45 minutes .,en,service,negative,negative
+"Each time we 've been , the front of house staff ( not the waiters - they 're fantastic - but the people who greet and seat you ) has been so hideous to us that were it not for the exceptional fish dishes I would never return .",en,taste,positive,negative
+Possibly the Most Romantic Restaurant in the City,en,atmosphere,positive,positive
+Although we were looking for regular lettuce and some walnuts the salads we got were great .,en,taste,positive,positive
+"Service is not exactly five star , but thats not really a big deal .",en,service,neutral,negative
+The food is great and the environment is even better .,en,taste,positive,positive
+The food is great and the environment is even better .,en,atmosphere,positive,positive
+"Everything I had was good , and I 'm a eater .",en,taste,positive,positive
+Delivery is fast too .,en,service,positive,positive
+Best . Sushi . Ever .,en,taste,positive,positive
+"Good spreads , great beverage selections and bagels really tasty .",en,taste,positive,positive
+Everyone was more then happy with his choices .,en,service,positive,positive
+I highly recommend the Sophia pizza .,en,taste,positive,positive
+"The service is excellent , the decor is great , and the food is delicious and comes in large portions .",en,service,positive,positive
+"The service is excellent , the decor is great , and the food is delicious and comes in large portions .",en,atmosphere,positive,positive
+"The service is excellent , the decor is great , and the food is delicious and comes in large portions .",en,taste,positive,positive
+"also it 's great to have dinner in a very romantic and comfortable place , the service it 's just perfect ... they 're so frendly that we never want to live the place !",en,atmosphere,positive,positive
+"also it 's great to have dinner in a very romantic and comfortable place , the service it 's just perfect ... they 're so frendly that we never want to live the place !",en,service,positive,negative
+And $ 11 for a plate of bland guacamole ?,en,taste,negative,positive
+And $ 11 for a plate of bland guacamole ?,en,value,negative,negative
+Ingredients are organic which is a real plus for me .,en,taste,positive,positive
+"The food is yummy , especially their cooked-to-perfection mussels in spicy tomato sauce and their shoestring crispy fries .",en,taste,positive,positive
+Maitre-D- `` Eat and get out ``,en,service,negative,positive
+Lexicographers take note : a new and fascinating definition of rudeness is alive and flourishing right here in Brooklyn .,en,service,negative,positive
+fresh restaurant was amazing ... ... .. food was delicious and of course fresh .,en,taste,positive,positive
+"Delicious , creative and fun .",en,taste,positive,positive
+It 's cuz it 's so good you need to taste it ! ! !,en,taste,positive,positive
+I was speechless by the horrible food .,en,taste,negative,negative
+It was wonderful .,en,taste,positive,positive
+"However , I think this place is a good hang out spot .",en,atmosphere,positive,positive
+"The decor in this place is very diner-ish and the kind of place you expect in the East Village - not romantic , just simple , small and sparse .",en,atmosphere,neutral,positive
+"Try the Pad Thai , or sample anything on the appetizer menu ... they 're all delicious .",en,taste,positive,positive
+Ess-A-Bagel ( either by Sty-town or midtown ) is by far the best bagel in NY .,en,taste,positive,positive
+And even with it 's Pub atmosphere they were great to my kids too !,en,service,positive,positive
+JUST AWSOME .,en,taste,positive,positive
+"Red Dragon Roll - my favorite thing to eat , of any food group - hands down",en,taste,positive,positive
+They have authentic Indian at amazin prices .,en,taste,positive,positive
+They have authentic Indian at amazin prices .,en,value,positive,positive
+"My father had the flank steak which was very good , and my mother had the swordfish .",en,taste,positive,positive
+Fabulous food - if the front of house staff do n't put you off –,en,taste,positive,positive
+Fabulous food - if the front of house staff do n't put you off –,en,service,negative,negative
+"By far , the best pizza in Manhattan .",en,taste,positive,positive
+Overpriced and not tasty,en,value,negative,negative
+Overpriced and not tasty,en,taste,negative,negative
+"Pizza is terrific , as is homemade pasta .",en,taste,positive,positive
+"Raga 's is a romantic , cozy restaurant .",en,atmosphere,positive,positive
+Expensive,en,value,negative,negative
+"The tables are crammed way too close , the menu is typical of any Italian restaurant , and the wine list is simply overpriced .",en,atmosphere,negative,positive
+"The tables are crammed way too close , the menu is typical of any Italian restaurant , and the wine list is simply overpriced .",en,value,negative,positive
+The food was pretty tradional but it was hot and good with large portions .,en,taste,positive,positive
+"I have reservations about the all you can eat deal , however -- the choices are fairly limited and you can probably order more food than you can eat for less than $ 18 by just going off the menu .",en,value,negative,positive
+I have to say I have never had a disapointing meal here .,en,taste,positive,positive
+Be sure not to get anything other than bagels ! . .,en,taste,negative,negative
+"the spinach is fresh , definately not frozen ...",en,taste,positive,positive
+I had the Thai style Fried Sea Bass ... which was very good .,en,taste,positive,positive
+The view is breathtaking the service is top notch ... the ambiance is wonderful .,en,service,positive,positive
+The view is breathtaking the service is top notch ... the ambiance is wonderful .,en,atmosphere,positive,positive
+"The ambience was nice , but service was n't so great .",en,atmosphere,positive,positive
+"The ambience was nice , but service was n't so great .",en,service,negative,positive
+This place is not worth the prices .,en,value,negative,negative
+"We ate out in the back patio , which is worth it as it 's cool and the music is hear well there .",en,atmosphere,positive,positive
+I did not try the caviar but I tried their salmon and crab salad ( they are all good ),en,taste,positive,positive
+We were seated outside and the waiter spilled red wine and hot tea on myself and my date .,en,service,negative,positive
+We asked for beverages and never received them .,en,service,negative,negative
+Great Indian food and the service is incredible .,en,taste,positive,positive
+Great Indian food and the service is incredible .,en,service,positive,positive
+Okay-i do n't mind the oily part ( cause most are cooked that way ) but it was way too bland .,en,taste,negative,negative
+The atmosphere is noisy and the waiters are literally walking around doing things as fast as they can .,en,atmosphere,negative,positive
+The atmosphere is noisy and the waiters are literally walking around doing things as fast as they can .,en,service,positive,positive
+it 's a perfect place to have a amazing indian food .,en,taste,positive,positive
+"The freshest , best variety , and the fastest delivery .",en,taste,positive,positive
+"The freshest , best variety , and the fastest delivery .",en,service,positive,positive
+"I found the food , service and value exceptional everytime I have been there .",en,taste,positive,positive
+"I found the food , service and value exceptional everytime I have been there .",en,service,positive,negative
+"I found the food , service and value exceptional everytime I have been there .",en,value,positive,positive
+"In an area sadly lacking in decent Thai food , this is one of the best spots .",en,taste,positive,positive
+I got an excellent piece of cheesecake and we had several other nice pastries .,en,taste,positive,positive
+"This is where it really really gets bad : the manager said , there is absolutely nothing we can do , it 's a matter of taste that she did n't like it , and I can not comp it .",en,service,negative,negative
+"Service ok but unfriendly , filthy bathroom .",en,service,negative,negative
+"Service ok but unfriendly , filthy bathroom .",en,atmosphere,negative,positive
+"The staff was accomodating , the food was absolutely delicious and the place is lovely .",en,service,positive,positive
+"The staff was accomodating , the food was absolutely delicious and the place is lovely .",en,taste,positive,positive
+"The staff was accomodating , the food was absolutely delicious and the place is lovely .",en,atmosphere,positive,positive
+"good music , great food , speedy service affordable prices .",en,atmosphere,positive,positive
+"good music , great food , speedy service affordable prices .",en,taste,positive,positive
+"good music , great food , speedy service affordable prices .",en,service,positive,positive
+"good music , great food , speedy service affordable prices .",en,value,positive,positive
+We were planning to get dessert but the waitress basically through the bill at us before we had a chance to order .,en,service,negative,negative
+The food is authentic Italian - delicious !,en,taste,positive,positive
+"To sum it up : Service varies from good to mediorce , depending on which waiter you get ; generally it is just average Ok .",en,service,neutral,negative
+"The food was not fresh , the sauces were bland and very oily .",en,taste,negative,negative
+I literally just got back home after visiting Casa La Femme and was so offended by my visit felt it necessary to try and warn other diners who value their money and time .,en,value,negative,negative
+"Anybody who likes this place must be from a different planet , where greasy , dry and tasteless are complimentary .",en,taste,negative,positive
+Rao 's has the best service and atmosphere in NYC .,en,service,positive,positive
+Rao 's has the best service and atmosphere in NYC .,en,atmosphere,positive,positive
+Quite simply it 's like stepping out of Manhattan and into a haven of tranquility .,en,atmosphere,positive,positive
+The place is a lot of fun .,en,atmosphere,positive,positive
+"The vibe is very relaxed and cozy , service was great and the food was excellent !",en,atmosphere,positive,positive
+"The vibe is very relaxed and cozy , service was great and the food was excellent !",en,service,positive,positive
+"The vibe is very relaxed and cozy , service was great and the food was excellent !",en,taste,positive,positive
+I have lived in Japan for 7 years and the taste of the food and the feel of the restaurant is like being back in Japan .,en,taste,positive,positive
+I have lived in Japan for 7 years and the taste of the food and the feel of the restaurant is like being back in Japan .,en,atmosphere,positive,positive
+If you like spicy food get the chicken vindaloo .,en,taste,positive,positive
+Decor is nice though service can be spotty .,en,atmosphere,positive,positive
+Decor is nice though service can be spotty .,en,service,negative,positive
+"The atmosphere is n't the greatest , but I suppose that 's how they keep the prices down .",en,atmosphere,negative,positive
+"The atmosphere is n't the greatest , but I suppose that 's how they keep the prices down .",en,value,positive,positive
+I can 't remember the last time I had such gross food in New York .,en,taste,negative,positive
+We ate at this Thai place following the reviews but very unhappy with the foods .,en,taste,negative,positive
+"The pesto pizza was excellent , thin-crust pizza with a nice amount of spicy Italian cheese that I 'd never heard of before .",en,taste,positive,positive
+"Food took some time to prepare , all worth waiting for .",en,taste,positive,positive
+"Food took some time to prepare , all worth waiting for .",en,service,neutral,negative
+"Leon is an East Village gem : casual but hip , with well prepared basic French bistro fare , good specials , a warm and lively atmosphere .",en,atmosphere,positive,positive
+"Leon is an East Village gem : casual but hip , with well prepared basic French bistro fare , good specials , a warm and lively atmosphere .",en,taste,positive,positive
+Best meal in a long time !,en,taste,positive,positive
+As always we had a great glass of wine while we waited .,en,taste,positive,positive
+Hurley 's is like Cheers where everyone knows your name and they are ACTUALLY glad you came .,en,service,positive,positive
+overpriced japanese food with mediocre service,en,value,negative,negative
+overpriced japanese food with mediocre service,en,service,neutral,negative
+We had Pam 's special fried fish and it was amazing .,en,taste,positive,positive
+The menu is limited but almost all of the dishes are excellent .,en,taste,positive,positive
+For each course we waited over 1 /2 hour to 45 minutes and were never offered a drink .,en,service,negative,negative
+We did arrive late for our reservation so I can not complain too much about the wait for a table .,en,service,neutral,negative
+bad staff,en,service,negative,negative
+this little place has a cute interior decor and affordable city prices .,en,atmosphere,positive,positive
+this little place has a cute interior decor and affordable city prices .,en,value,positive,positive
+But $ 500 for a dinner for two that didn 't include Wine ?,en,value,negative,negative
+Try green curry with vegetables .,en,taste,positive,positive
+My boyfriend had the New England Chowder it was good but I think the award should go to the Lobster Bisque .,en,taste,positive,positive
+Poor service and management,en,service,negative,negative
+And the Tom Kha soup was pathetic .,en,taste,negative,positive
+Moderate prices .,en,value,neutral,negative
+The hostess and the waitress were incredibly rude and did everything they could to rush us out .,en,service,negative,negative
+There is something about their atmosphere that makes me come back nearly every week .,en,atmosphere,positive,positive
+Great Indian food,en,taste,positive,positive
+"THe back garden sitting area is very pleasant , where you can see their personal herb garden .",en,atmosphere,positive,positive
+"The service was terrible , we had to wait for everything and ask several of different people for the same thing before we were allowed to be served .",en,service,negative,negative
+Not a very fancy place but very good Chinese style Indian food .,en,atmosphere,neutral,positive
+Not a very fancy place but very good Chinese style Indian food .,en,taste,positive,positive
+Wonderful strawberry daiquiries as well !,en,taste,positive,positive
+The food was lousy - too sweet or too salty and the portions tiny .,en,taste,negative,positive
+"delicious bagels , especially when right out of the oven .",en,taste,positive,positive
+Although they do the typical what kind of water would you like questions the service was good and overall very relaxing to place to eat .,en,service,positive,positive
+Although they do the typical what kind of water would you like questions the service was good and overall very relaxing to place to eat .,en,atmosphere,positive,positive
+I almost hesititate to write a review because the atmosphere was so great and I would hate for it too become to crowded .,en,atmosphere,positive,positive
+This was my frist time at Cafe St. Bart 's and I must say how delicious the food and the service was .,en,taste,positive,positive
+The service was excellent and the food was delicious .,en,service,positive,positive
+The service was excellent and the food was delicious .,en,taste,positive,positive
+"The bar drinks were Eh , ok to say the least .",en,taste,negative,positive
+"Considering we were the last patrons there and it was after the closing time , the waitstaff did not rush us at all and made us feel comfortable and relaxed .",en,service,positive,negative
+The food is great .,en,taste,positive,positive
+"Great vibe , lots of people .",en,atmosphere,positive,positive
+"This is undoubtedly my favorite modern Japanese brasserie ( that don ’ t serve sushi ) , and in my opinion , one of the most romantic restaurants in the city !",en,atmosphere,positive,positive
+The bread we received was horrible - rock hard and cold - and the `` free `` appetizer of olives was disappointing .,en,taste,negative,negative
+The bread we received was horrible - rock hard and cold - and the `` free `` appetizer of olives was disappointing .,en,value,neutral,negative
+"While it is understandable that every place is indeed different , there was not a need to be uncourteous to customers and downright rude .",en,service,negative,negative
+The nakgi-bokum was horrible .,en,taste,negative,negative
+I ate here a week ago and found most dishes average at best and too expensive .,en,taste,negative,positive
+I ate here a week ago and found most dishes average at best and too expensive .,en,value,negative,positive
+They honored reservation on Sunday afternoon very well .,en,service,positive,negative
+The hostess was very pleasant .,en,service,positive,positive
+"Service was very good - prompt , attentive and non-intrusive .",en,service,positive,positive
+"La Rosa waltzes in , and I think they are doing it the best .",en,taste,positive,positive
+"Toons has recently been redone , so it 's now a very attractive space .",en,atmosphere,positive,positive
+Sushi experience was unbelievable with my fiance .,en,taste,positive,positive
+"I don ’ t usually visit the same establishment more than once , what more twice , but I ’ ll come to Zenkichi anytime for a quiet , unhurried and memorable dinner .",en,atmosphere,positive,positive
+I highly recommend Caviar Russe to anyone who wants delicious top grade caviar and fantastic service .,en,taste,positive,positive
+I highly recommend Caviar Russe to anyone who wants delicious top grade caviar and fantastic service .,en,service,positive,positive
+These are overpriced and you can get better just around the corner :,en,value,negative,negative
+These are overpriced and you can get better just around the corner :,en,taste,negative,positive
+"I like Cafe Noir dont get me wrong , it is jsut that the people who work there are evil and incompetent ! !",en,service,negative,negative
+It 's very spicy but not offensive .,en,taste,positive,negative
+First of all Dal Bukhara Rocks .,en,taste,positive,positive
+"However , our $ 14 drinks were were horrible !",en,taste,negative,negative
+"However , our $ 14 drinks were were horrible !",en,value,negative,negative
+"No desert menu , no apology , nothing ! ! ! ! ! !",en,service,negative,negative
+"This is some really good , inexpensive sushi .",en,taste,positive,positive
+"This is some really good , inexpensive sushi .",en,value,positive,positive
+"Took my mom for Mother 's Day , and the maitre d ' was pretty rude .",en,service,negative,negative
+"However , go for the ambience , and consider the food just a companion for a trip across the world !",en,taste,neutral,positive
+The filet mignon dish was superb !,en,taste,positive,positive
+"The service is ok , some of the people did n't get what they asked for .",en,service,neutral,negative
+I have never before eaten 40 pieces of relatively good nigiri .,en,taste,neutral,positive
+It is expensive but well worth the money .,en,value,negative,negative
+The place 's decor and hidden bathrooms made for a good laugh .,en,atmosphere,positive,positive
+The lobster sandwich is $ 24 and although it was good it was not nearly enough to warrant that price .,en,taste,positive,positive
+The lobster sandwich is $ 24 and although it was good it was not nearly enough to warrant that price .,en,value,negative,negative
+"The food is very good , but not outstanding .",en,taste,neutral,positive
+Downstairs lounge is always a good attraction,en,atmosphere,positive,positive
+The spicy Tuna roll is huge and probably the best that I 've had at this price range .,en,taste,positive,positive
+The spicy Tuna roll is huge and probably the best that I 've had at this price range .,en,value,positive,positive
+"Can 't argue about that , but they are clearly over priced .",en,value,negative,negative
+"One special roll and one regular roll is enough to fill you up , but save room for dessert !",en,taste,positive,positive
+We were then shooed inside .,en,service,negative,negative
+"Inexpensive , unassuming , great time !",en,value,positive,positive
+"Inexpensive , unassuming , great time !",en,atmosphere,positive,positive
+The hanger steak was like rubber and the tuna was flavorless not to mention it tasted like it had just been thawed .,en,taste,negative,negative
+It was divine melts in your mouth .,en,taste,positive,positive
+Terrible Waste of money . . scammers,en,value,negative,negative
+"Food was just average ... if they lowered the prices just a bit , it would be a bigger draw .",en,taste,neutral,negative
+"I 've also been amazed at all the new additions in the past few years : A new Jazz Bar , the most fantastic Dining Garden , the Best Thin Crust Pizzas , and now a Lasagna Menu which is to die for ( these are not your average lasagnas ) !",en,atmosphere,positive,positive
+"I 've also been amazed at all the new additions in the past few years : A new Jazz Bar , the most fantastic Dining Garden , the Best Thin Crust Pizzas , and now a Lasagna Menu which is to die for ( these are not your average lasagnas ) !",en,taste,positive,positive
+"After dinner the manager grabbed my boyfriend , asked him : Where are you from ... maybe you dont know how things work in America ... and in the end stormed away almost teareyed yelling that tips are the only thing they survive on .",en,service,negative,negative
+The restaurant is a bit noisy but that is something that can be overlooked once you sit down and enjoy a great meal,en,taste,positive,positive
+The restaurant is a bit noisy but that is something that can be overlooked once you sit down and enjoy a great meal,en,atmosphere,negative,positive
+The food was good .,en,taste,positive,positive
+"The atmosphere is unheralded , the service impecible , and the food magnificant .",en,atmosphere,positive,positive
+"The atmosphere is unheralded , the service impecible , and the food magnificant .",en,service,positive,positive
+"The atmosphere is unheralded , the service impecible , and the food magnificant .",en,taste,positive,positive
+"$ 6 and there is much tasty food , all of it fresh and continually refilled .",en,taste,positive,positive
+"$ 6 and there is much tasty food , all of it fresh and continually refilled .",en,value,positive,positive
+The exotic food is beautifully presented and is a delight in delicious combinations .,en,taste,positive,positive
+"A gentleman , maybe the manager , came to our table , and without so much as a smile or greeting asked for our order .",en,service,negative,negative
+What we did do was waste 3 hours being trapped in a table waiting and waiting for food and drinks and hooka . . some of which we never received !,en,service,negative,negative
+But the pizza is way to expensive .,en,value,negative,negative
+"Just straight up cheap , good food .",en,taste,positive,positive
+"Just straight up cheap , good food .",en,value,positive,positive
+This dish is my favorite and I always get it when I go there and never get tired of it .,en,taste,positive,positive
+$ 20 for all you can eat sushi can not be beaten .,en,value,positive,negative
+We even had a visit from the Manager who wanted to make sure we were enjoying ourselves .,en,service,positive,negative
+"I was shocked that my friends wanted to stay after the waitress said , `` can I help you `` and `` how many are in your party . ``",en,service,negative,negative
+The takeout is great too since they give high quality tupperware as well .,en,service,positive,positive
+You must have the crabmeat lasagna which is out of this world and the chocolate bread pudding for dessert .,en,taste,positive,positive
+Staff is very accomodating .,en,service,positive,positive
+"He served me an Uni Hand roll , which I never had before , and let me tell you ... IT WAS HEAVEN !",en,taste,positive,positive
+"The food however , is what one might expect .",en,taste,negative,positive
+Great sushi experience .,en,taste,positive,positive
+Great pizza and fantastic service .,en,taste,positive,positive
+Great pizza and fantastic service .,en,service,positive,positive
+"On our last visit , they skipped over our name on the list , leaving us waiting an extra hour for a table .",en,service,negative,negative
+Easily the worst stir-fried squid I 've ever tasted .,en,taste,negative,positive
+With the theater 2 blocks away we had a delicious meal in a beautiful room .,en,taste,positive,positive
+With the theater 2 blocks away we had a delicious meal in a beautiful room .,en,atmosphere,positive,positive
+"But nonetheless -- great spot , great food .",en,taste,positive,positive
+"Our visit their to say the least , was an unpleasant and costly experience !",en,value,negative,negative
+Consistently good Japanese Tapas .,en,taste,positive,positive
+The food is prepared quickly and efficiently .,en,service,positive,positive
+It is simply amazing .,en,taste,positive,positive
+"If you go , try the marinara/arrabiatta sauce , the mozzarella en Carozza is mmmmmmmm ... .. everything is just delicious .",en,taste,positive,positive
+The pizza was pretty good and huge .,en,taste,positive,positive
+Pedí un menú y la misma camarera me miró como si estuviera loca.,es,service,negative,negative
+El propietario realmente atiende todas sus necesidades.,es,service,positive,positive
+"Soy una persona amigable, así que no me importaría si ella no hubiera sido tan desagradable y se hubiera vuelto tan personal.",es,service,negative,negative
+Tanto el propietario como el personal son japoneses y eso le suma valor al ambiente general.,es,atmosphere,positive,positive
+"Los (2 platos de acompañamiento) eran pasables, y me dieron una recarga cuando lo pedí.",es,taste,neutral,positive
+"Muy amable servicio, rápido asientos, rápido Entrega, excelente sushi.",es,service,positive,positive
+"Muy amable servicio, rápido asientos, rápido Entrega, excelente sushi.",es,taste,positive,positive
+Fui allí para almuerzo y no fue tan bueno como esperaba según las críticas que leí.,es,taste,negative,negative
+La tilapia rellena era horrible... sabía a cartón.,es,taste,negative,negative
+Sutil comida y servicio,es,taste,positive,positive
+Sutil comida y servicio,es,service,positive,positive
+El servicio fue maravilloso;,es,service,positive,positive
+"La comida aquí hace un gran servicio al nombre (cantonés, claro está...).",es,taste,positive,positive
+No se hizo ninguno así que colgué.,es,service,negative,negative
+Este lugar es una gran ganga.,es,value,positive,positive
+buenísimo perritos calientes.,es,taste,positive,positive
+La comida también estaba buena.,es,taste,positive,positive
+Winnie y su personal son el mejor equipo que puedes encontrar a tu servicio.,es,service,positive,positive
+"El servicio fue rápido, amable y excelente.",es,service,positive,positive
+"El ambiente era muy divertido, y los precios eran geniales, además de que la comida era realmente sabrosa.",es,atmosphere,positive,positive
+"El ambiente era muy divertido, y los precios eran geniales, además de que la comida era realmente sabrosa.",es,value,positive,positive
+"El ambiente era muy divertido, y los precios eran geniales, además de que la comida era realmente sabrosa.",es,taste,positive,positive
+La comida siempre está fresca...,es,taste,positive,positive
+"Excelente sashimi, y el millennium roll es más que delicioso.",es,taste,positive,positive
+"Los bagels siempre calentitos, suaves por dentro, crujientes por fuera y enormes en tamaño.",es,taste,positive,positive
+¡¡¡Qué grosero!!!,es,service,negative,negative
+Esta es una linda pizzería con buena selección de pizzas de masa fina incluida la porción de albahaca.,es,taste,positive,positive
+"La comida es muy normal... la comida fusión tailandesa es un poco demasiado dulce, todo lo que sirven aquí es demasiado dulce.",es,taste,negative,positive
+"Nuestra camarera no era mala, pero tampoco especialmente cálida o atenta.",es,service,neutral,negative
+La salsa sabía más a comida rápida china que a comida coreana decente.,es,taste,negative,positive
+mejillones y calamares estaban estupendos el sábado por la noche.,es,taste,positive,positive
+"La comida es maravillosa, sabrosa y abundante, y el servicio es profesional y amable.",es,taste,positive,positive
+"La comida es maravillosa, sabrosa y abundante, y el servicio es profesional y amable.",es,service,positive,positive
+El servicio es pésimo.,es,service,negative,positive
+"Los bagels están bien, ¡pero asegúrate de no hacer ningún pedido especial!",es,taste,neutral,positive
+"Los bagels están bien, ¡pero asegúrate de no hacer ningún pedido especial!",es,service,negative,negative
+Bueno Comida,es,taste,positive,positive
+"La comida fue increíble, y el servicio fue rápido y servicial, pero no agobiante ni apresurado.",es,taste,positive,positive
+"La comida fue increíble, y el servicio fue rápido y servicial, pero no agobiante ni apresurado.",es,service,positive,positive
+La salsa estaba aguada y la comida no tenía mucho sabor.,es,taste,negative,negative
+"No estuve aquí por la pizza así que no puedo comentar sobre eso todavía, pero lo que comí estaba muy bueno.",es,taste,positive,negative
+"¡Tienen un excelente cóctel con vodka cítrico, jugo de limón y lima y hojas de menta que es para morirse!",es,taste,positive,positive
+"La comida era normal o superior, incluidos algunos platos sorprendentemente sabrosos.",es,taste,positive,positive
+"A veces me va mal comida y mal servicio, a veces me va mal bien bien y mal servicio.",es,service,negative,positive
+¡Los mejores muslos de pollo con arroz y sopa agridulce picante de la ciudad!,es,taste,positive,positive
+"Algunos consejos: omite pastel de nabo, bollos de cerdo asado y natillas de huevo.",es,taste,negative,positive
+No vale la pena .,es,value,negative,negative
+Vanison fue bueno pero no increíble.,es,taste,neutral,positive
+"Al principio nos quedamos un poco desconcertados, ya que esto parecía presentar un problema, aunque el restaurante parecía bastante vacío, pero rápidamente prepararon la mesa para nosotros.",es,service,positive,negative
+"Pero en cuanto al Shabu Shabu, no encontrarás nada mejor en Nueva York.",es,taste,positive,positive
+"He trabajado en restaurantes y he cocinado mucho, y no hay manera de que un gusano pueda entrar en una comida bien preparada .",es,taste,negative,positive
+"Es un lugar agradable y tranquilo, pequeño pero con capacidad para 6 (o más).",es,atmosphere,positive,positive
+"La comida es buena, no puedo mentir.",es,taste,positive,positive
+"El servicio, sin embargo, fue excelente... y me gustó mucho el entorno/atmósfera.",es,service,positive,positive
+"El servicio, sin embargo, fue excelente... y me gustó mucho el entorno/atmósfera.",es,atmosphere,positive,positive
+"Mi grupo tenía el menú de precio fijo BBE $ 29, que fue una oferta maravillosa, ¡ya que también venía con una degustación de sake!",es,value,positive,positive
+La comida es confiable y el precio es moderado.,es,taste,positive,positive
+La comida es confiable y el precio es moderado.,es,value,neutral,positive
+"Si te gusta la música  a todo volumen y el sistema no es muy bueno y quieres pagar al menos 100 dólares botella como mínimo, entonces te encantará este lugar.",es,value,negative,negative
+"Si te gusta la música  a todo volumen y el sistema no es muy bueno y quieres pagar al menos 100 dólares botella como mínimo, entonces te encantará este lugar.",es,atmosphere,negative,positive
+El mejor pad thai que he probado jamás.,es,taste,positive,positive
+"Aunque nos dijeron que tardarían entre 10 y 15 minutos, en realidad fueron más bien 45 minutos.",es,service,negative,negative
+"Cada vez que hemos estado, el personal de recepción (no los camareros - son fantásticos - sino la gente que te saluda y te sienta) ha sido tan horrible con nosotros que si no fuera por los excepcionales platos de pescado nunca volvería.",es,taste,positive,negative
+Posiblemente el restaurante más romántico de la ciudad,es,atmosphere,positive,positive
+"Aunque buscábamos lechuga normal y algunas nueces, las ensaladas que nos dieron estaban buenísimas.",es,taste,positive,positive
+"El servicio no es exactamente cinco estrellas, pero eso no es realmente un gran problema.",es,service,neutral,negative
+La comida es genial y el ambiente es aún mejor.,es,taste,positive,positive
+La comida es genial y el ambiente es aún mejor.,es,atmosphere,positive,positive
+Todo lo que comí estuvo bueno y soy un comensal.,es,taste,positive,positive
+La entrega también es rápida.,es,service,positive,positive
+El mejor Sushi de todos los tiempos.,es,taste,positive,positive
+"Bueno untables, excelente selección de bebidas y bagels realmente sabroso.",es,taste,positive,positive
+Todos estaban más que contentos con sus elecciones.,es,service,positive,positive
+Recomiendo mucho la pizza Sophia.,es,taste,positive,positive
+"El servicio es excelente, la decoración es estupenda y la comida es deliciosa y viene en porciones grandes.",es,service,positive,positive
+"El servicio es excelente, la decoración es estupenda y la comida es deliciosa y viene en porciones grandes.",es,atmosphere,positive,positive
+"El servicio es excelente, la decoración es estupenda y la comida es deliciosa y viene en porciones grandes.",es,taste,positive,positive
+"Además es genial cenar en un lugar muy romántico y cómodo lugar, el servicio es simplemente perfecto... son tan amables que no queremos vivir nunca el lugar!",es,atmosphere,positive,positive
+"Además es genial cenar en un lugar muy romántico y cómodo lugar, el servicio es simplemente perfecto... son tan amables que no queremos vivir nunca el lugar!",es,service,positive,positive
+¿Y 11$ por un plato de soso guacamole?,es,taste,negative,positive
+¿Y 11$ por un plato de soso guacamole?,es,value,negative,positive
+"Ingredientes son orgánicos, lo cual es una verdadera ventaja para mí.",es,taste,positive,positive
+"La comida es deliciosa, especialmente sus mejillones en salsa de tomate picante cocinados a la perfección y sus papas fritas crujientes y diminutas.",es,taste,positive,positive
+Maitre-D- ``Comer y salir``,es,service,negative,negative
+"Lexicógrafos, tomen nota: una nueva y fascinante definición de grosería está viva y floreciendo aquí en Brooklyn.",es,service,negative,positive
+restaurante fresco fue increíble ... ... .. comida era deliciosa y por supuesto fresca.,es,taste,positive,positive
+"Delicioso, creativo y divertido.",es,taste,positive,positive
+¡¡¡Porque es tan bueno que necesitas probarlo!!!,es,taste,positive,negative
+Me quedé sin palabras por la horrible comida.,es,taste,negative,negative
+Fue maravilloso .,es,taste,positive,positive
+"Sin embargo, creo que este lugar es un buen lugar para pasar el rato.",es,atmosphere,positive,positive
+"La decoración de este lugar es muy parecida a la de un restaurante y el tipo de lugar que esperas encontrar en el East Village: nada romántico, solo simple, pequeño y escaso.",es,atmosphere,neutral,positive
+"Prueba el Pad Thai, o prueba cualquier cosa del menú de aperitivos... todos son deliciosos.",es,taste,positive,positive
+Ess-A-Bagel (ya sea cerca de Sty-town o de Midtown) es por lejos el mejor bagel en Nueva York.,es,taste,positive,positive
+"¡Y a pesar de su ambiente de pub, fueron geniales con mis hijos también!",es,service,positive,positive
+Simplemente impresionante.,es,taste,positive,positive
+"Red Dragon Roll: mi comida favorita de cualquier grupo de alimentos, sin lugar a dudas.",es,taste,positive,positive
+Tienen comida auténtica india a precios increíbles.,es,taste,positive,positive
+Tienen comida auténtica india a precios increíbles.,es,value,positive,positive
+"Mi padre pidió el filete de falda, que estaba muy bueno, y mi madre pidió el pez espada.",es,taste,positive,positive
+Fabuloso comida - si el personal de recepción no te desanima -,es,taste,positive,positive
+Fabuloso comida - si el personal de recepción no te desanima -,es,service,negative,negative
+"De lejos, la mejor pizza de Manhattan.",es,taste,positive,positive
+Demasiado caro y nada sabroso,es,value,negative,negative
+Demasiado caro y nada sabroso,es,taste,negative,negative
+"La pizza es buenísima, al igual que la pasta casera.",es,taste,positive,positive
+Raga's es un restaurante romántico y acogedor.,es,atmosphere,positive,positive
+Caro,es,value,negative,negative
+"Las mesas  están demasiado apretadas, el menú  es típico de cualquier restaurante italiano y la carta de vinos  es simplemente demasiado cara.",es,atmosphere,negative,positive
+"Las mesas  están demasiado apretadas, el menú  es típico de cualquier restaurante italiano y la carta de vinos  es simplemente demasiado cara.",es,value,negative,positive
+La comida era bastante tradicional pero estaba caliente y era buena con porciones grandes.,es,taste,positive,positive
+"Sin embargo, tengo reservas sobre la oferta todo lo que puedas comer: las opciones son bastante limitadas y probablemente puedas pedir más comida de la que puedes comer por menos de $ 18 simplemente saliendo del menú.",es,value,negative,negative
+Tengo que decir que nunca he tenido una comida decepcionante aquí.,es,taste,positive,positive
+¡Asegúrate de no pedir nada más que bagels!,es,taste,negative,negative
+"La espinaca es fresca, definitivamente no congelada...",es,taste,positive,negative
+Probé el lubina frita al estilo tailandés... que estaba muy bueno.,es,taste,positive,positive
+"La vista es impresionante, el servicio es de primera categoría... el ambiente es maravilloso.",es,service,positive,positive
+"La vista es impresionante, el servicio es de primera categoría... el ambiente es maravilloso.",es,atmosphere,positive,positive
+"El ambiente era agradable, pero el servicio no era tan bueno.",es,atmosphere,positive,positive
+"El ambiente era agradable, pero el servicio no era tan bueno.",es,service,negative,negative
+Este lugar no vale los precios.,es,value,negative,negative
+"Comimos fuera en el patio trasero, lo cual vale la pena ya que es fresco y la música se escucha bien allí.",es,atmosphere,positive,positive
+"No probé el caviar, pero sí el de salmón y ensalada de cangrejo (todos son buenos).",es,taste,positive,positive
+Estábamos sentados afuera y el camarero derramó vino tinto y té caliente sobre mí y mi cita.,es,service,negative,positive
+Pedimos bebidas y nunca las recibimos.,es,service,negative,negative
+Genial comida india y el servicio es increíble.,es,taste,positive,positive
+Genial comida india y el servicio es increíble.,es,service,positive,positive
+"Está bien, no me importa la parte aceitosa (porque la mayoría se cocinan de esa manera), pero era demasiado suave.",es,taste,negative,negative
+El ambiente es ruidoso y los camareros están literalmente caminando de un lado a otro haciendo las cosas lo más rápido que pueden.,es,atmosphere,negative,positive
+El ambiente es ruidoso y los camareros están literalmente caminando de un lado a otro haciendo las cosas lo más rápido que pueden.,es,service,positive,positive
+Es un lugar perfecto para disfrutar de una increíble comida india.,es,taste,positive,positive
+"Lo más fresco, la mejor variedad y la entrega más rápida 00.",es,taste,positive,positive
+"Lo más fresco, la mejor variedad y la entrega más rápida 00.",es,service,positive,positive
+"Encontré comida, servicio y valor excepcionales cada vez que estuve allí.",es,taste,positive,positive
+"Encontré comida, servicio y valor excepcionales cada vez que estuve allí.",es,service,positive,positive
+"Encontré comida, servicio y valor excepcionales cada vez que estuve allí.",es,value,positive,positive
+"En una zona donde lamentablemente falta comida decente tailandesa, este es uno de los mejores lugares.",es,taste,positive,positive
+Me dieron un excelente trozo de tarta de queso y tuvimos varios otros ricos pasteles.,es,taste,positive,positive
+"Aquí es donde realmente se pone muy mal: el gerente dijo, no hay absolutamente nada que podamos hacer, es cuestión de gustos que a ella no le haya gustado, y no puedo compararlo.",es,service,negative,negative
+"Servicio ok pero antipático, sucio baño.",es,service,negative,negative
+"Servicio ok pero antipático, sucio baño.",es,atmosphere,negative,positive
+"El personal fue servicial, la comida fue absolutamente deliciosa y el lugar es encantador.",es,service,positive,positive
+"El personal fue servicial, la comida fue absolutamente deliciosa y el lugar es encantador.",es,taste,positive,positive
+"El personal fue servicial, la comida fue absolutamente deliciosa y el lugar es encantador.",es,atmosphere,positive,positive
+"bueno música, genial comida, rápido servicio, precios asequibles.",es,atmosphere,positive,positive
+"bueno música, genial comida, rápido servicio, precios asequibles.",es,taste,positive,positive
+"bueno música, genial comida, rápido servicio, precios asequibles.",es,service,positive,positive
+"bueno música, genial comida, rápido servicio, precios asequibles.",es,value,positive,positive
+"Estábamos planeando pedir postre, pero la camarera básicamente nos arrojó la cuenta antes de que tuviéramos la oportunidad de ordenar.",es,service,negative,negative
+"La comida es auténticamente italiana, ¡deliciosa!",es,taste,positive,positive
+"En resumen: El servicio varía de bueno a mediocre, dependiendo del camarero que te toque; por lo general es simplemente normal.",es,service,neutral,negative
+"La comida no era fresca, las salsas eran insípidas y muy aceitosas.",es,taste,negative,positive
+"Literalmente, acabo de regresar a casa después de visitar Casa La Femme y me sentí tan ofendido por mi visita que sentí la necesidad de tratar de advertir a otros comensales que valoran su dinero y su tiempo.",es,value,negative,negative
+"Cualquiera que le guste este lugar debe ser de otro planeta, donde lo grasoso, lo seco y el insípido son complementarios.",es,taste,negative,positive
+Rao's tiene el mejor servicio y ambiente de Nueva York.,es,service,positive,positive
+Rao's tiene el mejor servicio y ambiente de Nueva York.,es,atmosphere,positive,positive
+Sencillamente es como salir de Manhattan y entrar en un remanso de tranquilidad.,es,atmosphere,positive,positive
+El lugar es muy divertido.,es,atmosphere,positive,positive
+"El ambiente es muy relajado y acogedor, el servicio fue excelente y la comida fue excelente.",es,atmosphere,positive,positive
+"El ambiente es muy relajado y acogedor, el servicio fue excelente y la comida fue excelente.",es,service,positive,positive
+"El ambiente es muy relajado y acogedor, el servicio fue excelente y la comida fue excelente.",es,taste,positive,positive
+He vivido en Japón durante 7 años y el sabor de la comida y la sensación del restaurante es como estar de regreso en Japón.,es,taste,positive,positive
+He vivido en Japón durante 7 años y el sabor de la comida y la sensación del restaurante es como estar de regreso en Japón.,es,atmosphere,positive,positive
+Si te gusta la comida picante prueba el pollo vindaloo.,es,taste,positive,positive
+La decoración es agradable aunque el servicio puede ser irregular.,es,atmosphere,positive,positive
+La decoración es agradable aunque el servicio puede ser irregular.,es,service,negative,positive
+"El ambiente no es el mejor, pero supongo que así es como mantienen los precios bajos.",es,atmosphere,negative,positive
+"El ambiente no es el mejor, pero supongo que así es como mantienen los precios bajos.",es,value,positive,negative
+No recuerdo la última vez que comí algo tan asqueroso comida en Nueva York.,es,taste,negative,positive
+"Comimos en este restaurante tailandés siguiendo las críticas, pero no quedamos muy satisfechos con la comida.",es,taste,negative,positive
+"La pizza de pesto era excelente, una pizza de masa fina con una buena cantidad de queso italiano picante del que nunca había oído hablar antes.",es,taste,positive,positive
+"La comida tomó algo de tiempo para prepararse, valió la pena la espera.",es,taste,positive,positive
+"La comida tomó algo de tiempo para prepararse, valió la pena la espera.",es,service,neutral,negative
+"Leon es una joya del East Village: informal pero moderno, con comida básica bien preparada de bistró francés, buena especialidades, un ambiente cálido y animado .",es,atmosphere,positive,positive
+"Leon es una joya del East Village: informal pero moderno, con comida básica bien preparada de bistró francés, buena especialidades, un ambiente cálido y animado .",es,taste,positive,positive
+¡La mejor comida en mucho tiempo!,es,taste,positive,positive
+"Como siempre, tuvimos una estupenda (1 copa de vino) mientras esperábamos.",es,taste,positive,positive
+"Hurley's es como Cheers, donde todos saben tu nombre y REALMENTE están contentos de que hayas venido.",es,service,positive,positive
+Caro comida japonesa y mediocre servicio,es,value,negative,negative
+Caro comida japonesa y mediocre servicio,es,service,neutral,negative
+Comimos pescado frito especial de Pam y estuvo increíble.,es,taste,positive,positive
+El menú es limitado pero casi todos los platos son excelentes.,es,taste,positive,positive
+Para cada plato esperamos más de media hora o 45 minutos y nunca nos ofrecieron una bebida.,es,service,negative,negative
+"Llegamos tarde a nuestra reserva, así que no puedo quejarme demasiado por la espera por una mesa.",es,service,neutral,negative
+malo personal,es,service,negative,negative
+Este pequeño lugar tiene una linda decoración interior y precios de ciudad asequibles.,es,atmosphere,positive,positive
+Este pequeño lugar tiene una linda decoración interior y precios de ciudad asequibles.,es,value,positive,positive
+¿Pero 500$ por una cena para dos que no incluía vino?,es,value,negative,negative
+Prueba curry verde con verduras.,es,taste,positive,positive
+"Mi novio pidió el New England Chowder, estaba bueno, pero creo que el premio debería ser para el Lobster Bisque.",es,taste,positive,positive
+Mal servicio y gestión,es,service,negative,negative
+Y la sopa Tom Kha era patética.,es,taste,negative,positive
+Precios moderados .,es,value,neutral,negative
+La anfitriona y la camarera fueron increíblemente groseras e hicieron todo lo posible para apresurarnos a salir.,es,service,negative,negative
+Hay algo en su atmósfera que me hace volver casi cada semana.,es,atmosphere,positive,positive
+Genial comida india,es,taste,positive,positive
+"La zona de estar del jardín trasero es muy agradable, donde se puede ver su jardín de hierbas personal.",es,atmosphere,positive,positive
+"El servicio fue pésimo, tuvimos que esperar por todo y pedirle a varias personas diferentes lo mismo antes de que nos permitieran servirnos.",es,service,negative,negative
+No es un lugar muy lujoso lugar pero es muy bueno comida india estilo chino.,es,atmosphere,neutral,positive
+No es un lugar muy lujoso lugar pero es muy bueno comida india estilo chino.,es,taste,positive,positive
+¡Maravillosos daiquiries de fresa también!,es,taste,positive,positive
+"La comida era pésima, demasiado dulce o demasiado salada y las porciones pequeñas.",es,taste,negative,positive
+"deliciosos bagels, especialmente recién salidos del horno.",es,taste,positive,positive
+"Aunque hacen las típicas preguntas de qué tipo de agua te gustaría, el servicio fue bueno y en general muy relajante para lugar comer.",es,service,positive,positive
+"Aunque hacen las típicas preguntas de qué tipo de agua te gustaría, el servicio fue bueno y en general muy relajante para lugar comer.",es,atmosphere,positive,positive
+Casi dudo en escribir una reseña porque el ambiente era tan bueno que odiaría que se llenara demasiado.,es,atmosphere,positive,negative
+Esta fue mi primera vez en Café St. Bart's y debo decir lo deliciosa que fue la comida y el servicio.,es,taste,positive,positive
+El servicio fue excelente y la comida estuvo deliciosa.,es,service,positive,positive
+El servicio fue excelente y la comida estuvo deliciosa.,es,taste,positive,positive
+"Las bebidas del bar  estaban bien, por decir lo menos.",es,taste,negative,positive
+"Teniendo en cuenta que éramos los últimos clientes allí y ya era después de la hora de cierre, los  camareros no nos apresuraron en absoluto y nos hicieron sentir cómodos y relajados.",es,service,positive,negative
+"Genial ambiente, mucha gente.",es,atmosphere,positive,positive
+"Este es sin duda mi favorito brasserie japonesa moderna (que no sirve sushi), y en mi opinión, ¡uno de los restaurantes más románticos de la ciudad!",es,atmosphere,positive,positive
+"El pan que recibimos era horrible, duro como una piedra y frío, y el aperitivo de aceitunas «gratis» fue decepcionante.",es,taste,negative,negative
+"El pan que recibimos era horrible, duro como una piedra y frío, y el aperitivo de aceitunas «gratis» fue decepcionante.",es,value,neutral,negative
+"Si bien es comprensible que cada lugar sea diferente, no había necesidad de ser descortés con los clientes y francamente grosero.",es,service,negative,negative
+El nakgi-bokum fue horrible.,es,taste,negative,negative
+Comí aquí hace una semana y encontré la mayoría (2 platos) promedio en el mejor de los casos y demasiado caros.,es,taste,negative,positive
+Comí aquí hace una semana y encontré la mayoría (2 platos) promedio en el mejor de los casos y demasiado caros.,es,value,negative,negative
+Honraron muy bien la reserva el domingo por la tarde.,es,service,positive,positive
+La anfitriona fue muy agradable.,es,service,positive,positive
+"El servicio fue muy bueno: rápido, atento y no intrusivo.",es,service,positive,positive
+La Rosa baila vals y creo que lo están haciendo mejor.,es,taste,positive,positive
+"Toons ha sido remodelado recientemente, por lo que ahora es un espacio muy atractivo.",es,atmosphere,positive,positive
+Sushi La experiencia con mi prometido fue increíble.,es,taste,positive,positive
+"No suelo visitar el mismo establecimiento más de una vez, mucho menos dos, pero a Zenkichi vengo en cualquier momento para disfrutar de una cena tranquila, sin prisas y memorable.",es,atmosphere,positive,positive
+Recomiendo encarecidamente Caviar Russe a cualquiera que quiera un caviar delicioso de primera calidad  y fantástico servicio.,es,taste,positive,positive
+Recomiendo encarecidamente Caviar Russe a cualquiera que quiera un caviar delicioso de primera calidad  y fantástico servicio.,es,service,positive,positive
+Son caros y puedes conseguir otros mejores a la vuelta de la esquina:,es,value,negative,positive
+Son caros y puedes conseguir otros mejores a la vuelta de la esquina:,es,taste,negative,positive
+"Me gusta personas no me malinterpreten, es solo que las personas que trabajan allí son malvadas e incompetentes.",es,service,negative,negative
+Es muy picante pero no ofensivo.,es,taste,positive,positive
+En primer lugar Dal Bukhara Rocas.,es,taste,positive,positive
+"Sin embargo, ¡nuestros $ 14 bebidas fueron horribles!",es,taste,negative,positive
+"Sin embargo, ¡nuestros $ 14 bebidas fueron horribles!",es,value,negative,negative
+"¡¡¡Sin menú de postres, sin disculpas, nada!!!",es,service,negative,negative
+Este es un sushi realmente bueno y económico sushi.,es,taste,positive,positive
+Este es un sushi realmente bueno y económico sushi.,es,value,positive,positive
+"Llevé a mi mamá al Día de la Madre, y el maitre fue bastante grosero.",es,service,negative,negative
+"Sin embargo, déjese llevar por el ambiente y considere la comida ¡sólo un compañero para un viaje alrededor del mundo!",es,taste,neutral,positive
+El plato de filet mignon  estaba magnífico!,es,taste,positive,positive
+"El servicio está bien, algunas personas no obtuvieron lo que pidieron.",es,service,neutral,negative
+Nunca antes había comido 40 piezas de un nigiri relativamente bueno.,es,taste,neutral,positive
+Es caro pero vale la pena el dinero.,es,value,negative,negative
+El lugar decoración y baños ocultos fueron motivo de mucha risa.,es,atmosphere,positive,positive
+"El sándwich de langosta cuesta $ 24 y aunque era bueno, no era suficiente para justificar ese precio.",es,taste,positive,positive
+"El sándwich de langosta cuesta $ 24 y aunque era bueno, no era suficiente para justificar ese precio.",es,value,negative,negative
+"La comida es muy buena, pero no sobresaliente.",es,taste,neutral,positive
+El salón de la planta baja siempre es una buena atracción.,es,atmosphere,positive,positive
+El rollo de atún picante es enorme y probablemente el mejor que he probado en este rango de precios.,es,taste,positive,positive
+El rollo de atún picante es enorme y probablemente el mejor que he probado en este rango de precios.,es,value,positive,positive
+"No puedo discutir sobre eso, pero claramente tienen un precio excesivo.",es,value,negative,positive
+"Uno rollo especial y uno rollo normal son suficientes para llenarte, ¡pero guarda lugar para postre!",es,taste,positive,positive
+Luego nos mandaron adentro.,es,service,negative,negative
+"¡Barato, modesto y genial!",es,value,positive,positive
+"¡Barato, modesto y genial!",es,atmosphere,positive,positive
+"El filete de percha era como goma y el atún no tenía sabor, sin mencionar que sabía como si recién lo hubieran descongelado.",es,taste,negative,negative
+"Fue divino, se derrite en la boca.",es,taste,positive,positive
+Terrible pérdida de dinero... estafadores,es,value,negative,negative
+"La comida era simplemente normal... si bajaran un poco los precios, sería un atractivo mayor.",es,taste,neutral,negative
+"También me han sorprendido todas las nuevas incorporaciones en los últimos años: un nuevo Jazz Bar, el más fantástico Dining Garden, el mejor Thin Crust Pizzas y ahora un Lasagna Menu que es para morirse (¡estas no son las típicas lasañas!).",es,atmosphere,positive,positive
+"También me han sorprendido todas las nuevas incorporaciones en los últimos años: un nuevo Jazz Bar, el más fantástico Dining Garden, el mejor Thin Crust Pizzas y ahora un Lasagna Menu que es para morirse (¡estas no son las típicas lasañas!).",es,taste,positive,positive
+"Después de la cena, el gerente agarró a mi novio, le preguntó: ¿De dónde eres...? Tal vez no sabes cómo funcionan las cosas en Estados Unidos... y al final se fue furioso, casi con lágrimas en los ojos, gritando que las propinas son lo único con lo que sobreviven.",es,service,negative,negative
+"El restaurante es un poco ruidoso, pero eso es algo que se puede pasar por alto una vez que te sientas y disfrutas de una excelente comida",es,taste,positive,positive
+"El restaurante es un poco ruidoso, pero eso es algo que se puede pasar por alto una vez que te sientas y disfrutas de una excelente comida",es,atmosphere,negative,positive
+La comida estaba buena.,es,taste,positive,positive
+"El ambiente es poco conocido, el servicio impecable y la comida magnífica.",es,atmosphere,positive,positive
+"El ambiente es poco conocido, el servicio impecable y la comida magnífica.",es,service,positive,positive
+"El ambiente es poco conocido, el servicio impecable y la comida magnífica.",es,taste,positive,positive
+"6$ y hay mucha comida sabrosa , toda fresca y continuamente rellenada.",es,taste,positive,positive
+"6$ y hay mucha comida sabrosa , toda fresca y continuamente rellenada.",es,value,positive,positive
+La comida exótica está bellamente presentada y es una delicia en deliciosas combinaciones.,es,taste,positive,positive
+"Un caballero, tal vez el gerente, se acercó a nuestra mesa y sin siquiera una sonrisa o saludo, pidió nuestro pedido.",es,service,negative,negative
+"Lo que sí hicimos fue perder 3 horas atrapados en una mesa esperando y esperando comida, bebidas y shisha... ¡algunas de las cuales nunca recibimos!",es,service,negative,positive
+Pero la pizza es demasiado cara.,es,value,negative,negative
+Simplemente barato y bueno comida.,es,taste,positive,positive
+Simplemente barato y bueno comida.,es,value,positive,positive
+Este plato es mi favorito y siempre lo pido cuando voy allí y nunca me canso de él.,es,taste,positive,positive
+20$ por todo lo que puedas comer de sushi no tiene comparación.,es,value,positive,negative
+Incluso recibimos la visita del Gerente que quería asegurarse de que lo estuviéramos disfrutando.,es,service,positive,negative
+"Me sorprendió que mis amigos quisieran quedarse después de que la camarera dijera: ""¿Puedo ayudarlos?"" y ""¿Cuántos son en su grupo?"".",es,service,negative,negative
+"La comida para llevar  también es genial, ya que también ofrecen tupperware de alta calidad.",es,service,positive,positive
+Debes probar la lasaña de carne de cangrejo que es de otro mundo y el pudín de pan con chocolate de postre.,es,taste,positive,positive
+El personal es muy servicial.,es,service,positive,positive
+"Me sirvió un Uni Hand roll, que nunca había probado antes, y déjame decirte... ¡FUE EL CIELO!",es,taste,positive,positive
+"La comida, sin embargo, es lo que uno podría esperar.",es,taste,negative,positive
+Gran experiencia sushi.,es,taste,positive,positive
+Genial pizza y fantástico servicio.,es,taste,positive,positive
+Genial pizza y fantástico servicio.,es,service,positive,positive
+"En nuestra última visita, omitieron nuestro nombre en la lista, dejándonos esperando una hora extra por una mesa.",es,service,negative,negative
+Fácilmente el peor calamares salteados que he probado jamás.,es,taste,negative,positive
+Con el teatro a 2 cuadras tuvimos una deliciosa comida en una hermosa sala.,es,taste,positive,positive
+Con el teatro a 2 cuadras tuvimos una deliciosa comida en una hermosa sala.,es,atmosphere,positive,positive
+"Pero aún así, excelente lugar, excelente comida.",es,taste,positive,positive
+"Nuestra visita allí, por decir lo menos, ¡fue una experiencia desagradable y costosa!",es,value,negative,negative
+Consistentemente bueno Tapas Japonesas.,es,taste,positive,positive
+La comida se prepara de forma rápida y eficiente.,es,service,positive,negative
+Es simplemente asombroso .,es,taste,positive,positive
+"Si vais, probad la salsa marinara/arrabiatta, la salsa marinara/arrabiatta es mmmmmmmm... todo es simplemente delicioso.",es,taste,positive,positive
+La pizza  era bastante buena y enorme.,es,taste,positive,positive

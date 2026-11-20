@@ -1,0 +1,114 @@
+ASPECT PRESENCE V1 — TF-IDF + LOGISTIC REGRESSION DEV BASELINE
+========================================================================================
+
+Train sentence count: 2722
+Dev sentence count: 730
+Test evaluated: NO
+Representation: sentence only
+TF-IDF: word unigram + bigram, min_df=2
+Classifier: four independent LogisticRegression models
+class_weight: balanced
+Default threshold: 0.5
+
+OVERALL DEV METRICS
+Macro F1: 0.7542
+Micro F1: 0.8040
+Exact Match Ratio: 0.6548
+Hamming Loss: 0.1209
+
+ASPECT METRICS
+Aspect       Precision  Recall  F1      Support  TP   FP   FN   TN
+taste        0.8791     0.8610  0.8700  439      378  52   61   239
+atmosphere   0.7459     0.6741  0.7082  135      91   31   44   564
+service      0.7975     0.8143  0.8058  237      193  49   44   444
+value        0.7294     0.5586  0.6327  111      62   23   49   596
+
+LANGUAGE BREAKDOWN
+tr: n=243, macro_f1=0.7293; taste_f1=0.8601, atmosphere_f1=0.6889, service_f1=0.7799, value_f1=0.5882
+en: n=244, macro_f1=0.7692; taste_f1=0.8904, atmosphere_f1=0.7229, service_f1=0.8272, value_f1=0.6364
+es: n=243, macro_f1=0.7652; taste_f1=0.8592, atmosphere_f1=0.7143, service_f1=0.8101, value_f1=0.6774
+
+DEV DIAGNOSTIC EXAMPLES
+[1] fully correct | language=tr
+sentence: Menü istedim ve aynı garson bana deliymişim gibi baktı.
+actual: ['service']
+predicted: ['service']
+false_positive: []
+false_negative: []
+
+[2] fully correct | language=tr
+sentence: Ben arkadaş canlısı bir insanım, bu yüzden onun bu kadar kötü davranmaması ve kişisel olmaması umurumda olmazdı.
+actual: ['service']
+predicted: ['service']
+false_positive: []
+false_negative: []
+
+[3] fully correct | language=tr
+sentence: garnitürler fena değildi ve isteğim üzerine tekrar doldurttum.
+actual: ['taste']
+predicted: ['taste']
+false_positive: []
+false_negative: []
+
+[4] contains false positive | language=tr
+sentence: Sahibi ve çalışanları da tamamen Japon, bu da tüm ortama ayrı bir hava katıyor.
+actual: ['atmosphere']
+predicted: ['service', 'value']
+false_positive: ['service', 'value']
+false_negative: ['atmosphere']
+
+[5] contains false positive | language=tr
+sentence: Buradaki yemek ismine (Kantonca yani ...) büyük hizmet ediyor.
+actual: ['taste']
+predicted: ['service']
+false_positive: ['service']
+false_negative: ['taste']
+
+[6] contains false positive | language=tr
+sentence: Bu yer çok iyi bir fırsat.
+actual: ['value']
+predicted: ['atmosphere', 'value']
+false_positive: ['atmosphere']
+false_negative: []
+
+[7] contains false negative | language=tr
+sentence: sahibi gerçekten tüm ihtiyaçlarınızı karşılıyor.
+actual: ['service']
+predicted: []
+false_positive: []
+false_negative: ['service']
+
+[8] contains false negative | language=tr
+sentence: Harika, güler yüzlü servis, Hızlı oturma, Hızlı Teslimat, Mükemmel suşi.
+actual: ['taste', 'service']
+predicted: ['service']
+false_positive: []
+false_negative: ['taste']
+
+[9] contains false negative | language=tr
+sentence: ortam çok eğlenceliydi ve fiyatlar harikaydı, üstelik yemekler gerçekten lezzetliydi.
+actual: ['taste', 'atmosphere', 'value']
+predicted: ['taste', 'atmosphere']
+false_positive: []
+false_negative: ['value']
+
+[10] multi-label | language=tr
+sentence: İnce yemek ve servis
+actual: ['taste', 'service']
+predicted: ['taste', 'service']
+false_positive: []
+false_negative: []
+
+[11] multi-label | language=tr
+sentence: Yemekler harika, lezzetli ve doyurucu, Servis ise profesyonel ve güler yüzlü.
+actual: ['taste', 'service']
+predicted: ['taste', 'service']
+false_positive: []
+false_negative: []
+
+[12] multi-label | language=tr
+sentence: Simit tamam, ancak özel bir istekte bulunmayın!
+actual: ['taste', 'service']
+predicted: ['atmosphere']
+false_positive: ['atmosphere']
+false_negative: ['taste', 'service']

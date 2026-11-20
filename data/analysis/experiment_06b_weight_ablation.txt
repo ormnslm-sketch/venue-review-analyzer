@@ -1,0 +1,196 @@
+EXPERIMENT 06B — NEUTRAL DATA x CLASS WEIGHT ABLATION
+
+CONTROLLED PIPELINE
+Dev: data/cleaned/dev.csv for every condition
+Test: not loaded or evaluated
+Input: aspect=<aspect> [SEP] <sentence>
+TF-IDF: ngram_range=(1, 2), min_df=2, max_df=1.0, max_features=None
+LogisticRegression: solver=lbfgs, max_iter=1000, random_state=42
+Fixed old weights: {'positive': 0.5086669734621875, 'neutral': 11.885304659498209, 'negative': 1.0526984126984127}
+Hyperparameter tuning: none
+
+DATA VALIDATION
+Old train: {'positive': 2173, 'neutral': 93, 'negative': 1050} | total=3316
+Expanded train: {'positive': 2173, 'neutral': 300, 'negative': 1050} | total=3523
+Dev: {'negative': 258, 'positive': 586, 'neutral': 57} | total=901
+Expanded dev matches cleaned dev byte-for-byte: True
+
+CONDITION A
+Dataset: OLD
+Weighting: None
+Accuracy: 0.7858
+Macro F1: 0.5076
+
+Per-class metrics:
+positive: precision=0.8064 | recall=0.9454 | F1=0.8704 | support=586
+neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=57
+negative: precision=0.7196 | recall=0.5969 | F1=0.6525 | support=258
+
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              554        0        32
+neutral                29        0        28
+negative              104        0       154
+
+Predicted counts:
+positive: 687
+neutral: 0
+negative: 214
+
+Language metrics:
+TR: n=300 | accuracy=0.7767 | macro F1=0.4987
+  neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=19
+EN: n=301 | accuracy=0.7940 | macro F1=0.5140
+  neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=19
+ES: n=300 | accuracy=0.7867 | macro F1=0.5099
+  neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=19
+
+Aspect metrics:
+taste: n=421 | accuracy=0.8029 | macro F1=0.4487 | neutral F1=0.0000
+atmosphere: n=135 | accuracy=0.8148 | macro F1=0.2993 | neutral F1=0.0000
+service: n=234 | accuracy=0.7479 | macro F1=0.5201 | neutral F1=0.0000
+value: n=111 | accuracy=0.7658 | macro F1=0.5303 | neutral F1=0.0000
+
+CONDITION B
+Dataset: EXPANDED
+Weighting: None
+Accuracy: 0.7869
+Macro F1: 0.5189
+
+Per-class metrics:
+positive: precision=0.8067 | recall=0.9471 | F1=0.8713 | support=586
+neutral: precision=1.0000 | recall=0.0175 | F1=0.0345 | support=57
+negative: precision=0.7217 | recall=0.5930 | F1=0.6511 | support=258
+
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              555        0        31
+neutral                28        1        28
+negative              105        0       153
+
+Predicted counts:
+positive: 688
+neutral: 1
+negative: 212
+
+Language metrics:
+TR: n=300 | accuracy=0.7767 | macro F1=0.5305
+  neutral: precision=1.0000 | recall=0.0526 | F1=0.1000 | support=19
+EN: n=301 | accuracy=0.7940 | macro F1=0.5127
+  neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=19
+ES: n=300 | accuracy=0.7900 | macro F1=0.5122
+  neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=19
+
+Aspect metrics:
+taste: n=421 | accuracy=0.7981 | macro F1=0.4422 | neutral F1=0.0000
+atmosphere: n=135 | accuracy=0.8148 | macro F1=0.2993 | neutral F1=0.0000
+service: n=234 | accuracy=0.7521 | macro F1=0.5229 | neutral F1=0.0000
+value: n=111 | accuracy=0.7838 | macro F1=0.6064 | neutral F1=0.2000
+
+CONDITION C
+Dataset: OLD
+Weighting: Fixed old weights
+Accuracy: 0.7603
+Macro F1: 0.5891
+
+Per-class metrics:
+positive: precision=0.8714 | recall=0.8208 | F1=0.8453 | support=586
+neutral: precision=0.3667 | recall=0.1930 | F1=0.2529 | support=57
+negative: precision=0.6050 | recall=0.7481 | F1=0.6690 | support=258
+
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              481        8        97
+neutral                17       11        29
+negative               54       11       193
+
+Predicted counts:
+positive: 552
+neutral: 30
+negative: 319
+
+Language metrics:
+TR: n=300 | accuracy=0.7633 | macro F1=0.5936
+  neutral: precision=0.4000 | recall=0.2105 | F1=0.2759 | support=19
+EN: n=301 | accuracy=0.7641 | macro F1=0.5998
+  neutral: precision=0.4000 | recall=0.2105 | F1=0.2759 | support=19
+ES: n=300 | accuracy=0.7533 | macro F1=0.5734
+  neutral: precision=0.3000 | recall=0.1579 | F1=0.2069 | support=19
+
+Aspect metrics:
+taste: n=421 | accuracy=0.7886 | macro F1=0.5902 | neutral F1=0.3429
+atmosphere: n=135 | accuracy=0.7630 | macro F1=0.3210 | neutral F1=0.0000
+service: n=234 | accuracy=0.7094 | macro F1=0.5251 | neutral F1=0.0800
+value: n=111 | accuracy=0.7568 | macro F1=0.6988 | neutral F1=0.6154
+
+CONDITION D
+Dataset: EXPANDED
+Weighting: Fixed old weights
+Accuracy: 0.7037
+Macro F1: 0.5692
+
+Per-class metrics:
+positive: precision=0.8968 | recall=0.7560 | F1=0.8204 | support=586
+neutral: precision=0.1880 | recall=0.4386 | F1=0.2632 | support=57
+negative: precision=0.6058 | recall=0.6434 | F1=0.6241 | support=258
+
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              443       55        88
+neutral                12       25        20
+negative               39       53       166
+
+Predicted counts:
+positive: 494
+neutral: 133
+negative: 274
+
+Language metrics:
+TR: n=300 | accuracy=0.7267 | macro F1=0.5828
+  neutral: precision=0.2286 | recall=0.4211 | F1=0.2963 | support=19
+EN: n=301 | accuracy=0.7110 | macro F1=0.5811
+  neutral: precision=0.1957 | recall=0.4737 | F1=0.2769 | support=19
+ES: n=300 | accuracy=0.6733 | macro F1=0.5460
+  neutral: precision=0.1538 | recall=0.4211 | F1=0.2254 | support=19
+
+Aspect metrics:
+taste: n=421 | accuracy=0.7720 | macro F1=0.6016 | neutral F1=0.3793
+atmosphere: n=135 | accuracy=0.6074 | macro F1=0.3188 | neutral F1=0.0909
+service: n=234 | accuracy=0.6795 | macro F1=0.5713 | neutral F1=0.2500
+value: n=111 | accuracy=0.6126 | macro F1=0.5469 | neutral F1=0.3000
+
+CRITICAL COMPARISONS
+B - A (data effect without weighting)
+  Delta Accuracy: +0.0011
+  Delta Macro F1: +0.0113
+  Delta Neutral precision: +1.0000
+  Delta Neutral recall: +0.0175
+  Delta Neutral F1: +0.0345
+D - C (data effect with fixed weights)
+  Delta Accuracy: -0.0566
+  Delta Macro F1: -0.0199
+  Delta Neutral precision: -0.1787
+  Delta Neutral recall: +0.2456
+  Delta Neutral F1: +0.0103
+C - A (weighting effect on old data)
+  Delta Accuracy: -0.0255
+  Delta Macro F1: +0.0814
+  Delta Neutral precision: +0.3667
+  Delta Neutral recall: +0.1930
+  Delta Neutral F1: +0.2529
+D - B (weighting effect on expanded data)
+  Delta Accuracy: -0.0832
+  Delta Macro F1: +0.0503
+  Delta Neutral precision: -0.8120
+  Delta Neutral recall: +0.4211
+  Delta Neutral F1: +0.2287
+
+COMPACT COMPARISON
+Condition | Dataset | Weighting | Accuracy | Macro F1 | Neutral P | Neutral R | Neutral F1 | Pred Neutral
+A | OLD | None | 0.7858 | 0.5076 | 0.0000 | 0.0000 | 0.0000 | 0
+B | EXPANDED | None | 0.7869 | 0.5189 | 1.0000 | 0.0175 | 0.0345 | 1
+C | OLD | Fixed old weights | 0.7603 | 0.5891 | 0.3667 | 0.1930 | 0.2529 | 30
+D | EXPANDED | Fixed old weights | 0.7037 | 0.5692 | 0.1880 | 0.4386 | 0.2632 | 133
+
+C reproduces old baseline: YES
+Reproducibility tolerance against rounded historical metrics: 0.0001

@@ -1,0 +1,5 @@
+candidate_id,sentence,mapped_aspect,source_category,matched_neutral_pattern,source_group_id,human_decision
+MAMS-EN-002585-AMBIENCE,"The place was small and simple, but I never cared about service or decor.",atmosphere,ambience,room/layout description,MAMS-TRAIN-002585,
+MAMS-EN-000793-FOOD,"The price wouldnt be so bad if it wasnt for the poor service, average food, and uninspired menu selections (choice of tiramisu and strawberries with whipped cream for dessert?!",taste,food,explicit neutral taste/quality phrase: average food,MAMS-TRAIN-000793,
+MAMS-EN-001950-FOOD,"small portions, average food 6) we ask for the check, the waiter says, ok, and 5 minutes later asks if we want coffee or dessert.",taste,food,explicit neutral taste/quality phrase: average food,MAMS-TRAIN-001950,
+MAMS-EN-002497-FOOD,"Management had always been rude, but without the great staff as a buffer, Jesse's is just another pubby place with poor decor and average food.",taste,food,explicit neutral taste/quality phrase: average food,MAMS-TRAIN-002497,

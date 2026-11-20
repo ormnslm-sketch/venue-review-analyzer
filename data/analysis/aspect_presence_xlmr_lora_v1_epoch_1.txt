@@ -1,0 +1,92 @@
+ASPECT PRESENCE V2 — XLM-R + LORA MULTI-LABEL EPOCH 2
+
+Train: data/aspect_presence_v2/train.csv
+Dev: data/aspect_presence_v2/dev.csv
+Test: not loaded, predicted, or evaluated
+Input: sentence only
+Aspect/logit order: ['taste', 'atmosphere', 'service', 'value']
+Activation: sigmoid
+Threshold: 0.50
+Random seed: 42
+Epoch shuffle seed: 43
+Permutation SHA256: 5f5305ef98583b1b2a9363de525fb97d01f27dfd870b4821aa299ecf0ad998f7
+Config signature: 5778e879e4a660776fb22320e01651053f9f67490e8d33419edc65e196cfc420
+Epoch train loss: 0.613636
+
+TRAIN POS_WEIGHT
+taste: positive=1627 | negative=2148 | pos_weight=1.32022127
+atmosphere: positive=510 | negative=3265 | pos_weight=6.40196078
+service: positive=873 | negative=2902 | pos_weight=3.32416953
+value: positive=384 | negative=3391 | pos_weight=8.83072917
+
+DEV OVERALL
+Macro F1: 0.7611
+Micro F1: 0.7826
+Exact Match: 0.6157
+Hamming Loss: 0.1165
+Predicted positive aspect count: 1097
+
+DEV ASPECTS
+taste: P=0.7710 | R=0.8588 | F1=0.8125 | support=439 | TP=377 FP=112 FN=62 TN=391
+atmosphere: P=0.5748 | R=0.9111 | F1=0.7049 | support=135 | TP=123 FP=91 FN=12 TN=716
+service: P=0.8243 | R=0.8312 | F1=0.8277 | support=237 | TP=197 FP=42 FN=40 TN=663
+value: P=0.6000 | R=0.8378 | F1=0.6992 | support=111 | TP=93 FP=62 FN=18 TN=769
+
+DEV ALL-ZERO
+Support: 212
+Correct 0/0/0/0: 106
+Exact accuracy: 0.5000
+False-positive aspect total: 133
+taste false positive: 62
+atmosphere false positive: 36
+service false positive: 15
+value false positive: 20
+
+DEV TARGET-CONTAINING
+Support: 730
+Macro F1: 0.8168
+Micro F1: 0.8378
+Exact Match: 0.6493
+
+LANGUAGE BREAKDOWN
+TR: Macro F1=0.7601 | Exact Match=0.6166 | All-zero exact=0.5286 | all-zero support=70
+EN: Macro F1=0.7652 | Exact Match=0.6139 | All-zero exact=0.5000 | all-zero support=72
+ES: Macro F1=0.7585 | Exact Match=0.6166 | All-zero exact=0.4714 | all-zero support=70
+
+TRANSFORMER MINUS CLASSICAL V2 CALIBRATED
+Macro F1 delta: +0.0453
+Micro F1 delta: +0.0121
+Exact Match delta: -0.0350
+Hamming Loss delta: +0.0109
+All-zero exact accuracy delta: -0.2783
+All-zero FP total delta: +84
+taste F1 delta: -0.0086
+atmosphere F1 delta: +0.0239
+service F1 delta: +0.0363
+value F1 delta: +0.1295
+
+EPOCH 2 MINUS EPOCH 1
+Macro F1 delta: +0.0800
+Micro F1 delta: +0.0797
+Exact Match delta: +0.1454
+Hamming Loss delta: -0.0565
+All-zero exact accuracy delta: +0.0802
+All-zero FP total delta: -39
+Predicted positive aspect count delta: -175
+taste F1 delta: +0.0087
+atmosphere F1 delta: +0.2280
+service F1 delta: +0.0509
+value F1 delta: +0.0326
+
+FINAL DECISION: MIXED
+
+Epoch 3 was not started and is blocked.
+Threshold tuning was not performed.
+Test split was not used.
+Resume checkpoint: models/aspect_presence_xlmr_lora_v1/resume/slot_a
+Current optimizer step: 944/944
+Epoch 2 complete: True
+Total optimizer steps across Epochs 1-2: 1888
+Best epoch: 2
+Best DEV Macro F1: 0.7611
+STOP: Epoch 3 was not started and is blocked by this script.

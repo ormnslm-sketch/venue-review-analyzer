@@ -1,0 +1,23 @@
+MAMS NEUTRAL CURATION SUMMARY
+================================
+
+Candidates:
+taste: 30
+atmosphere: 35
+service: 40
+value: 35
+total: 140
+
+Exact overlaps with existing train: 0
+Exact overlaps with existing dev: 0
+Exact overlaps with existing test: 0
+
+License: apache-2.0
+Source: justinsiow/mams-acsa
+Human review required: YES
+
+Notes:
+- No candidate has been accepted or added to training data.
+- Any exact overlap is marked EXACT_OVERLAP_EXISTING_DATA in review_notes.
+- Candidate display order uses deterministic random seed 42.
+- source_group_id is the stable MAMS train-row identifier.

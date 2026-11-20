@@ -1,0 +1,50 @@
+ASPECT PRESENCE V2 — NATURAL ALL-ZERO CLASSICAL DEV BASELINE
+============================================================================================
+
+Train sentence count: 3775
+Dev sentence count: 942
+Test evaluated: NO
+TF-IDF: word unigram + bigram, min_df=2
+Classifiers: four independent LogisticRegression models
+class_weight: balanced
+Default threshold: 0.5
+
+OVERALL DEV
+Macro F1: 0.7241
+Micro F1: 0.7697
+Exact Match: 0.6433
+Hamming Loss: 0.1096
+
+ASPECT METRICS
+Aspect       Precision  Recall  F1      Support  TP   FP   FN   TN
+taste        0.8268     0.8155  0.8211  439      358  75   81   428
+atmosphere   0.7258     0.6667  0.6950  135      90   34   45   773
+service      0.8070     0.7764  0.7914  237      184  44   53   661
+value        0.6744     0.5225  0.5888  111      58   28   53   803
+
+TRUE ALL-ZERO DEV SUBSET
+Support: 212
+Correct 0/0/0/0 predictions: 156
+All-zero Exact Accuracy: 0.7358
+False-positive aspect count: 62
+False positives by aspect: taste=32, atmosphere=16, service=6, value=8
+
+TARGET-CONTAINING DEV SUBSET
+Macro F1: 0.7522
+Micro F1: 0.7972
+Exact Match: 0.6164
+
+LANGUAGE BREAKDOWN
+tr: macro_f1=0.7089, exact_match=0.6550, all_zero_support=70, all_zero_exact_accuracy=0.7857
+en: macro_f1=0.7346, exact_match=0.6392, all_zero_support=72, all_zero_exact_accuracy=0.7083
+es: macro_f1=0.7282, exact_match=0.6358, all_zero_support=70, all_zero_exact_accuracy=0.7143
+
+V1 VS V2 ON IDENTICAL V1 DEV SENTENCES
+Common rows: 730
+Rule: V2 Macro F1 and Exact Match are each no more than 0.01 below V1 on identical DEV rows
+V1: macro_f1=0.7542, micro_f1=0.8040, exact_match=0.6548, hamming_loss=0.1209
+V2: macro_f1=0.7522, micro_f1=0.7972, exact_match=0.6164, hamming_loss=0.1202
+Existing target-sentence performance preserved: NO
+
+INTERPRETATION NOTE
+V1 and V2 overall DEV metrics use different DEV populations. The common-subset comparison above is the controlled check for existing target-containing sentence behavior.

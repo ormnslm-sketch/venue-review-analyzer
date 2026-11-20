@@ -1,0 +1,19 @@
+candidate_id,source_group_id,mapped_aspect,semantic_subtopic,sentence,human_decision,human_final_aspect,human_final_sentiment,human_verified,review_notes
+HA-CAND-EN-VALUE-0056,HA-EN-VALUE-0056,value,expected_range,The dinner matched the price range I expected for a mid-range three-course restaurant.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0055,HA-EN-VALUE-0055,value,same_as_area,Our meal came to roughly the same as at the other places we tried in the area.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0063,HA-EN-SERVICE-0063,service,table_service_sequence,"The server took the drinks first, returned for the food order, and brought the check after we asked.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0052,HA-EN-VALUE-0052,value,usual_payment_comparison,I paid about what I usually do for a meal at this kind of neighborhood restaurant.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0064,HA-EN-SERVICE-0064,service,payment_process_variant,"I tapped my card on the portable reader, and the receipt was printed at the table.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0050,HA-EN-VALUE-0050,value,nearby_price_comparison,The prices were about the same as the other Italian restaurants we visited nearby.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0059,HA-EN-VALUE-0059,value,usual_dish_comparison,The noodle bowl cost about what I normally pay for the same type of dish elsewhere.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0065,HA-EN-SERVICE-0065,service,counter_process_variant,"We ordered at the counter, kept the printed number, and collected the tray when that number appeared on the screen.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0053,HA-EN-VALUE-0053,value,usual_category_range,The menu was in the usual price range I see at casual seafood places.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0058,HA-EN-VALUE-0058,value,local_lunch_average,"Based on the menus outside nearby restaurants, the lunch prices were around the local average.",ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0060,HA-EN-SERVICE-0060,service,queue_procedure,We wrote our name on the walk-in list and waited for the host to call it.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0054,HA-EN-VALUE-0054,value,comparable_nearby_menus,Prices were comparable with the similar set menus we checked nearby.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0061,HA-EN-SERVICE-0061,service,course_timing,Our starter plates were cleared before the main courses were brought out.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0057,HA-EN-VALUE-0057,value,nearby_cafe_comparison,Coffee and dessert were priced similarly to the cafés around the same square.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0060,HA-EN-VALUE-0060,value,neighborhood_menu_comparison,The à la carte prices lined up with comparable restaurant menus in the neighborhood.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0051,HA-EN-VALUE-0051,value,local_average,The main courses seemed to sit around the local average for that part of town.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0059,HA-EN-SERVICE-0059,service,takeaway_pickup,I gave the pickup number at the side counter and collected the takeaway bag when it was called.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0062,HA-EN-SERVICE-0062,service,normal_wait_process,"From joining the list to reaching the table, the process took roughly a quarter of an hour.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL

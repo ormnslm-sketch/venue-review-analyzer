@@ -1,0 +1,15 @@
+HUMAN-AUTHORED NEUTRAL CANDIDATES — ENGLISH
+================================================
+atmosphere: 28
+service: 42
+value: 34
+total: 104
+single-aspect: 62
+multi-aspect: 42
+exact duplicates removed: 0
+near-duplicate warnings: 0
+strong-valence warnings: 2
+wrong-aspect warnings: 0
+review batch 1 size: 24
+human decisions assigned: 0
+training rows added: 0

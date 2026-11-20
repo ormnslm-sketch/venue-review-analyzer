@@ -1,0 +1,73 @@
+EXPERIMENT 12 — PAIRED BOOTSTRAP ROBUSTNESS CHECK
+
+Test split was not loaded or evaluated.
+Dev rows: 901
+Paired bootstrap replicates: 10000
+Random seed: 42
+The same sampled dev indices were used for Models A, B, and C in every replicate.
+
+MODEL DEFINITIONS
+A: cleaned train, inline representation, class_weight='balanced'.
+B: expanded train, one shared expanded TF-IDF, fixed old weights, added-row alpha=0.00.
+C: expanded train, same shared expanded TF-IDF, fixed old weights, added-row alpha=0.40.
+
+REPRODUCTION CHECK
+Model A:
+  Accuracy: 0.7603
+  Macro F1: 0.5891
+  Neutral P/R/F1: 0.3667 / 0.1930 / 0.2529
+  True neutral predicted neutral: 11
+  False neutral: 19
+  Maximum rounded-reference difference: 0.00003542
+Model B:
+  Accuracy: 0.7647
+  Macro F1: 0.5920
+  Neutral P/R/F1: 0.3667 / 0.1930 / 0.2529
+  True neutral predicted neutral: 11
+  False neutral: 19
+  Maximum rounded-reference difference: 0.00003064
+Model C:
+  Accuracy: 0.7325
+  Macro F1: 0.5913
+  Neutral P/R/F1: 0.2268 / 0.3860 / 0.2857
+  True neutral predicted neutral: 22
+  False neutral: 75
+  Maximum rounded-reference difference: 0.00003509
+Reproduction status: PASS
+
+PAIRED BOOTSTRAP DELTAS
+Comparison | Metric | Observed | Mean | Median | 95% CI lower | 95% CI upper | P(delta > 0)
+C-A | accuracy | -0.027747 | -0.027788 | -0.027747 | -0.044395 | -0.011099 | 0.0005
+C-A | macro_f1 | +0.002262 | +0.002492 | +0.002223 | -0.033614 | +0.039745 | 0.5480
+C-A | neutral_precision | -0.139863 | -0.140520 | -0.139088 | -0.286294 | -0.004568 | 0.0215
+C-A | neutral_recall | +0.192982 | +0.193565 | +0.192308 | +0.096154 | +0.301587 | 1.0000
+C-A | neutral_f1 | +0.032841 | +0.033619 | +0.033101 | -0.063634 | +0.134719 | 0.7456
+C-B | accuracy | -0.032186 | -0.032219 | -0.032186 | -0.049945 | -0.015538 | 0.0001
+C-B | macro_f1 | -0.000642 | -0.000403 | -0.000708 | -0.036664 | +0.036995 | 0.4855
+C-B | neutral_precision | -0.139863 | -0.140520 | -0.139088 | -0.286294 | -0.004568 | 0.0215
+C-B | neutral_recall | +0.192982 | +0.193565 | +0.192308 | +0.096154 | +0.301587 | 1.0000
+C-B | neutral_f1 | +0.032841 | +0.033619 | +0.033101 | -0.063634 | +0.134719 | 0.7456
+B-A | accuracy | +0.004440 | +0.004431 | +0.004440 | +0.000000 | +0.009989 | 0.9381
+B-A | macro_f1 | +0.002905 | +0.002895 | +0.002880 | -0.000935 | +0.007120 | 0.9301
+B-A | neutral_precision | +0.000000 | +0.000000 | +0.000000 | +0.000000 | +0.000000 | 0.0000
+B-A | neutral_recall | +0.000000 | +0.000000 | +0.000000 | +0.000000 | +0.000000 | 0.0000
+B-A | neutral_f1 | +0.000000 | +0.000000 | +0.000000 | +0.000000 | +0.000000 | 0.0000
+
+PRIMARY COMPARISON: C (ALPHA 0.40) VS A (CLEANED)
+macro_f1: observed=+0.002262, 95% CI=[-0.033614, +0.039745], P(delta>0)=0.5480
+neutral_f1: observed=+0.032841, 95% CI=[-0.063634, +0.134719], P(delta>0)=0.7456
+neutral_precision: observed=-0.139863, 95% CI=[-0.286294, -0.004568], P(delta>0)=0.0215
+neutral_recall: observed=+0.192982, 95% CI=[+0.096154, +0.301587], P(delta>0)=1.0000
+accuracy: observed=-0.027747, 95% CI=[-0.044395, -0.011099], P(delta>0)=0.0005
+P(Macro F1 delta > -0.01): 0.7428
+This is a bootstrap diagnostic, not a formal non-inferiority test.
+
+NEUTRAL CONFUSION TRADE-OFF
+Cleaned baseline true-neutral recovered: 11
+Cleaned baseline false-neutral: 19
+Alpha 0.40 true-neutral recovered: 22
+Alpha 0.40 false-neutral: 75
+Additional true neutral recovered: +11
+Additional false-neutral introduced: +56
+
+ALPHA 0.40 TRADE-OFF: INCONCLUSIVE

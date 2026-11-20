@@ -1,0 +1,64 @@
+EXPERIMENT 02 — CLEANED DATASET SENTIMENT BASELINE
+
+Controlled experiment:
+- Training data: data/cleaned/train.csv
+- Evaluation data: data/cleaned/dev.csv
+- Test data: not loaded or evaluated
+- Input: aspect=<aspect> [SEP] <sentence>
+- TF-IDF: ngram_range=(1, 2), min_df=2
+- Logistic Regression: class_weight=balanced, max_iter=1000, random_state=42
+- Train rows: 3316
+- Dev rows: 901
+
+OVERALL
+Accuracy: 0.7603
+Macro F1: 0.5891
+
+SENTIMENT METRICS
+positive:
+  precision: 0.8714
+  recall: 0.8208
+  F1: 0.8453
+  support: 586
+neutral:
+  precision: 0.3667
+  recall: 0.1930
+  F1: 0.2529
+  support: 57
+negative:
+  precision: 0.6050
+  recall: 0.7481
+  F1: 0.6690
+  support: 258
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted
+                 positive  neutral  negative
+positive              481        8        97
+neutral                17       11        29
+negative               54       11       193
+
+LANGUAGE METRICS
+Turkish: n=300 | accuracy=0.7633 | macro F1=0.5936
+English: n=301 | accuracy=0.7641 | macro F1=0.5998
+Spanish: n=300 | accuracy=0.7533 | macro F1=0.5734
+
+ASPECT METRICS
+taste: n=421 | accuracy=0.7886 | macro F1=0.5902
+atmosphere: n=135 | accuracy=0.7630 | macro F1=0.3210
+service: n=234 | accuracy=0.7094 | macro F1=0.5251
+value: n=111 | accuracy=0.7568 | macro F1=0.6988
+
+ORIGINAL VS CLEANED
+Accuracy: original=0.7614 | cleaned=0.7603 | difference=-0.0011
+Macro F1: original=0.5725 | cleaned=0.5891 | difference=+0.0166
+positive F1: original=0.8460 | cleaned=0.8453 | difference=-0.0007
+neutral F1: original=0.2174 | cleaned=0.2529 | difference=+0.0355
+negative F1: original=0.6541 | cleaned=0.6690 | difference=+0.0149
+Turkish macro F1: original=0.5896 | cleaned=0.5936 | difference=+0.0040
+English macro F1: original=0.5681 | cleaned=0.5998 | difference=+0.0317
+Spanish macro F1: original=0.5606 | cleaned=0.5734 | difference=+0.0128
+taste macro F1: original=0.5807 | cleaned=0.5902 | difference=+0.0095
+atmosphere macro F1: original=0.3189 | cleaned=0.3210 | difference=+0.0021
+service macro F1: original=0.5273 | cleaned=0.5251 | difference=-0.0022
+value macro F1: original=0.6500 | cleaned=0.6988 | difference=+0.0488

@@ -1,0 +1,579 @@
+EXPERIMENT 15 — EXPANDED-BALANCED CORRECTED WEIGHTED LORA EPOCH 1
+
+Condition: expanded
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Random seed: 42
+Epoch shuffle seed: 42
+Epoch permutation SHA256: 3721322ae5de7b3ad462a9b832f33685d73a4062ef3f1b353a767742276c8ca0
+Config signature: d45023a2c912c8f7e5b684d3473260d1a336a773a3171a1cea5a14908e011955
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Sample weights: None
+Accuracy: 0.6293
+Macro F1: 0.4736
+Epoch train loss: 1.085741
+
+SENTIMENT
+positive: precision=0.9118 | recall=0.7935 | F1=0.8485 | support=586
+neutral: precision=0.0972 | recall=0.4912 | F1=0.1623 | support=57
+negative: precision=0.7184 | recall=0.2868 | F1=0.4100 | support=258
+
+PREDICTED COUNTS
+positive: 510
+neutral: 288
+negative: 103
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              465      101        20
+neutral                20       28         9
+negative               25      159        74
+
+NEUTRAL CONFUSION
+true neutral -> predicted neutral: 28
+positive -> neutral: 101
+negative -> neutral: 159
+total false-neutral: 260
+
+LANGUAGE — Macro F1 and neutral P/R/F1/support
+TR: Macro F1=0.4463 | Neutral=0.0818/0.4737/0.1395/19
+EN: Macro F1=0.5074 | Neutral=0.1111/0.3684/0.1707/19
+ES: Macro F1=0.4649 | Neutral=0.1043/0.6316/0.1791/19
+
+ASPECT — Macro F1 and neutral F1
+taste: Macro F1=0.5321 | Neutral F1=0.1429
+atmosphere: Macro F1=0.2959 | Neutral F1=0.0323
+service: Macro F1=0.5120 | Neutral F1=0.2759
+value: Macro F1=0.3388 | Neutral F1=0.1205
+
+Historical vanilla full XLM-R cleaned reference (different architecture):
+Accuracy=0.8457 | Macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820 | neutral predictions=0
+This reference is background only, not architecture-controlled.
+Epoch 2 was not started automatically.
+COLLAPSE CHECK
+Total DEV: 901
+Predicted positive: 510
+Predicted neutral: 288
+Predicted negative: 103
+Dominant class: positive (56.60%)
+>90% single-class collapse: False
+All three classes predicted: True
+Negative predictions present: True
+Neutral overpredicted versus true-neutral support: True
+HISTORICAL REFERENCES
+13B expanded + unweighted: Accuracy=0.6570 | Macro F1=0.2837 | Neutral F1=0.0000 | Pred neutral=0
+14A clean + old balanced weights: Accuracy=0.6526 | Macro F1=0.2845 | Neutral F1=0.0606 | Pred neutral=9
+14B expanded + old clean weights: Accuracy=0.0633 | Macro F1=0.0397 | Neutral F1=0.1190 | Pred neutral=901
+Classical TF-IDF baseline reference: Macro F1=0.5891
+
+TRAINING CHUNK RESULT
+Epoch: 1/1
+Optimizer steps completed this run: 31
+Current optimizer step: 881
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: True
+Dev Accuracy: 0.6293
+Dev Macro F1: 0.4736
+Best epoch: 1
+Best Macro F1: 0.4736
+Best checkpoint: ./models/experiment_15_lora_expanded_balanced/best/epoch_1
+Epoch 2 was not started automatically.
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 0
+Target optimizer step: 50
+Remaining optimizer steps in epoch: 881
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 50
+Epoch progress percentage: 5.68%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 50
+Target optimizer step: 100
+Remaining optimizer steps in epoch: 831
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 100
+Epoch progress percentage: 11.35%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 100
+Target optimizer step: 150
+Remaining optimizer steps in epoch: 781
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 150
+Epoch progress percentage: 17.03%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 150
+Target optimizer step: 200
+Remaining optimizer steps in epoch: 731
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 200
+Epoch progress percentage: 22.70%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 200
+Target optimizer step: 250
+Remaining optimizer steps in epoch: 681
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 250
+Epoch progress percentage: 28.38%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 250
+Target optimizer step: 300
+Remaining optimizer steps in epoch: 631
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 300
+Epoch progress percentage: 34.05%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 300
+Target optimizer step: 350
+Remaining optimizer steps in epoch: 581
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 350
+Epoch progress percentage: 39.73%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 350
+Target optimizer step: 400
+Remaining optimizer steps in epoch: 531
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 400
+Epoch progress percentage: 45.40%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 400
+Target optimizer step: 450
+Remaining optimizer steps in epoch: 481
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 450
+Epoch progress percentage: 51.08%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 450
+Target optimizer step: 500
+Remaining optimizer steps in epoch: 431
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 500
+Epoch progress percentage: 56.75%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 500
+Target optimizer step: 550
+Remaining optimizer steps in epoch: 381
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 550
+Epoch progress percentage: 62.43%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 550
+Target optimizer step: 600
+Remaining optimizer steps in epoch: 331
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 600
+Epoch progress percentage: 68.10%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 600
+Target optimizer step: 650
+Remaining optimizer steps in epoch: 281
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 650
+Epoch progress percentage: 73.78%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 650
+Target optimizer step: 700
+Remaining optimizer steps in epoch: 231
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 700
+Epoch progress percentage: 79.46%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 700
+Target optimizer step: 750
+Remaining optimizer steps in epoch: 181
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 750
+Epoch progress percentage: 85.13%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 750
+Target optimizer step: 800
+Remaining optimizer steps in epoch: 131
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 800
+Epoch progress percentage: 90.81%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 800
+Target optimizer step: 850
+Remaining optimizer steps in epoch: 81
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 50
+Current optimizer step: 850
+Epoch progress percentage: 96.48%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+Experiment: 15
+Device: mps
+Epoch: 2/2
+Starting optimizer step: 850
+Target optimizer step: 881
+Remaining optimizer steps in epoch: 31
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Entering training loop for epoch 2
+Starting first training batch
+
+EXPERIMENT 15 — EXPANDED-BALANCED CORRECTED WEIGHTED LORA EPOCH 2
+
+Condition: expanded
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Random seed: 42
+Epoch shuffle seed: 43
+Epoch permutation SHA256: 36766d7b943b42173dd865310182470e28de35bc157bb5cf7487cb51fd2502a6
+Config signature: d45023a2c912c8f7e5b684d3473260d1a336a773a3171a1cea5a14908e011955
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.1184126984126983, 3.9144444444444444, 0.540420309863476)
+Sample weights: None
+Accuracy: 0.7902
+Macro F1: 0.6149
+Epoch train loss: 0.768077
+
+SENTIMENT
+positive: precision=0.9340 | recall=0.8942 | F1=0.9137 | support=586
+neutral: precision=0.1562 | recall=0.3509 | F1=0.2162 | support=57
+negative: precision=0.7925 | recall=0.6512 | F1=0.7149 | support=258
+
+PREDICTED COUNTS
+positive: 561
+neutral: 128
+negative: 212
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              524       38        24
+neutral                17       20        20
+negative               20       70       168
+
+NEUTRAL CONFUSION
+true neutral -> predicted neutral: 20
+positive -> neutral: 38
+negative -> neutral: 70
+total false-neutral: 108
+
+LANGUAGE — Macro F1 and neutral P/R/F1/support
+TR: Macro F1=0.5744 | Neutral=0.1064/0.2632/0.1515/19
+EN: Macro F1=0.6500 | Neutral=0.2000/0.3684/0.2593/19
+ES: Macro F1=0.6224 | Neutral=0.1739/0.4211/0.2462/19
+
+ASPECT — Macro F1 and neutral F1
+taste: Macro F1=0.6716 | Neutral F1=0.2745
+atmosphere: Macro F1=0.4983 | Neutral F1=0.1429
+service: Macro F1=0.6174 | Neutral F1=0.2812
+value: Macro F1=0.5463 | Neutral F1=0.0952
+
+Historical vanilla full XLM-R cleaned reference (different architecture):
+Accuracy=0.8457 | Macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820 | neutral predictions=0
+This reference is background only, not architecture-controlled.
+Epoch 3 was not started automatically.
+COLLAPSE CHECK
+Total DEV: 901
+Predicted positive: 561
+Predicted neutral: 128
+Predicted negative: 212
+Dominant class: positive (62.26%)
+>90% single-class collapse: False
+All three classes predicted: True
+Negative predictions present: True
+Neutral overpredicted versus true-neutral support: True
+EPOCH 2 MINUS EPOCH 1
+Accuracy delta: +0.1609
+Macro F1 delta: +0.1413
+Positive F1 delta: +0.0651
+Neutral F1 delta: +0.0539
+Negative F1 delta: +0.3049
+Neutral precision delta: +0.0590
+Neutral recall delta: -0.1404
+Predicted neutral delta: -160
+False-neutral delta: -152
+
+CLASSICAL BASELINE COMPARISON
+Macro F1 delta vs 0.5891: +0.0258
+Neutral F1 delta vs 0.2529: -0.0367
+
+DECISION QUESTIONS
+Macro F1 increased: True
+Neutral precision increased: True
+Neutral recall preserved or increased: False
+False-neutral decreased: True
+Negative F1 increased: True
+All three classes predicted: True
+>90% single-class collapse: False
+Recommendation: A) TRANSFORMER UMUT VERİCİ — sonraki model adımı değerlendirilebilir.
+Epoch 3 was not started automatically.
+
+TRAINING CHUNK RESULT
+Epoch: 2/2
+Optimizer steps completed this run: 31
+Current optimizer step: 881
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/experiment_15_lora_expanded_balanced/resume/slot_b
+Epoch finished: True
+Dev Accuracy: 0.7902
+Dev Macro F1: 0.6149
+Best epoch: 2
+Best Macro F1: 0.6149
+Best checkpoint updated: ./models/experiment_15_lora_expanded_balanced/best/epoch_2
+Epoch 3 was not started automatically.
+Training chunk complete.
+No additional chunk was started automatically.

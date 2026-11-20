@@ -1,0 +1,770 @@
+M-ABSA PROCESSED SENTIMENT DATASET AUDIT
+Scope: train.csv, dev.csv, test.csv
+No rows were deleted or changed. No model was trained.
+
+Definitions:
+- Exact duplicate key: sentence + language + aspect + sentiment.
+- Duplicate rows: total rows minus unique rows (extra repeated copies).
+- Model input key: sentence + language + aspect.
+- Conflict: one model input key has more than one sentiment within a split.
+- Split leakage: one model input key appears in more than one split.
+- Interpretation note: aspect_term and source_category are intentionally not
+  part of the requested duplicate/conflict keys. Different fine-grained
+  annotations can therefore collapse to the same baseline model input; a
+  reported duplicate or conflict is not automatically a source-label error.
+
+Source files:
+- train.csv: rows=4350, sha256=8d268c9313afd854564ce421c0d53088e1166afa1c55fb5ebbd68a392f629e5f
+- dev.csv: rows=1182, sha256=b6b8fb74cf5869a52b70629adbf5585c474a72a6d836775c5f350268ef989856
+- test.csv: rows=1686, sha256=c9ef44f11ea14935b9110db0103c0baaa7734c9db1a64330ddfcef42c300ae59
+
+----------------------------------------------------------------------------------------
+A) EXACT DUPLICATES — TRAIN
+----------------------------------------------------------------------------------------
+Total rows: 4350
+Unique rows: 3472
+Duplicate rows (total - unique): 878
+Duplicate rate: 20.18%
+Duplicate groups: 677
+Top 20 repeated examples:
+[1] rows=8 | language=es | aspect=taste | sentiment=positive
+    sentence: Somos muy particulares con sushi y ambos quedamos satisfechos con cada elección que incluía: mezcla de ceviche (especial), albóndigas de cangrejo, sashimi variado, sushi y rollos, dos tipos de sake, y el tempura de plátano.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=sushi, rows=2
+    annotation: sentiment=positive, source_category=drinks quality, aspect_term=dos tipos de sake, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=albóndigas de cangrejo, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=mezcla de ceviche (especial, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=rollos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=sashimi variado, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=tempura de plátano, rows=1
+[2] rows=8 | language=en | aspect=taste | sentiment=positive
+    sentence: We are very particular about sushi and were both please with every choice which included : ceviche mix ( special ) , crab dumplings , assorted sashimi , sushi and rolls , two types of sake , and the banana tempura .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=sushi, rows=2
+    annotation: sentiment=positive, source_category=drinks quality, aspect_term=two types of sake, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=assorted sashimi, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=banana tempura, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=ceviche mix ( special ), rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=crab dumplings, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=rolls, rows=1
+[3] rows=8 | language=tr | aspect=taste | sentiment=positive
+    sentence: suşi konusunda çok seçiciyiz ve her ikimiz de şu seçeneklerin hepsinden memnun kaldık: ceviche karışımı (özel), yengeç köftesi, çeşitli sashimi, suşi ve rulolar, iki çeşit sake ve muz tempurası.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=suşi, rows=2
+    annotation: sentiment=positive, source_category=drinks quality, aspect_term=iki çeşit sake, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=ceviche karışımı (özel, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=muz tempurası, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=rulolar, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yengeç köftesi, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=çeşitli sashimi, rows=1
+[4] rows=4 | language=en | aspect=value | sentiment=positive
+    sentence: And it all comes at a very reasonable price ( congee , noodles , and rice dishes are no more than $ 3-6 each ) .
+    annotation: sentiment=positive, source_category=food prices, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food prices, aspect_term=congee, rows=1
+    annotation: sentiment=positive, source_category=food prices, aspect_term=noodles, rows=1
+    annotation: sentiment=positive, source_category=food prices, aspect_term=rice dishes, rows=1
+[5] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Delicado especias, cebollas, huevos y buenísimo roti.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=cebollas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=especias, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=huevos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=roti, rows=1
+[6] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: Delicate spices , onions , eggs and a kick-ass roti .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=eggs, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=onions, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=roti, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=spices, rows=1
+[7] rows=4 | language=tr | aspect=service | sentiment=positive
+    sentence: Eşim ve ben her zaman genç, her zaman iyi eğitimli olmasalar da yine de arkadaş canlısı personel insanlardan hoşlanırız, hepsinin bir hikayesi vardır.
+    annotation: sentiment=positive, source_category=service general, aspect_term=personel, rows=4
+[8] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: I recommend the jelly fish , drunken chicken and the soupy dumplings , certainly the stir fry blue crab .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=drunken chicken, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=jelly fish, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=soupy dumplings, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=stir fry blue crab, rows=1
+[9] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: It melted in my little mouth and the perfect consistency-not too fishy , creamy , and slightly buttery .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=4
+[10] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Küçük ağzımda eridi ve kıvamı mükemmeldi - çok balık tadında değildi, kremamsıydı ve hafif tereyağlıydı.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=4
+[11] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: La comida es deliciosa: desde los especiales hasta el menú regular, los platos nunca decepcionan.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=especiales, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=menú regular, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=platos, rows=1
+[12] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: La corteza tiene un gran mordisco y una buena masticación, la salsa es ligera con una acidez agradable, la sal del queso es excelente, realmente realza el sabor de todos los demás componentes.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=corteza, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=queso, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=salsa, rows=1
+[13] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Las pastas son increíbles, los risottos (particularmente el sepia) son fantásticos y el conejo estofado es asombroso.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=conejo estofado, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=pastas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=risottos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=sepia, rows=1
+[14] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Lo que realmente lo hace brillar es la comida, que está agresivamente sazonada con especias chipriotas, y toda hecha en casa (incluso la carne de gyro y las salchichas), y hecha con una calidad ingredientes mucho mayor de la que podría esperarse de otra manera.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=carne de gyro, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=ingredientes, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=salchichas, rows=1
+[15] rows=4 | language=es | aspect=taste | sentiment=negative
+    sentence: Los mejillones eran lo más parecido a pescado que he probado en mi vida, la lubina estaba insípida, a la ensalada de queso de cabra le faltaba el queso de cabra, el penne con pollo tenía huesos... Era repugnante.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=ensalada de queso de cabra, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=lubina, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=mejillones, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=penne con pollo, rows=1
+[16] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Los platos ofrecidos eran únicos, muy sabrosos y frescos, desde las salchichas de cordero, sardinas con galletas, camarones grandes enteros hasta el increíble helado de pistacho (el mejor y más fresco que he probado).
+    annotation: sentiment=positive, source_category=food quality, aspect_term=platos, rows=3
+    annotation: sentiment=positive, source_category=food quality, aspect_term=helado de pistacho, rows=1
+[17] rows=4 | language=es | aspect=service | sentiment=positive
+    sentence: Mi esposa y yo siempre disfrutamos del personal joven, no siempre bien entrenado pero sin embargo amigable (4 personas), todos los cuales tienen una historia.
+    annotation: sentiment=positive, source_category=service general, aspect_term=personas, rows=4
+[18] rows=4 | language=en | aspect=service | sentiment=positive
+    sentence: My wife and I always enjoy the young , not always well trained but nevertheless friendly , staff , all of whom have a story .
+    annotation: sentiment=positive, source_category=service general, aspect_term=staff, rows=4
+[19] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Narin baharatlar, soğanlar, yumurtalar ve harika roti.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=baharatlar, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=roti, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=soğanlar, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yumurtalar, rows=1
+[20] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Onu gerçekten öne çıkaran şey, Kıbrıs baharatlarıyla yoğun bir şekilde tatlandırılmış ve tamamı evde yapılmış (hatta gyro eti ve sosisler bile) yemek ve aksi takdirde beklenebilecek çok daha yüksek kalitede malzemeler yapılmış olmasıdır.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=gyro eti, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=malzemeler, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=sosisler, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yemek, rows=1
+
+----------------------------------------------------------------------------------------
+A) EXACT DUPLICATES — DEV
+----------------------------------------------------------------------------------------
+Total rows: 1182
+Unique rows: 945
+Duplicate rows (total - unique): 237
+Duplicate rate: 20.05%
+Duplicate groups: 168
+Top 20 repeated examples:
+[1] rows=5 | language=es | aspect=taste | sentiment=positive
+    sentence: La comida es deliciosa, especialmente sus mejillones en salsa de tomate picante cocinados a la perfección y sus papas fritas crujientes y diminutas.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=mejillones en salsa de tomate picante, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=papas fritas, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+[2] rows=5 | language=en | aspect=taste | sentiment=positive
+    sentence: The food is yummy , especially their cooked-to-perfection mussels in spicy tomato sauce and their shoestring crispy fries .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=fries, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=mussels in spicy tomato sauce, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=food, rows=1
+[3] rows=5 | language=tr | aspect=taste | sentiment=positive
+    sentence: yemekler çok lezzetli, özellikle de mükemmel pişirilmişleri baharatlı domates soslu midyeler ve çıtır çıtır patates kızartmaları patates kızartması.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=baharatlı domates soslu midyeler, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=patates kızartması, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yemekler, rows=1
+[4] rows=4 | language=es | aspect=taste | sentiment=negative
+    sentence: El piruleta de pollo es mi favorito, la mayoría de los platos (tengo que estar de acuerdo con un crítico anterior) son bastante aceitosos y muy picantes, especialmente el pollo picante.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=platos, rows=2
+    annotation: sentiment=negative, source_category=food quality, aspect_term=pollo picante, rows=2
+[5] rows=4 | language=es | aspect=service | sentiment=positive
+    sentence: El servicio fue muy bueno: rápido, atento y no intrusivo.
+    annotation: sentiment=positive, source_category=service general, aspect_term=El servicio, rows=4
+[6] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Eğer giderseniz marinara/arrabiatta sosunu deneyin, Carozza'da mozzarella mmmmmmmm ... .. her şey çok lezzetli.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=marinara/arrabiatta sosunu, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Carozza'da mozzarella, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+[7] rows=4 | language=tr | aspect=service | sentiment=positive
+    sentence: Hizmet çok iyiydi - hızlı, dikkatli ve müdahaleci değildi.
+    annotation: sentiment=positive, source_category=service general, aspect_term=Hizmet, rows=4
+[8] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: If you go , try the marinara/arrabiatta sauce , the mozzarella en Carozza is mmmmmmmm ... .. everything is just delicious .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=marinara/arrabiatta sauce, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=mozzarella en Carozza, rows=1
+[9] rows=4 | language=tr | aspect=atmosphere | sentiment=positive
+    sentence: Leon East Village'ın gözdesi: rahat ama şık, iyi hazırlanmış temel Fransız bistro yemekleri, iyi spesiyaller, sıcak ve canlı atmosfer.
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=Leon, rows=2
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=atmosfer, rows=2
+[10] rows=4 | language=es | aspect=atmosphere | sentiment=positive
+    sentence: Leon es una joya del East Village: informal pero moderno, con comida básica bien preparada de bistró francés, buena especialidades, un ambiente cálido y animado .
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=Leon, rows=2
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=NULL, rows=2
+[11] rows=4 | language=en | aspect=atmosphere | sentiment=positive
+    sentence: Leon is an East Village gem : casual but hip , with well prepared basic French bistro fare , good specials , a warm and lively atmosphere .
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=Leon, rows=2
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=atmosphere, rows=2
+[12] rows=4 | language=en | aspect=service | sentiment=positive
+    sentence: Service was very good - prompt , attentive and non-intrusive .
+    annotation: sentiment=positive, source_category=service general, aspect_term=Service, rows=4
+[13] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Si vais, probad la salsa marinara/arrabiatta, la salsa marinara/arrabiatta es mmmmmmmm... todo es simplemente delicioso.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=salsa marinara/arrabiatta, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=mozzarella en Carozza, rows=1
+[14] rows=4 | language=en | aspect=taste | sentiment=negative
+    sentence: The chicken lollipop is my favorite , most of the dishes ( I have to agree with a previous reviewer ) are quite oily and very spicy , espeically the Chilli Chicken .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=Chilli Chicken, rows=2
+    annotation: sentiment=negative, source_category=food quality, aspect_term=dishes, rows=2
+[15] rows=4 | language=tr | aspect=taste | sentiment=negative
+    sentence: tavuk lolipopu benim favorim, yemeklerin çoğu (önceki bir yorumcuya katılmalıyım) oldukça yağlı ve çok baharatlı, özellikle Acılı Tavuk.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=Acılı Tavuk, rows=2
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yemeklerin, rows=2
+[16] rows=3 | language=en | aspect=taste | sentiment=negative
+    sentence: A few tips : skip the turnip cake , roast pork buns and egg custards .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=egg custards, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=roast pork buns, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=turnip cake, rows=1
+[17] rows=3 | language=es | aspect=taste | sentiment=negative
+    sentence: Algunos consejos: omite pastel de nabo, bollos de cerdo asado y natillas de huevo.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=bollos de cerdo asado, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=natillas de huevo, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=pastel de nabo, rows=1
+[18] rows=3 | language=en | aspect=taste | sentiment=negative
+    sentence: Anybody who likes this place must be from a different planet , where greasy , dry and tasteless are complimentary .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=NULL, rows=3
+[19] rows=3 | language=tr | aspect=taste | sentiment=negative
+    sentence: Birkaç ipucu: şalgam keki, kızarmış domuz etli çörekler ve yumurtalı muhallebi tariflerini atlayın.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=kızarmış domuz etli çörekler, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yumurtalı muhallebi, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=şalgam keki, rows=1
+[20] rows=3 | language=tr | aspect=taste | sentiment=negative
+    sentence: Burayı seven her kimse yağlı, kuru ve tatsız her şeyin birbirini tamamladığı başka bir gezegenden olmalı.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=NULL, rows=3
+
+----------------------------------------------------------------------------------------
+A) EXACT DUPLICATES — TEST
+----------------------------------------------------------------------------------------
+Total rows: 1686
+Unique rows: 1349
+Duplicate rows (total - unique): 337
+Duplicate rate: 19.99%
+Duplicate groups: 223
+Top 20 repeated examples:
+[1] rows=6 | language=en | aspect=taste | sentiment=positive
+    sentence: – Eggs , pancakes , potatoes , fresh fruit and yogurt -- everything they serve is delicious .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Eggs, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=fresh fruit, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=pancakes, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=potatoes, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yogurt, rows=1
+[2] rows=6 | language=es | aspect=taste | sentiment=positive
+    sentence: – Huevos, panqueques, papas, fruta fresca y yogur – todo lo que sirven es delicioso.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Huevos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=fruta fresca, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=panqueques, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=papas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yogur, rows=1
+[3] rows=6 | language=tr | aspect=taste | sentiment=positive
+    sentence: – Yumurta, krep, patates, taze meyve ve yoğurt -- servis ettikleri her şey lezzetli.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Yumurta, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=krep, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=patates, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=taze meyve, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yoğurt, rows=1
+[4] rows=5 | language=tr | aspect=taste | sentiment=positive
+    sentence: Normalde bu tarz bir yemek sipariş ettiğimde brokoli kısmını bitiremem ama ilk defa her parçası ilki kadar olaylıydı... deniz tarağı ve karides çok taze ve güzel pişmişti.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=deniz tarağı, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=karides, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=brokoli, rows=1
+[5] rows=5 | language=es | aspect=taste | sentiment=positive
+    sentence: Normalmente no terminaría el brócoli cuando pido este tipo de comida, pero por primera vez, cada pieza fue tan completa como la primera... las vieiras y los camarones estaban tan frescos y bien cocinados.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=camarones, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=vieiras, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=brócoli, rows=1
+[6] rows=5 | language=en | aspect=taste | sentiment=positive
+    sentence: i would normally not finish the brocolli when i order these kinds of food but for the first time , every piece was as eventful as the first one ... the scallops and prawns was so fresh and nicely cooked .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=prawns, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=scallops, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=brocolli, rows=1
+[7] rows=4 | language=es | aspect=value | sentiment=negative
+    sentence: Al final nuestra cuenta fue de $27 por 4 platos pequeños panqueques, un burrito de desayuno, un jugo de naranja y un té helado (yo tomé agua).
+    annotation: sentiment=negative, source_category=drinks prices, aspect_term=jugo de naranja, rows=1
+    annotation: sentiment=negative, source_category=drinks prices, aspect_term=té helado, rows=1
+    annotation: sentiment=negative, source_category=food prices, aspect_term=burrito de desayuno, rows=1
+    annotation: sentiment=negative, source_category=food prices, aspect_term=panqueques, rows=1
+[8] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Burada yediğim her şey güzeldi, taco salataları, burritolar, enchiladalar burayı seviyorum mekan.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=burritolar, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=enchiladalar, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=taco salataları, rows=1
+[9] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Comí delicioso cordero korma, saag paneer, samosas, naan, etc.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=cordero korma, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=naan, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=saag paneer, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=samosas, rows=1
+[10] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Denizanası, İstavrit, Mavi Yüzgeçli Ton Balığı ve Sake Ikura rulosu gibilerini denedim ve hepsi de güzeldi.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Denizanası, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Mavi Yüzgeçli Ton Balığı, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Sake Ikura rulosu, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=İstavrit, rows=1
+[11] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Entonces, sobre los camarones, estaban frescos y tenían una ligera textura crujiente en la masa... ¡tan buenos!... las nueces estaban cortadas en trozos más pequeños y eran muy crujientes y sabrosas.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=nueces, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=camarones, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=masa, rows=1
+[12] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: Everything I 've had here is good , taco salads , burritos , enchiladas i love this place .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=burritos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=enchiladas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=taco salads, rows=1
+[13] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: I 've had the Jellyfish , Horse Mackerel , Blue Fin Tuna and the Sake Ikura roll among others , and they were all good .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Blue Fin Tuna, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Horse Mackerel, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Jellyfish, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Sake Ikura roll, rows=1
+[14] rows=4 | language=en | aspect=taste | sentiment=positive
+    sentence: I had yummy lamb korma , saag paneer , samosas , naan , etc .
+    annotation: sentiment=positive, source_category=food quality, aspect_term=lamb korma, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=naan, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=saag paneer, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=samosas, rows=1
+[15] rows=4 | language=en | aspect=value | sentiment=negative
+    sentence: In the end our check came to $ 27 for 4 small pancakes , a breakfast burrito , an orange juice and an iced tea ( I had water ) .
+    annotation: sentiment=negative, source_category=drinks prices, aspect_term=iced tea, rows=1
+    annotation: sentiment=negative, source_category=drinks prices, aspect_term=orange juice, rows=1
+    annotation: sentiment=negative, source_category=food prices, aspect_term=breakfast burrito, rows=1
+    annotation: sentiment=negative, source_category=food prices, aspect_term=pancakes, rows=1
+[16] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Küçük tabaklardan bir seçim sipariş ettik ve ince soğan, keçi peynirli pizza, ızgara kuşkonmaz ve meyveli kızarmış brie peyniri hepsi çok lezzetliydi.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=ince soğan, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=keçi peynirli pizza, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=meyveli kızarmış brie peyniri, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=ızgara kuşkonmaz, rows=1
+[17] rows=4 | language=tr | aspect=taste | sentiment=positive
+    sentence: Nefis kuzu korma, saag paneer, samosas, naan vb. yedim.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=kuzu korma, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=naan, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=saag paneer, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=samosas, rows=1
+[18] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Pedimos una selección de platos pequeños, y los cebollas finas, pizza con queso de cabra, espárragos a la parrilla y brie frito con fruta estaban todos muy buenos.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=brie frito con fruta, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=cebollas finas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=espárragos a la parrilla, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=pizza con queso de cabra, rows=1
+[19] rows=4 | language=es | aspect=taste | sentiment=positive
+    sentence: Probé el Medusa, Jurel, Atún rojo y el Sake Ikura roll, entre otros, y todos estaban buenos.
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Atún rojo, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Jurel, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Medusa, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Sake Ikura roll, rows=1
+[20] rows=4 | language=tr | aspect=value | sentiment=negative
+    sentence: Sonunda hesabımız 4 küçük porsiyon krep, bir porsiyon kahvaltılık burrito, bir porsiyon portakal suyu ve bir porsiyon buzlu çay için 27 dolara geldi (ben su içtim).
+    annotation: sentiment=negative, source_category=drinks prices, aspect_term=buzlu çay, rows=1
+    annotation: sentiment=negative, source_category=drinks prices, aspect_term=portakal suyu, rows=1
+    annotation: sentiment=negative, source_category=food prices, aspect_term=kahvaltılık burrito, rows=1
+    annotation: sentiment=negative, source_category=food prices, aspect_term=krep, rows=1
+
+----------------------------------------------------------------------------------------
+B) SAME INPUT, DIFFERENT LABEL — TRAIN
+----------------------------------------------------------------------------------------
+Conflicting inputs: 78
+Sentiment combinations:
+  positive + negative: 60
+  positive + neutral: 12
+  neutral + negative: 6
+First 20 conflict examples:
+[1] language=es | aspect=taste | labels=neutral + negative
+    sentence: Con la excepción de nuestra ensalada de limón que tenía tanta pimienta que se nos empezaron a llenar los ojos de lágrimas, la comida aquí era decente, no excelente.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=comida, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=ensalada de limón, rows=1
+    annotation: sentiment=neutral, source_category=food quality, aspect_term=comida, rows=1
+[2] language=es | aspect=taste | labels=neutral + negative
+    sentence: El bibimbap era normal, pero el cuenco de piedra no estaba ni cerca de ser chisporroteante.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=cuenco de piedra, rows=1
+    annotation: sentiment=neutral, source_category=food quality, aspect_term=bibimbap, rows=1
+[3] language=en | aspect=taste | labels=neutral + negative
+    sentence: The bibimbap was average , but the stone bowl was n't even close to sizzling .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=stone bowl, rows=1
+    annotation: sentiment=neutral, source_category=food quality, aspect_term=bibimbap, rows=1
+[4] language=en | aspect=taste | labels=neutral + negative
+    sentence: With the exception of our lemon salad that had so much pepper on it that our eyes started watering , the food here was decent , not great .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=food, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=lemon salad, rows=1
+    annotation: sentiment=neutral, source_category=food quality, aspect_term=food, rows=1
+[5] language=tr | aspect=taste | labels=neutral + negative
+    sentence: bibimbap ortalamaydı, ama taş kase cızırtıya bile yakın değildi.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=taş kase, rows=1
+    annotation: sentiment=neutral, source_category=food quality, aspect_term=bibimbap, rows=1
+[6] language=tr | aspect=taste | labels=neutral + negative
+    sentence: limonlu salata gözlerimizin yaşarmasına neden olacak kadar çok biber içerdiği için hariç, yemek burada fena değildi, harika değildi.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=limonlu salata, rows=1
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yemek, rows=1
+    annotation: sentiment=neutral, source_category=food quality, aspect_term=yemek, rows=1
+[7] language=en | aspect=atmosphere | labels=positive + negative
+    sentence: Admittedly some nights inside the restaurant were rather warm , but the open kitchen is part of the charm .
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=restaurant, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=open kitchen, rows=1
+[8] language=en | aspect=atmosphere | labels=positive + negative
+    sentence: Although the tables may be closely situated , the candle-light , food quality and service overcompensate .
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=tables, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=candle-light, rows=1
+[9] language=es | aspect=atmosphere | labels=positive + negative
+    sentence: Aunque las mesas pueden estar situadas muy cerca, la luz de las velas, la calidad de la comida y el servicio compensan en exceso.
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=mesas, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=luz de las velas, rows=1
+[10] language=tr | aspect=taste | labels=positive + negative
+    sentence: Benimki biraz yanmıştı ama keçi peyniri ve panchetta ile yine de lezzetliydi (raddichio biraz acıydı ama).
+    annotation: sentiment=negative, source_category=food quality, aspect_term=raddichio, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+[11] language=es | aspect=taste | labels=positive + negative
+    sentence: El de mi marido estaba perfecto, el mío estaba bien hecho y seco.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=NULL, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+[12] language=es | aspect=taste | labels=positive + negative
+    sentence: El mío estaba un poco quemado, pero aún así delicioso con queso de cabra y panchetta (aunque el raddichio era algo amargo).
+    annotation: sentiment=negative, source_category=food quality, aspect_term=raddichio, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=NULL, rows=1
+[13] language=es | aspect=taste | labels=positive + negative
+    sentence: El pad se ew chicken estaba delicioso, sin embargo el pad thai era demasiado aceitoso.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=pad thai, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=pad se ew chicken, rows=1
+[14] language=es | aspect=service | labels=positive + negative
+    sentence: El personal ha sido agradable, pero parecían muy estresados y el baño unisex necesita ser limpiado con más frecuencia.
+    annotation: sentiment=negative, source_category=service general, aspect_term=personal, rows=1
+    annotation: sentiment=positive, source_category=service general, aspect_term=personal, rows=1
+[15] language=es | aspect=service | labels=positive + negative
+    sentence: El servicio fue extremadamente rápido y atento (gracias al botón servicio en su mesa) pero apenas entendí 1 palabra cuando el camarero tomó nuestro pedido.
+    annotation: sentiment=positive, source_category=service general, aspect_term=servicio, rows=2
+    annotation: sentiment=negative, source_category=service general, aspect_term=camarero, rows=1
+    annotation: sentiment=positive, source_category=service general, aspect_term=botón servicio, rows=1
+[16] language=es | aspect=service | labels=positive + negative
+    sentence: El servicio fue lento, pero la gente fue amable.
+    annotation: sentiment=negative, source_category=service general, aspect_term=El servicio, rows=1
+    annotation: sentiment=positive, source_category=service general, aspect_term=gente, rows=1
+[17] language=es | aspect=taste | labels=positive + negative
+    sentence: En general, todos parecían contentos con su comida, excepto mi hermano que pidió el Mahi Mahi a la parrilla, ¡aparentemente empapado en jugo de pomelo!
+    annotation: sentiment=negative, source_category=food quality, aspect_term=Mahi Mahi a la parrilla, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+[18] language=es | aspect=atmosphere | labels=positive + negative
+    sentence: Es cierto que algunas noches dentro del restaurante eran bastante calurosas, pero la cocina abierta es parte del encanto.
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=restaurante, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=cocina abierta, rows=1
+[19] language=en | aspect=taste | labels=positive + negative
+    sentence: Everyone seemed generally happy with their food , except my brother who had the grilled Mahi Mahi , seemingly drenched in Grapfruit Juice !
+    annotation: sentiment=negative, source_category=food quality, aspect_term=grilled Mahi Mahi, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=food, rows=1
+[20] language=tr | aspect=taste | labels=positive + negative
+    sentence: Evet, süslü malzemeler kullanıyorlar, ama süslü malzemeler bile iyi pizza yapmaz, ta ki birisi hamurun nasıl düzgün yapılacağını bilmeyene kadar.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=pizza, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=malzemeler, rows=1
+
+----------------------------------------------------------------------------------------
+B) SAME INPUT, DIFFERENT LABEL — DEV
+----------------------------------------------------------------------------------------
+Conflicting inputs: 21
+Sentiment combinations:
+  positive + negative: 18
+  positive + neutral: 3
+First 20 conflict examples:
+[1] language=es | aspect=taste | labels=positive + negative
+    sentence: A veces me va mal comida y mal servicio, a veces me va mal bien bien y mal servicio.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=comida, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=bien, rows=1
+[2] language=es | aspect=service | labels=positive + negative
+    sentence: Cada vez que hemos estado, el personal de recepción (no los camareros - son fantásticos - sino la gente que te saluda y te sienta) ha sido tan horrible con nosotros que si no fuera por los excepcionales platos de pescado nunca volvería.
+    annotation: sentiment=negative, source_category=service general, aspect_term=personal de recepción, rows=1
+    annotation: sentiment=positive, source_category=service general, aspect_term=camareros, rows=1
+[3] language=en | aspect=service | labels=positive + negative
+    sentence: Each time we 've been , the front of house staff ( not the waiters - they 're fantastic - but the people who greet and seat you ) has been so hideous to us that were it not for the exceptional fish dishes I would never return .
+    annotation: sentiment=negative, source_category=service general, aspect_term=front of house staff, rows=1
+    annotation: sentiment=positive, source_category=service general, aspect_term=waiters, rows=1
+[4] language=es | aspect=taste | labels=positive + negative
+    sentence: El piruleta de pollo es mi favorito, la mayoría de los platos (tengo que estar de acuerdo con un crítico anterior) son bastante aceitosos y muy picantes, especialmente el pollo picante.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=platos, rows=2
+    annotation: sentiment=negative, source_category=food quality, aspect_term=pollo picante, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=piruleta de pollo, rows=1
+[5] language=en | aspect=taste | labels=positive + negative
+    sentence: Food is usually very good , though ocasionally I wondered about freshmess of raw vegatables in side orders .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=raw vegatables in side orders, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Food, rows=1
+[6] language=tr | aspect=taste | labels=positive + negative
+    sentence: Guacamole+karides mezesi gerçekten harikaydı, ikimiz de bonfile yedik, çok güzeldi, yanında gelen patates kızartması pek hoşuma gitmedi, ama bonfile o kadar güzeldi ki ikimiz de umursamadık.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=patates kızartması, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Guacamole+karides mezesi, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=bonfile, rows=1
+[7] language=en | aspect=taste | labels=positive + negative
+    sentence: Guacamole+shrimp appetizer was really great , we both had the filet , very good , did n't much like the frites that came with , but the filet was so good , neither of us cared .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=frites, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Guacamole+shrimp appetizer, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=filet, rows=1
+[8] language=tr | aspect=service | labels=positive + negative
+    sentence: Her gittiğimizde, resepsiyon personeli ( garsonlar değil - onlar harika - ama sizi karşılayan ve oturtan kişiler) bize o kadar iğrenç geldi ki, olağanüstü balık yemekleri olmasa asla geri dönmezdim.
+    annotation: sentiment=negative, source_category=service general, aspect_term=resepsiyon personeli, rows=1
+    annotation: sentiment=positive, source_category=service general, aspect_term=garsonlar değil, rows=1
+[9] language=tr | aspect=taste | labels=positive + negative
+    sentence: Küçük ana yemek porsiyonu, ben somon yedim (etkilenmedim), kız arkadaşım tavuk yedi, güzeldi.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=somon, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=tavuk, rows=1
+[10] language=es | aspect=taste | labels=positive + negative
+    sentence: La comida suele ser muy buena, aunque en ocasiones me pregunto sobre la frescura de las verduras crudas en los acompañamientos.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=las verduras crudas en los acompañamientos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=La comida, rows=1
+[11] language=es | aspect=taste | labels=positive + negative
+    sentence: Pequeño (3 porciones como plato principal), yo pedí salmón (no me impresionó), mi novia pidió pollo, estaba bueno.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=salmón, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=pollo, rows=1
+[12] language=en | aspect=taste | labels=positive + negative
+    sentence: Small servings for main entree , i had salmon ( wasnt impressed ) girlfriend had chicken , it was good .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=salmon, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=chicken, rows=1
+[13] language=en | aspect=taste | labels=positive + negative
+    sentence: The chicken lollipop is my favorite , most of the dishes ( I have to agree with a previous reviewer ) are quite oily and very spicy , espeically the Chilli Chicken .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=Chilli Chicken, rows=2
+    annotation: sentiment=negative, source_category=food quality, aspect_term=dishes, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=chicken lollipop, rows=1
+[14] language=tr | aspect=taste | labels=positive + negative
+    sentence: Yemek genelde çok iyi, ancak bazen yan siparişlerdeki çiğ sebzelerin tazeliği konusunda endişeleniyorum.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yan siparişlerdeki çiğ sebzelerin, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=Yemek, rows=1
+[15] language=es | aspect=taste | labels=positive + negative
+    sentence: aperitivo de guacamole + camarones fue realmente genial, ambos tuvimos el filete, muy bueno, no nos gustó mucho el papas fritas que venía con, pero el filete era tan bueno que a ninguno de nosotros le importó.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=papas fritas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=aperitivo de guacamole + camarones, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=filete, rows=1
+[16] language=tr | aspect=taste | labels=positive + negative
+    sentence: bazen kötü yemek ve kötü servis alıyorum, bazen iyi iyi ve kötü servis alıyorum.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yemek, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=iyi, rows=1
+[17] language=en | aspect=taste | labels=positive + negative
+    sentence: sometimes i get bad food and bad service , sometimes i get good good and bad service .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=food, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=good, rows=1
+[18] language=tr | aspect=taste | labels=positive + negative
+    sentence: tavuk lolipopu benim favorim, yemeklerin çoğu (önceki bir yorumcuya katılmalıyım) oldukça yağlı ve çok baharatlı, özellikle Acılı Tavuk.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=Acılı Tavuk, rows=2
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yemeklerin, rows=2
+    annotation: sentiment=positive, source_category=food quality, aspect_term=tavuk lolipopu, rows=1
+[19] language=es | aspect=taste | labels=positive + neutral
+    sentence: La comida que pedimos estaba excelente, aunque no diría que las margaritas eran nada del otro mundo.
+    annotation: sentiment=neutral, source_category=drinks quality, aspect_term=margaritas, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+[20] language=tr | aspect=taste | labels=positive + neutral
+    sentence: Sipariş ettiğimiz yemek mükemmeldi, ancak margarita hakkında pek de iyi şeyler söyleyemem.
+    annotation: sentiment=neutral, source_category=drinks quality, aspect_term=margarita, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yemek, rows=1
+
+----------------------------------------------------------------------------------------
+B) SAME INPUT, DIFFERENT LABEL — TEST
+----------------------------------------------------------------------------------------
+Conflicting inputs: 15
+Sentiment combinations:
+  positive + negative: 15
+First 20 conflict examples:
+[1] language=es | aspect=taste | labels=positive + negative
+    sentence: Además, mientras que el pescado es indudablemente fresco, los rollitos tienden a ser inexplicablemente sosos.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=rollitos, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=pescado, rows=1
+[2] language=es | aspect=taste | labels=positive + negative
+    sentence: Agradable comida ¡pero sin picante!
+    annotation: sentiment=negative, source_category=food quality, aspect_term=comida, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+[3] language=tr | aspect=taste | labels=positive + negative
+    sentence: Ayrıca, balık şüphesiz taze iken, rulolar açıklanamayacak kadar tatsız olma eğilimindedir.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=rulolar, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=balık, rows=1
+[4] language=en | aspect=taste | labels=positive + negative
+    sentence: Furthermore , while the fish is unquestionably fresh , rolls tend to be inexplicably bland .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=rolls, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=fish, rows=1
+[5] language=tr | aspect=taste | labels=positive + negative
+    sentence: Güzel yemek ama baharat yok!
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yemek, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yemek, rows=1
+[6] language=es | aspect=taste | labels=positive + negative
+    sentence: La comida estaba toda buena pero era demasiado suave.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=comida, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+[7] language=es | aspect=atmosphere | labels=positive + negative
+    sentence: La música que se escuchaba era muy moderna, música pop de unos 20 o 30 años, música, pero el subwoofer del sistema de sonido estaba ubicado debajo de mi asiento, lo que se volvió molesto a mitad de la cena.
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=subwoofer del sistema de sonido, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=música, rows=1
+[8] language=en | aspect=taste | labels=positive + negative
+    sentence: Nice food but no spice !
+    annotation: sentiment=negative, source_category=food quality, aspect_term=food, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=food, rows=1
+[9] language=en | aspect=taste | labels=positive + negative
+    sentence: The food was all good but it was way too mild .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=food, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=food, rows=1
+[10] language=en | aspect=atmosphere | labels=positive + negative
+    sentence: The music playing was very hip , 20-30 something pop music , but the subwoofer to the sound system was located under my seat , which became annoying midway through dinner .
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=subwoofer to the sound system, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=music, rows=1
+[11] language=tr | aspect=atmosphere | labels=positive + negative
+    sentence: müzik çalması çok havalı, 20-30 küsur pop müzik, ama ses sistemine giden subwoofer koltuğumun altındaydı ve bu da akşam yemeğinin ortasında rahatsız edici olmaya başladı.
+    annotation: sentiment=negative, source_category=ambience general, aspect_term=ses sistemine giden subwoofer, rows=1
+    annotation: sentiment=positive, source_category=ambience general, aspect_term=müzik, rows=1
+[12] language=tr | aspect=taste | labels=positive + negative
+    sentence: yemek hepsi güzeldi ama çok hafifti.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=yemek, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yemek, rows=1
+[13] language=es | aspect=taste | labels=positive + negative
+    sentence: – La comida aquí es increíble, aunque la calidad es inconsistente durante el almuerzo.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=almuerzo, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=comida, rows=1
+[14] language=en | aspect=taste | labels=positive + negative
+    sentence: – The food is here is incredible , though the quality is inconsistent during lunch .
+    annotation: sentiment=negative, source_category=food quality, aspect_term=lunch, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=food, rows=1
+[15] language=tr | aspect=taste | labels=positive + negative
+    sentence: – yemek burada inanılmaz, ancak öğle yemeği sırasında kalite tutarsız.
+    annotation: sentiment=negative, source_category=food quality, aspect_term=öğle yemeği, rows=1
+    annotation: sentiment=positive, source_category=food quality, aspect_term=yemek, rows=1
+
+========================================================================================
+C) SPLIT LEAKAGE
+========================================================================================
+
+train vs dev shared inputs: 2
+First 20 examples:
+[1] language=es | aspect=taste | train labels=positive | dev labels=positive
+    sentence: La comida es genial.
+[2] language=tr | aspect=taste | train labels=positive | dev labels=positive
+    sentence: Yemek harika.
+
+train vs test shared inputs: 3
+First 20 examples:
+[1] language=es | aspect=atmosphere | train labels=positive | test labels=positive
+    sentence: El ambiente era genial.
+[2] language=en | aspect=atmosphere | train labels=positive | test labels=positive
+    sentence: The atmosphere was great .
+[3] language=tr | aspect=atmosphere | train labels=positive | test labels=positive
+    sentence: atmosfer harikaydı.
+
+dev vs test shared inputs: 0
+Examples: None
+
+Inputs shared by train + dev + test: 0
+
+========================================================================================
+D) LANGUAGE-PARALLEL STRUCTURE
+========================================================================================
+Method: within each split, rows are grouped by language in file order. The same position is compared using aspect + sentiment + source_category.
+Limitation: processed CSV files have no shared semantic example ID. Therefore row-order alignment is strong evidence, not proof of translation identity.
+
+TRAIN language rows: {'tr': 1450, 'en': 1450, 'es': 1450}
+Compared positions: 1450
+Signature mismatches: 0
+Inferred within-split parallel alignment: True
+Sample inferred parallel rows:
+  position=0 | signature=('service', 'positive', 'service general')
+    tr: akşam yemeği için sadece birkaç kez gittik ama aynı harika kalite ve hizmet verildi.
+    en: We have gone for dinner only a few times but the same great quality and service is given .
+    es: Hemos ido a cenar sólo unas pocas veces, pero se ofrece la misma gran calidad y servicio.
+  position=1 | signature=('taste', 'positive', 'food quality')
+    tr: akşam yemeği için sadece birkaç kez gittik ama aynı harika kalite ve hizmet verildi.
+    en: We have gone for dinner only a few times but the same great quality and service is given .
+    es: Hemos ido a cenar sólo unas pocas veces, pero se ofrece la misma gran calidad y servicio.
+  position=2 | signature=('atmosphere', 'positive', 'ambience general')
+    tr: Karanlık ve rahat bir yer. Gittiğimizde her zaman caz müziği çalıyor.
+    en: Its dark , and cozy . . there is always jazz music playing when we go .
+    es: Es oscuro y acogedor... siempre hay música jazz cuando vamos.
+  position=3 | signature=('taste', 'positive', 'food quality')
+    tr: Burası harika Hint ve Çin yemekleri.
+    en: This place has great indian chinese food .
+    es: Este lugar tiene muy buena comida china india.
+  position=4 | signature=('value', 'neutral', 'restaurant prices')
+    tr: Bu fiyata ve prestije göre beklediğim gibi değil konum.
+    en: Not what I would expect for the price and prestige of this location .
+    es: No es lo que esperaba por el precio y el prestigio de este ubicación.
+
+DEV language rows: {'tr': 394, 'en': 394, 'es': 394}
+Compared positions: 394
+Signature mismatches: 0
+Inferred within-split parallel alignment: True
+Sample inferred parallel rows:
+  position=0 | signature=('service', 'negative', 'service general')
+    tr: Menü istedim ve aynı garson bana deliymişim gibi baktı.
+    en: I asked for a menu and the same waitress looked at my like I was insane .
+    es: Pedí un menú y la misma camarera me miró como si estuviera loca.
+  position=1 | signature=('service', 'positive', 'service general')
+    tr: sahibi gerçekten tüm ihtiyaçlarınızı karşılıyor.
+    en: The owner truly caters to all your needs .
+    es: El propietario realmente atiende todas sus necesidades.
+  position=2 | signature=('service', 'negative', 'service general')
+    tr: Ben arkadaş canlısı bir insanım, bu yüzden onun bu kadar kötü davranmaması ve kişisel olmaması umurumda olmazdı.
+    en: I 'm a friendly person , so I wouldn 't mind had she not been so nasty and gotten so personal .
+    es: Soy una persona amigable, así que no me importaría si ella no hubiera sido tan desagradable y se hubiera vuelto tan personal.
+  position=3 | signature=('atmosphere', 'positive', 'ambience general')
+    tr: Sahibi ve çalışanları da tamamen Japon, bu da tüm ortama ayrı bir hava katıyor.
+    en: The owner and staff are all Japanese as well and that adds to the entire ambiance .
+    es: Tanto el propietario como el personal son japoneses y eso le suma valor al ambiente general.
+  position=4 | signature=('taste', 'neutral', 'food quality')
+    tr: garnitürler fena değildi ve isteğim üzerine tekrar doldurttum.
+    en: The side dishes were passable , and I did get a refill upon request .
+    es: Los (2 platos de acompañamiento) eran pasables, y me dieron una recarga cuando lo pedí.
+
+TEST language rows: {'tr': 562, 'en': 562, 'es': 562}
+Compared positions: 562
+Signature mismatches: 0
+Inferred within-split parallel alignment: True
+Sample inferred parallel rows:
+  position=0 | signature=('service', 'negative', 'service general')
+    tr: servis için 10-15 dakika bekledim ve bira sipariş ettim ve bir daha asla servis edilmedi.
+    en: I waited for 10-15 minutes for service ordered a beer & was never served again .
+    es: Esperé entre 10 y 15 minutos para servicio, pedí una cerveza y nunca más me atendieron.
+  position=1 | signature=('atmosphere', 'positive', 'ambience general')
+    tr: ortam Downtown Disney'de koşuşturan tüm çocukların arasında huzurlu ve rahatlatıcı bir molaydı.
+    en: The ambiance was a peaceful and relaxing break amongst all the kids running around in Downtown Disney .
+    es: El ambiente era un descanso tranquilo y relajante entre todos los niños corriendo por Downtown Disney.
+  position=2 | signature=('taste', 'positive', 'food quality')
+    tr: Harika suşi ve daha da iyisi servis.
+    en: It has great sushi and even better service .
+    es: Tiene muy buen sushi y aún mejor servicio.
+  position=3 | signature=('service', 'positive', 'service general')
+    tr: Harika suşi ve daha da iyisi servis.
+    en: It has great sushi and even better service .
+    es: Tiene muy buen sushi y aún mejor servicio.
+  position=4 | signature=('taste', 'positive', 'food quality')
+    tr: Menülerindeki tüm menü öğeleri yemekler çok beğeniliyor ve mimoza da servis ediyorlar.
+    en: All their menu items are a hit , and they serve mimosas .
+    es: Todos sus platos elementos del menú son un éxito y sirven mimosas.
+
+All splits pass inferred parallel alignment: True
+Cross-language split warning: no within-split row-order evidence of TR/EN/ES counterparts being separated. Definitive cross-split semantic matching requires a shared source/example ID that is not present.
+
+========================================================================================
+E1) ATMOSPHERE AUDIT
+========================================================================================
+Rows: 1065
+Unique exact rows within splits: 828
+Duplicate rows within splits: 237
+Exact duplicate rate: 22.25%
+Conflicting inputs within splits: 15
+Sentiment distribution:
+  positive: 870
+  neutral: 39
+  negative: 156
+
+========================================================================================
+E2) NEUTRAL AUDIT
+========================================================================================
+Rows: 261
+Unique exact rows within splits: 240
+Duplicate rows within splits: 21
+Exact duplicate rate: 8.05%
+Aspect distribution:
+  taste: 138
+  atmosphere: 39
+  service: 45
+  value: 39
+
+========================================================================================
+SUMMARY
+========================================================================================
+train: rows=4350, duplicate_rows=878 (20.18%), conflicts=78
+dev: rows=1182, duplicate_rows=237 (20.05%), conflicts=21
+test: rows=1686, duplicate_rows=337 (19.99%), conflicts=15
+
+Audit only: no automatic remediation was applied.

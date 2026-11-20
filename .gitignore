@@ -1,0 +1,62 @@
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python caches and test/tool output
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime/cache/build output
+.cache/
+**/.cache/
+cache/
+tmp/
+temp/
+*.log
+*.pid
+build/
+dist/
+
+# Local archives
+*.zip
+
+# Model artifacts: keep large/reproducible and historical outputs local.
+models/**/resume/
+models/**/*.bin
+models/**/*.pt
+models/**/*.pth
+models/**/tokenizer.json
+models/xlmr-sentiment-v1/model.safetensors
+models/xlmr-sentiment-v1-best/model.safetensors
+
+# Public model allowlist: only final production artifacts are Git-visible.
+models/*
+!models/aspect_presence_logreg_v2/
+!models/aspect_presence_logreg_v2/**
+!models/experiment_15_lora_expanded_balanced/
+models/experiment_15_lora_expanded_balanced/*
+!models/experiment_15_lora_expanded_balanced/best/
+models/experiment_15_lora_expanded_balanced/best/*
+!models/experiment_15_lora_expanded_balanced/best/epoch_2/
+!models/experiment_15_lora_expanded_balanced/best/epoch_2/**

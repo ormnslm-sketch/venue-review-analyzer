@@ -1,0 +1,25 @@
+candidate_id,source_group_id,mapped_aspect,semantic_subtopic,sentence,human_decision,human_final_aspect,human_final_sentiment,human_verified,review_notes
+HA-CAND-EN-VALUE-0035,HA-EN-VALUE-0035,value,nearby_price_comparison,The prices looked pretty similar to the other restaurants we tried nearby.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-ATMOSPHERE-0034,HA-EN-ATMOSPHERE-0034,atmosphere,room_layout,"Our drinks came from the bar, and the dining room wrapped around an open kitchen.",ACCEPT,atmosphere,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0041,HA-EN-VALUE-0041,value,typical_category_price,I paid about what I normally see for this type of noodle bowl.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0048,HA-EN-VALUE-0048,value,fixed_price_menu,"We chose the fixed menu, which listed one set price for a starter, main course, and dessert.",REJECT,,,false,HUMAN_REJECTED
+HA-CAND-EN-SERVICE-0054,HA-EN-SERVICE-0054,service,self_service,We picked up our own cutlery and returned the trays to the collection area.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0049,HA-EN-SERVICE-0049,service,food_delivery,"Our starters came first, and the main dishes followed after the plates were cleared.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0039,HA-EN-VALUE-0039,value,expected_price_range,The set menu was in the price range I expected for a three-course dinner.,ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0051,HA-EN-SERVICE-0051,service,drink_delivery,"Water is set down first, with the ordered drinks brought afterward.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0055,HA-EN-SERVICE-0055,service,counter_ordering,"I ordered at the counter, took a table number, and waited for the number to be called.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0037,HA-EN-VALUE-0037,value,area_average_price,"From what I saw on nearby menus, the main courses sat around the area average.",ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-ATMOSPHERE-0030,HA-EN-ATMOSPHERE-0030,atmosphere,noise_level,We could hear the room getting busier as the dinner crowd came in.,ACCEPT,atmosphere,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0052,HA-EN-SERVICE-0052,service,payment_check,We asked for the check and paid at the table with the card terminal.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0045,HA-EN-VALUE-0045,value,lunch_dinner_pricing,I noticed that lunch and dinner had separate price lists for the same dining room.,REJECT,,,false,HUMAN_REJECTED
+HA-CAND-EN-SERVICE-0043,HA-EN-SERVICE-0043,service,order_taking,"We looked over the menu for a few minutes, then gave our drink and food orders together.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0047,HA-EN-SERVICE-0047,service,normal_wait,We waited around ten minutes before being shown to our table.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-ATMOSPHERE-0031,HA-EN-ATMOSPHERE-0031,atmosphere,background_music,The music stayed at about the same level throughout our meal.,ACCEPT,atmosphere,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0047,HA-EN-VALUE-0047,value,portion_price_context,The menu showed small and large portions with a separate price for each size.,REJECT,,,false,HUMAN_REJECTED
+HA-CAND-EN-ATMOSPHERE-0033,HA-EN-ATMOSPHERE-0033,atmosphere,seating_layout,The dining area mixes wall booths with small tables for two.,ACCEPT,atmosphere,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0043,HA-EN-VALUE-0043,value,comparable_menu_price,"We compared a few menus nearby, and the lunch sets were in a similar price range.",ACCEPT,value,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0045,HA-EN-SERVICE-0045,service,seating_process,We checked in at the front and were shown to our table after the party size was confirmed.,ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-SERVICE-0046,HA-EN-SERVICE-0046,service,reservation_process,"I gave my name at the host stand, and they matched it to the reservation before seating us.",ACCEPT,service,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-ATMOSPHERE-0029,HA-EN-ATMOSPHERE-0029,atmosphere,lighting,I noticed the lights were kept fairly low from the time we sat down until dessert.,ACCEPT,atmosphere,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-ATMOSPHERE-0032,HA-EN-ATMOSPHERE-0032,atmosphere,crowd_level,"By seven, most of the tables were occupied, with a few seats still open near the bar.",ACCEPT,atmosphere,neutral,true,HUMAN_VERIFIED_NEUTRAL
+HA-CAND-EN-VALUE-0044,HA-EN-VALUE-0044,value,standard_menu_pricing,"The menu uses separate standard price bands for starters, mains, and desserts.",REJECT,,,false,HUMAN_REJECTED

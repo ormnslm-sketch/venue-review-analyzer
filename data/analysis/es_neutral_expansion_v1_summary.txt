@@ -1,0 +1,7 @@
+ES_NEUTRAL_EXPANSION_V1 = COMPLETE
+taste: 25
+atmosphere: 25
+service: 25
+value: 25
+No automatically accepted translations were added.
+The cleaned training dataset was not overwritten.

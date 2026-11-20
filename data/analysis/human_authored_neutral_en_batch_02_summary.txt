@@ -1,0 +1,26 @@
+HUMAN-AUTHORED NEUTRAL EN — NATURAL BATCH 2
+=============================================
+Verified coverage:
+taste: 26
+atmosphere: 19
+service: 12
+value: 13
+Remaining EN gap:
+taste: 0
+atmosphere: 6
+service: 13
+value: 12
+Generated candidates:
+atmosphere: 8
+service: 16
+value: 15
+total: 39
+Style distribution:
+first_person: 20
+third_person: 10
+multi_aspect: 9
+exact duplicates removed: 0
+high lexical overlap warnings: 1
+repeated opening warnings: 0
+template similarity warnings: 1
+Review Batch 2 size: 24

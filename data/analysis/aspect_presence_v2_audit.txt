@@ -1,0 +1,118 @@
+ASPECT PRESENCE V2 DATASET AUDIT
+============================================================================================
+
+RAW SOURCE
+Dataset: Multilingual-NLP/M-ABSA
+Local snapshot commit: 521ab96c3fc0acb4f844205d0e05382734fc89f2
+Domain: restaurant
+Network used: NO (local_files_only=True)
+Source representation: sentence####[term, category, polarity] triplets
+All source categories observed: ambience general, drinks prices, drinks quality, drinks style_options, food general, food prices, food quality, food style_options, location general, restaurant general, restaurant miscellaneous, restaurant prices, service general
+
+TARGET CATEGORY MAPPING
+  food quality -> taste
+  drinks quality -> taste
+  ambience general -> atmosphere
+  service general -> service
+  food prices -> value
+  restaurant prices -> value
+  drinks prices -> value
+Non-target categories remain unmapped: drinks style_options, food general, food style_options, location general, restaurant general, restaurant miscellaneous
+Sentiment polarity and aspect-term explicitness are not used.
+
+SOURCE FILE HASHES
+train/tr: sha256=cfa0f11ce77c1abc2b7d5488582b1f9459ea41f345e303d4fa51d7f1a32c38ea
+train/en: sha256=2dd70becd32f8c047105963b3899f6538ec7924f1b3247db0bda24d56d7412df
+train/es: sha256=dc752ac5127a627155b2af2cc342835432e2ab92ad9f39c90ba1afe5dabcfcca
+dev/tr: sha256=802560f77bdf5515b8d424f40b37a6b20b8fbb0509a702da7de5e80499d89b35
+dev/en: sha256=96b154cf9a15ec9f99a1f5034a39753a9e0458bee7286e8aaeaecfa5997a7977
+dev/es: sha256=b9ec45124a9408659089dc5089eea289189fe5333a43fcdf653950d2d24fc3a0
+test/tr: sha256=48d91395a4de95fee01aa0c8e808440aa23b2cc8f4e2895a774007427b83673d
+test/en: sha256=c45467005a981fe05e04fe73465ac664b9630862cf8a703ed342c2dbcb5d5ecf
+test/es: sha256=306457981292aaedff7dc1792599160638bdab6b0074a9fcc91f3d480824c9de
+
+V1 TARGET-POSITIVE PRESERVATION
+train: checked=2722, missing=0, label_mismatch=0
+dev: checked=730, missing=0, label_mismatch=0
+test: checked=1127, missing=0, label_mismatch=0
+
+SPLIT SUMMARY
+
+TRAIN
+Sentence count: 3775
+Language counts: tr=1255, en=1263, es=1257
+Aspect positive counts: taste=1627, atmosphere=510, service=873, value=384
+Aspect prevalence: taste=0.4310 (43.10%), atmosphere=0.1351 (13.51%), service=0.2313 (23.13%), value=0.1017 (10.17%)
+All-zero count: 1053
+All-zero prevalence: 0.2789 (27.89%)
+All-zero by language: tr=349, en=355, es=349
+All-zero source-category sentence incidence (each category counts once per sentence; multi-category sentences contribute to multiple categories): drinks style_options=30, food style_options=81, location general=36, restaurant general=747, restaurant miscellaneous=171
+Mean multi-label cardinality: 0.8991
+Label-count distribution: 0 aspect=1053, 1 aspect=2146, 2 aspect=486, 3 aspect=84, 4 aspect=6
+Output duplicate sentence+language rows: 0
+Raw duplicate line excess collapsed: 17
+
+DEV
+Sentence count: 942
+Language counts: tr=313, en=316, es=313
+Aspect positive counts: taste=439, atmosphere=135, service=237, value=111
+Aspect prevalence: taste=0.4660 (46.60%), atmosphere=0.1433 (14.33%), service=0.2516 (25.16%), value=0.1178 (11.78%)
+All-zero count: 212
+All-zero prevalence: 0.2251 (22.51%)
+All-zero by language: tr=70, en=72, es=70
+All-zero source-category sentence incidence (each category counts once per sentence; multi-category sentences contribute to multiple categories): drinks style_options=6, food style_options=27, location general=6, restaurant general=155, restaurant miscellaneous=18
+Mean multi-label cardinality: 0.9788
+Label-count distribution: 0 aspect=212, 1 aspect=562, 2 aspect=147, 3 aspect=18, 4 aspect=3
+Output duplicate sentence+language rows: 0
+Raw duplicate line excess collapsed: 0
+
+TEST
+Sentence count: 1623
+Language counts: tr=540, en=543, es=540
+Aspect positive counts: taste=680, atmosphere=165, service=363, value=123
+Aspect prevalence: taste=0.4190 (41.90%), atmosphere=0.1017 (10.17%), service=0.2237 (22.37%), value=0.0758 (7.58%)
+All-zero count: 496
+All-zero prevalence: 0.3056 (30.56%)
+All-zero by language: tr=164, en=167, es=165
+All-zero source-category sentence incidence (each category counts once per sentence; multi-category sentences contribute to multiple categories): drinks style_options=15, food style_options=60, location general=21, restaurant general=343, restaurant miscellaneous=66
+Mean multi-label cardinality: 0.8201
+Label-count distribution: 0 aspect=496, 1 aspect=947, 2 aspect=156, 3 aspect=24, 4 aspect=0
+Output duplicate sentence+language rows: 0
+Raw duplicate line excess collapsed: 1
+
+SPLIT LEAKAGE
+Before cleanup: train-dev=6, train-test=8, dev-test=0
+Removed with train > dev > test priority: train=0, dev=6, test=8
+Final exact sentence+language leakage: train-dev=0, train-test=0, dev-test=0
+
+MANUAL DIAGNOSTIC — 20 NATURAL ALL-ZERO TRAIN EXAMPLES
+Selection: first 20 English train all-zero sentences in raw source order. This is a mapping audit, not model evaluation.
+[1] categories=['restaurant general'] | Finally a reliable Chinese restaurant !
+[2] categories=['food style_options'] | The menu is fairly simple without much descriptions .
+[3] categories=['restaurant general'] | WORST PLACE ON SMITH STREET IN BROOKLYN
+[4] categories=['restaurant general'] | I absolutely love this place ! ! !
+[5] categories=['food style_options'] | Consequently , their burgers fell apart in their hands and made such a mess that they did'nt feel like finishing them .
+[6] categories=['restaurant general'] | I 'm partial to the Gnocchi .
+[7] categories=['restaurant miscellaneous'] | I completely recommend Casa La Femme for any special occasion and to REALLY impress your date .
+[8] categories=['restaurant general'] | Can 't wait to go back .
+[9] categories=['location general'] | I would highly recommand requesting a table by the window .
+[10] categories=['restaurant miscellaneous'] | This is the kind of place you 'd like to take all your friends to and still keep a secret .
+[11] categories=['restaurant general'] | Still we keep going back : )
+[12] categories=['restaurant general'] | SO GOOD
+[13] categories=['restaurant general'] | Highly recommended to all !
+[14] categories=['restaurant miscellaneous'] | How do you rate home ?
+[15] categories=['restaurant general'] | Have eaten at Ginger House several times , and it 's always good .
+[16] categories=['restaurant general'] | We will be back .
+[17] categories=['restaurant miscellaneous'] | But that is highly forgivable .
+[18] categories=['restaurant general'] | So close , but not good enough .
+[19] categories=['restaurant general'] | Went here on sat 1 /26 and was disappointed .
+[20] categories=['restaurant general'] | not sure why this restaurant would be rated that highly .
+
+Manual diagnostic finding:
+Most examples express restaurant-general, miscellaneous, location, or menu/style content outside the target ontology. Four examples show plausible lexical/semantic overlap with target concepts (menu simplicity, burgers falling apart, preference for gnocchi, and a window-table request). They remain all-zero because their gold source categories are explicitly excluded by the requested mapping. No automatic relabeling was performed.
+
+LIMITATION
+Cross-language semantic leakage cannot be fully verified because the raw dataset has no reliable language-independent source_example_id. Only exact sentence+language leakage is proven zero.
+
+AUDIT RESULT
+PASS

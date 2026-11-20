@@ -1,0 +1,93 @@
+NEUTRAL DATA EXPANSION v1 — COVERAGE AUDIT
+
+SOURCE
+Input: ./data/cleaned/train.csv
+Split: train
+Sentiment filter: neutral
+
+TOTAL NEUTRAL
+Total neutral rows: 93
+
+ASPECT TOTALS
+taste: 45
+atmosphere: 21
+service: 9
+value: 18
+
+LANGUAGE TOTALS
+TR: 31
+EN: 31
+ES: 31
+
+ASPECT × LANGUAGE MATRIX — COUNTS
+aspect               TR       EN       ES    TOTAL
+taste                15       15       15       45
+atmosphere            7        7        7       21
+service               3        3        3        9
+value                 6        6        6       18
+TOTAL                31       31       31       93
+
+ASPECT × LANGUAGE MATRIX — % OF ALL NEUTRAL ROWS
+aspect               TR       EN       ES    TOTAL
+taste             16.1%    16.1%    16.1%    48.4%
+atmosphere         7.5%     7.5%     7.5%    22.6%
+service            3.2%     3.2%     3.2%     9.7%
+value              6.5%     6.5%     6.5%    19.4%
+
+SOURCE CATEGORY DISTRIBUTION
+food quality: count=45 | mapped aspect=taste
+drinks quality: count=0 | mapped aspect=taste
+ambience general: count=21 | mapped aspect=atmosphere
+service general: count=9 | mapped aspect=service
+food prices: count=6 | mapped aspect=value
+restaurant prices: count=12 | mapped aspect=value
+drinks prices: count=0 | mapped aspect=value
+
+UNIQUE / PARALLEL STRUCTURE
+Unique source_row_id values: 93/93
+Neutral rows per language equal: True (tr=31, en=31, es=31)
+Ordered (aspect, source_category, split) signatures equal: True
+Constant source-row offsets across all ordinal pairs: True
+EN − TR offsets observed: [1450]
+ES − TR offsets observed: [2900]
+Structurally aligned candidate annotation groups: 31
+exact unique semantic count cannot be verified
+Reason: source_row_id is a processed long-row position, not an explicit language-independent source annotation ID. The 31 candidate groups are structural evidence only, not verified semantic labels.
+
+DUPLICATE CHECK WITHIN NEUTRAL SUBSET
+Key: exact (sentence, aspect)
+Repeated keys: 0
+Duplicate rows beyond first: 0
+Near-duplicate or small-wording variants were not classified as semantic duplicates.
+
+GAP CLASSIFICATION THRESHOLDS
+Target per aspect × language cell: 25
+CRITICAL GAP: current 0–5
+HIGH GAP: current 6–12
+MODERATE GAP: current 13–19
+LOW GAP: current 20–24
+TARGET MET: current >=25
+
+GAP ANALYSIS
+MODERATE GAP — taste / tr: current=15, target=25, needed=10
+MODERATE GAP — taste / en: current=15, target=25, needed=10
+MODERATE GAP — taste / es: current=15, target=25, needed=10
+HIGH GAP — atmosphere / tr: current=7, target=25, needed=18
+HIGH GAP — atmosphere / en: current=7, target=25, needed=18
+HIGH GAP — atmosphere / es: current=7, target=25, needed=18
+CRITICAL GAP — service / tr: current=3, target=25, needed=22
+CRITICAL GAP — service / en: current=3, target=25, needed=22
+CRITICAL GAP — service / es: current=3, target=25, needed=22
+HIGH GAP — value / tr: current=6, target=25, needed=19
+HIGH GAP — value / en: current=6, target=25, needed=19
+HIGH GAP — value / es: current=6, target=25, needed=19
+
+TOTAL GAP
+Minimum balanced target: 300
+Current neutral rows: 93
+Total additional human-verified neutral examples needed: 207
+
+VALIDATION
+Matrix sum equals total neutral: True
+Distribution target total: 300
+Distribution needed total: 207

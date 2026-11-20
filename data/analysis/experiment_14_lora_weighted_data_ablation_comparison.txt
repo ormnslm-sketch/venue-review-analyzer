@@ -1,0 +1,28 @@
+EXPERIMENT 14 — CORRECTED WEIGHTED LORA DATA ABLATION
+
+14B minus 14A after Epoch 1; test split was not used.
+Both conditions use identical CLEAN-derived fixed class weights.
+Only the training dataset differs.
+
+Accuracy delta: -0.5893
+Macro F1 delta: -0.2449
+positive F1 delta: -0.7930
+neutral F1 delta: +0.0584
+negative F1 delta: +0.0000
+Neutral precision delta: -0.1590
+Neutral recall delta: +0.9649
+Predicted neutral count delta: +892
+False-neutral count delta: +837
+
+LANGUAGE MACRO F1 DELTAS
+TR: -0.2240
+EN: -0.2538
+ES: -0.2557
+
+ASPECT MACRO F1 DELTAS
+taste: -0.2561
+atmosphere: -0.2724
+service: -0.1635
+value: -0.2215
+
+Epoch 2 was not started automatically for either condition.

@@ -1,0 +1,82 @@
+EXPERIMENT 06 — EXPANDED NEUTRAL V1 TF-IDF BASELINE
+
+CONTROLLED SETTINGS
+Train: data/expanded_neutral_v1/train.csv
+Dev: data/expanded_neutral_v1/dev.csv
+Test: not loaded or evaluated
+Input: aspect=<aspect> [SEP] <sentence>
+TF-IDF: ngram_range=(1, 2), min_df=2; all other settings unchanged/default
+LogisticRegression: class_weight=balanced, max_iter=1000, random_state=42; solver and other settings unchanged/default
+Hyperparameter tuning: none
+
+DATA DISTRIBUTION
+Train: positive=2173, neutral=300, negative=1050, total=3523
+Dev: positive=586, neutral=57, negative=258, total=901
+Dev matches cleaned dev byte-for-byte: True
+
+OVERALL
+Accuracy: 0.7469
+Macro F1: 0.5493
+
+PER-CLASS METRICS
+positive:
+  precision: 0.8764
+  recall: 0.8106
+  F1: 0.8422
+  support: 586
+neutral:
+  precision: 0.1667
+  recall: 0.1228
+  F1: 0.1414
+  support: 57
+negative:
+  precision: 0.6025
+  recall: 0.7403
+  F1: 0.6643
+  support: 258
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted
+                 positive  neutral  negative
+positive              475       17        94
+neutral                18        7        32
+negative               49       18       191
+
+PREDICTION DISTRIBUTION
+positive: 542
+neutral: 42
+negative: 317
+
+LANGUAGE METRICS
+TR: n=300 | accuracy=0.7533 | macro F1=0.5661
+  neutral: precision=0.2727 | recall=0.1579 | F1=0.2000 | support=19
+EN: n=301 | accuracy=0.7508 | macro F1=0.5461
+  neutral: precision=0.1538 | recall=0.1053 | F1=0.1250 | support=19
+ES: n=300 | accuracy=0.7367 | macro F1=0.5385
+  neutral: precision=0.1111 | recall=0.1053 | F1=0.1081 | support=19
+
+ASPECT METRICS
+taste: n=421 | accuracy=0.7791 | macro F1=0.4986 | neutral F1=0.0690
+atmosphere: n=135 | accuracy=0.7185 | macro F1=0.3117 | neutral F1=0.0000
+service: n=234 | accuracy=0.7094 | macro F1=0.5037 | neutral F1=0.0000
+value: n=111 | accuracy=0.7387 | macro F1=0.6668 | neutral F1=0.5217
+
+DELTA VS CLEANED BASELINE
+Accuracy: -0.0134
+Macro F1: -0.0398
+positive F1: -0.0031
+neutral F1: -0.1115
+negative F1: -0.0047
+neutral precision: -0.2000
+neutral recall: -0.0702
+
+Language macro F1 delta:
+TR: -0.0275
+EN: -0.0537
+ES: -0.0349
+
+Aspect macro F1 delta:
+taste: -0.0916
+atmosphere: -0.0093
+service: -0.0214
+value: -0.0320

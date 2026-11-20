@@ -1,0 +1,136 @@
+EXPERIMENT 10 — NEUTRAL DISTRIBUTION & SOURCE-CONTROL ANALYSIS
+
+Test split was not loaded or evaluated.
+Fixed class weights: {'positive': 0.54042031, 'neutral': 11.88530466, 'negative': 1.1184127}
+Representation: inline aspect=<aspect> [SEP] <sentence>.
+Pipeline: unchanged TF-IDF (1,2; min_df=2) + LogisticRegression.
+
+1. ASPECT × SENTIMENT DISTRIBUTION AUDIT
+Aspect | Old Pos | Old Neu | Old Neg | Old Total | Old Neutral % | Expanded Pos | Expanded Neu | Expanded Neg | Expanded Total | Expanded Neutral % | PP Change | Enrichment | Added Neu / Old Total
+taste | 1159 | 45 | 372 | 1576 | 2.8553% | 1159 | 75 | 372 | 1606 | 4.6700% | +1.8147 pp | 1.6355x | 1.9036%
+atmosphere | 384 | 21 | 93 | 498 | 4.2169% | 384 | 75 | 93 | 552 | 13.5870% | +9.3701 pp | 3.2220x | 10.8434%
+service | 441 | 9 | 411 | 861 | 1.0453% | 441 | 75 | 411 | 927 | 8.0906% | +7.0453 pp | 7.7400x | 7.6655%
+value | 189 | 18 | 174 | 381 | 4.7244% | 189 | 75 | 174 | 438 | 17.1233% | +12.3989 pp | 3.6244x | 14.9606%
+
+2. LANGUAGE × ASPECT NEUTRAL RATES
+Language | Aspect | Old Total | Old Neutral | Old Rate | Expanded Total | Expanded Neutral | Expanded Rate | PP Change
+TR | taste | 524 | 15 | 2.8626% | 534 | 25 | 4.6816% | +1.8191 pp
+TR | atmosphere | 166 | 7 | 4.2169% | 184 | 25 | 13.5870% | +9.3701 pp
+TR | service | 287 | 3 | 1.0453% | 309 | 25 | 8.0906% | +7.0453 pp
+TR | value | 127 | 6 | 4.7244% | 146 | 25 | 17.1233% | +12.3989 pp
+EN | taste | 526 | 15 | 2.8517% | 536 | 25 | 4.6642% | +1.8125 pp
+EN | atmosphere | 166 | 7 | 4.2169% | 184 | 25 | 13.5870% | +9.3701 pp
+EN | service | 287 | 3 | 1.0453% | 309 | 25 | 8.0906% | +7.0453 pp
+EN | value | 127 | 6 | 4.7244% | 146 | 25 | 17.1233% | +12.3989 pp
+ES | taste | 526 | 15 | 2.8517% | 536 | 25 | 4.6642% | +1.8125 pp
+ES | atmosphere | 166 | 7 | 4.2169% | 184 | 25 | 13.5870% | +9.3701 pp
+ES | service | 287 | 3 | 1.0453% | 309 | 25 | 8.0906% | +7.0453 pp
+ES | value | 127 | 6 | 4.7244% | 146 | 25 | 17.1233% | +12.3989 pp
+
+3. ASPECT PRIOR ANALYSIS
+Aspect | Expanded Neutral Rate | Enrichment | One-hot Neutral Coef | Full Expanded False-neutral
+taste | 4.6700% | 1.6355x | -0.4875 | 21
+atmosphere | 13.5870% | 3.2220x | +0.6049 | 32
+service | 8.0906% | 7.7400x | -0.4212 | 19
+value | 17.1233% | 3.6244x | +0.2565 | 24
+Spearman(expanded neutral rate, one-hot coefficient): +0.8000
+Spearman(expanded neutral rate, false-neutral count): +0.6000
+This is correlational diagnostic evidence and does not establish causality.
+
+4–6. ATMOSPHERE COUNT-MATCHED SOURCE TEST
+MAMS set: 4 complete atmosphere groups × 3 languages = 12 rows.
+Each human-authored run: 4 complete atmosphere groups × 3 languages = 12 rows.
+Human-authored sampling seeds: 1–10.
+OLD baseline (fixed weights):
+Overall Accuracy: 0.7625
+Overall Macro F1: 0.5912
+Overall Neutral P/R/F1: 0.3793 / 0.1930 / 0.2558
+Overall Pred neutral: 29
+Overall False neutral: 18
+Atmosphere Accuracy: 0.7630
+Atmosphere Macro F1: 0.3198
+Atmosphere Neutral P/R/F1: 0.0000 / 0.0000 / 0.0000
+Atmosphere Pred neutral: 7
+Atmosphere False neutral: 7
+Atmosphere False neutral by language: TR=2, EN=3, ES=2
+OLD + MAMS atmosphere 12:
+Overall Accuracy: 0.7592
+Overall Macro F1: 0.5749
+Overall Neutral P/R/F1: 0.3103 / 0.1579 / 0.2093
+Overall Pred neutral: 29
+Overall False neutral: 20
+Atmosphere Accuracy: 0.7556
+Atmosphere Macro F1: 0.3194
+Atmosphere Neutral P/R/F1: 0.0000 / 0.0000 / 0.0000
+Atmosphere Pred neutral: 9
+Atmosphere False neutral: 9
+Atmosphere False neutral by language: TR=4, EN=3, ES=2
+Human-authored atmosphere 12 aggregate (10 seeds):
+accuracy: mean=0.7578, std=0.0018, min=0.7547, max=0.7614
+macro_f1: mean=0.5805, std=0.0053, min=0.5715, max=0.5881
+neutral_precision: mean=0.3223, std=0.0215, min=0.2647, max=0.3448
+neutral_recall: mean=0.1772, std=0.0123, min=0.1579, max=0.1930
+neutral_f1: mean=0.2285, std=0.0143, min=0.1978, max=0.2472
+pred_neutral: mean=31.4000, std=1.9079, min=28.0000, max=34.0000
+false_neutral: mean=21.3000, std=1.7349, min=19.0000, max=25.0000
+atmosphere_accuracy: mean=0.7393, std=0.0055, min=0.7333, max=0.7481
+atmosphere_macro_f1: mean=0.3160, std=0.0022, min=0.3125, max=0.3185
+atmosphere_neutral_precision: mean=0.0000, std=0.0000, min=0.0000, max=0.0000
+atmosphere_neutral_recall: mean=0.0000, std=0.0000, min=0.0000, max=0.0000
+atmosphere_neutral_f1: mean=0.0000, std=0.0000, min=0.0000, max=0.0000
+atmosphere_pred_neutral: mean=11.3000, std=1.1000, min=10.0000, max=13.0000
+atmosphere_false_neutral: mean=11.3000, std=1.1000, min=10.0000, max=13.0000
+atmosphere_false_neutral_tr: mean=4.7000, std=0.4583, min=4.0000, max=5.0000
+atmosphere_false_neutral_en: mean=4.4000, std=0.6633, min=4.0000, max=6.0000
+atmosphere_false_neutral_es: mean=2.2000, std=0.4000, min=2.0000, max=3.0000
+Individual seed results:
+seed=1: overall_macro_f1=0.5811, overall_neutral_P/R/F1=0.3226/0.1754/0.2273, atmosphere_macro_f1=0.3145, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=12, atmosphere_false_neutral=12
+seed=2: overall_macro_f1=0.5868, overall_neutral_P/R/F1=0.3438/0.1930/0.2472, atmosphere_macro_f1=0.3178, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=10, atmosphere_false_neutral=10
+seed=3: overall_macro_f1=0.5715, overall_neutral_P/R/F1=0.2647/0.1579/0.1978, atmosphere_macro_f1=0.3185, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=13, atmosphere_false_neutral=13
+seed=4: overall_macro_f1=0.5795, overall_neutral_P/R/F1=0.3226/0.1754/0.2273, atmosphere_macro_f1=0.3135, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=11, atmosphere_false_neutral=11
+seed=5: overall_macro_f1=0.5807, overall_neutral_P/R/F1=0.3448/0.1754/0.2326, atmosphere_macro_f1=0.3178, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=10, atmosphere_false_neutral=10
+seed=6: overall_macro_f1=0.5734, overall_neutral_P/R/F1=0.3214/0.1579/0.2118, atmosphere_macro_f1=0.3125, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=10, atmosphere_false_neutral=10
+seed=7: overall_macro_f1=0.5881, overall_neutral_P/R/F1=0.3235/0.1930/0.2418, atmosphere_macro_f1=0.3185, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=13, atmosphere_false_neutral=13
+seed=8: overall_macro_f1=0.5868, overall_neutral_P/R/F1=0.3333/0.1930/0.2444, atmosphere_macro_f1=0.3174, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=12, atmosphere_false_neutral=12
+seed=9: overall_macro_f1=0.5798, overall_neutral_P/R/F1=0.3333/0.1754/0.2299, atmosphere_macro_f1=0.3161, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=11, atmosphere_false_neutral=11
+seed=10: overall_macro_f1=0.5773, overall_neutral_P/R/F1=0.3125/0.1754/0.2247, atmosphere_macro_f1=0.3135, atmosphere_neutral_P/R/F1=0.0000/0.0000/0.0000, atmosphere_pred_neutral=11, atmosphere_false_neutral=11
+Source/style directional comparisons vs fixed MAMS atmosphere set (number of human-authored seeds out of 10):
+more_pred_neutral: 10/10
+more_false_neutral: 10/10
+lower_neutral_precision: 0/10
+lower_macro_f1: 10/10
+SOURCE/STYLE EFFECT: WEAK
+Scope limitation: this source comparison applies only to atmosphere; it must not be generalized directly to taste, service, or value.
+
+8–9. HUMAN-AUTHORED DOSE RESPONSE
+Rows | Aspect group quotas (atmosphere/service/value) | Accuracy | Macro F1 | Neutral P | Neutral R | Neutral F1 | Pred neutral | False neutral | False-neutral aspects (taste/atmosphere/service/value) | False-neutral languages (TR/EN/ES)
+42 | 3/6/5 | 0.7458 | 0.5806 | 0.2766 | 0.2281 | 0.2500 | 47 | 34 | 8/11/8/7 | 10/10/14
+84 | 7/11/10 | 0.7358 | 0.5743 | 0.2174 | 0.2632 | 0.2381 | 69 | 54 | 11/18/10/15 | 17/16/21
+126 | 11/17/14 | 0.7336 | 0.5707 | 0.1923 | 0.2632 | 0.2222 | 78 | 63 | 10/23/12/18 | 17/23/23
+165 | 14/22/19 | 0.7192 | 0.5661 | 0.1895 | 0.3158 | 0.2368 | 95 | 77 | 12/25/16/24 | 20/27/30
+Dose Spearman correlations with actual added rows:
+neutral_precision: -1.0000
+neutral_recall: +0.9487
+neutral_f1: -0.8000
+pred_neutral: +1.0000
+false_neutral: +1.0000
+macro_f1: -1.0000
+Dose expected-direction adjacent transitions:
+neutral_precision: 3/3
+neutral_recall: 3/3
+pred_neutral: 3/3
+false_neutral: 3/3
+QUANTITY/DOSE EFFECT: SUPPORTED
+
+10. ATMOSPHERE PROGRESSION CONTROL
+Condition | Atmosphere Macro F1 | Neutral P | Neutral R | Neutral F1 | Pred neutral | False neutral
+OLD fixed-weight baseline | 0.3198 | 0.0000 | 0.0000 | 0.0000 | 7 | 7
+OLD + MAMS atmosphere 12 | 0.3194 | 0.0000 | 0.0000 | 0.0000 | 9 | 9
+OLD + matched human atmosphere 12 mean | 0.3160 | 0.0000 | 0.0000 | 0.0000 | 11.30 | 11.30
+FULL expanded | 0.3329 | 0.0588 | 0.3333 | 0.1000 | 34 | 32
+
+FINAL EVIDENCE-BASED CONCLUSION
+SOURCE/STYLE EFFECT: WEAK
+QUANTITY/DOSE EFFECT: SUPPORTED
+ASPECT-PRIOR DISTORTION: WEAK
+PRIMARY PROBLEM MOST CONSISTENT WITH: B) quantity/dose

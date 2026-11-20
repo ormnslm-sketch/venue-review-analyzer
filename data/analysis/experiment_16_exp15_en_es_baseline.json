@@ -1,0 +1,127 @@
+{
+  "name": "EXP15_EN_ES_BASELINE",
+  "checkpoint": "models/experiment_15_lora_expanded_balanced/best/epoch_2",
+  "evaluation_scope": [
+    "en",
+    "es"
+  ],
+  "dev_rows": 601,
+  "device": "cpu",
+  "metrics": {
+    "accuracy": 0.8069883527454242,
+    "macro_f1": 0.6363343478547387,
+    "train_loss": 0.0,
+    "per_class": {
+      "positive": {
+        "precision": 0.9366754617414248,
+        "recall": 0.907928388746803,
+        "f1": 0.922077922077922,
+        "support": 391
+      },
+      "neutral": {
+        "precision": 0.18518518518518517,
+        "recall": 0.39473684210526316,
+        "f1": 0.25210084033613445,
+        "support": 38
+      },
+      "negative": {
+        "precision": 0.8156028368794326,
+        "recall": 0.6686046511627907,
+        "f1": 0.7348242811501597,
+        "support": 172
+      }
+    },
+    "confusion_matrix": [
+      [
+        355,
+        22,
+        14
+      ],
+      [
+        11,
+        15,
+        12
+      ],
+      [
+        13,
+        44,
+        115
+      ]
+    ],
+    "predicted_counts": {
+      "positive": 379,
+      "neutral": 81,
+      "negative": 141
+    },
+    "neutral_confusion": {
+      "true_neutral_predicted_neutral": 15,
+      "positive_to_neutral": 22,
+      "negative_to_neutral": 44,
+      "false_neutral_total": 66
+    },
+    "languages": {
+      "EN": {
+        "n": 301,
+        "macro_f1": 0.6499551951494692,
+        "neutral": {
+          "precision": 0.2,
+          "recall": 0.3684210526315789,
+          "f1": 0.25925925925925924,
+          "support": 19
+        }
+      },
+      "ES": {
+        "n": 300,
+        "macro_f1": 0.6223687423687424,
+        "neutral": {
+          "precision": 0.17391304347826086,
+          "recall": 0.42105263157894735,
+          "f1": 0.24615384615384617,
+          "support": 19
+        }
+      }
+    },
+    "aspects": {
+      "taste": {
+        "n": 281,
+        "macro_f1": 0.6948021229034471,
+        "neutral": {
+          "precision": 0.2777777777777778,
+          "recall": 0.35714285714285715,
+          "f1": 0.3125,
+          "support": 14
+        }
+      },
+      "atmosphere": {
+        "n": 90,
+        "macro_f1": 0.5459050599895671,
+        "neutral": {
+          "precision": 0.14285714285714285,
+          "recall": 0.5,
+          "f1": 0.2222222222222222,
+          "support": 4
+        }
+      },
+      "service": {
+        "n": 156,
+        "macro_f1": 0.6271173506237241,
+        "neutral": {
+          "precision": 0.2222222222222222,
+          "recall": 0.42857142857142855,
+          "f1": 0.2926829268292683,
+          "support": 14
+        }
+      },
+      "value": {
+        "n": 74,
+        "macro_f1": 0.5739939073272406,
+        "neutral": {
+          "precision": 0.09090909090909091,
+          "recall": 0.3333333333333333,
+          "f1": 0.14285714285714285,
+          "support": 6
+        }
+      }
+    }
+  }
+}

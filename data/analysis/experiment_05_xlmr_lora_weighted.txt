@@ -1,0 +1,626 @@
+EXPERIMENT 05 — XLM-ROBERTA-BASE + LORA + WEIGHTED LOSS
+
+STATUS: INVALID FOR WEIGHTING HYPOTHESIS
+Reason: weighted CE mean reduction cancelled class weights at batch_size=1
+Do not resume this checkpoint as a corrected weighted-loss experiment.
+
+STAGE 0 — PREPARATION AND VALIDATION ONLY
+Training started: NO
+Base model: xlm-roberta-base
+Task: sequence classification
+Device available: mps unavailable in this process
+Training device requirement: mps; CPU fallback is blocked
+Transformers version: 4.57.6
+PEFT version: 0.17.1
+LoRA target modules: ['query', 'value']
+Target reason: XLM-R named_modules içinde her encoder katmanında attention.self.query ve attention.self.value gerçek nn.Linear projeksiyonları olarak doğrulandı.
+Attention Linear modules found: 48
+query targets found: 12
+value targets found: 12
+Base model params before LoRA: 278,045,955
+Total params after PEFT wrapping: 278,933,766
+Trainable params: 887,811
+Trainable %: 0.318287%
+  LoRA trainable params: 294,912
+  Classifier trainable params: 592,899
+Base model frozen: True
+Sequence-classification head trainable: True
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Weight tensor order: [negative, neutral, positive]
+Train class counts:
+  negative: 1050
+  neutral: 93
+  positive: 2173
+Class weights:
+  negative (id=0): 1.05269841
+  neutral (id=1): 11.88530466
+  positive (id=2): 0.50866697
+Physical train batch size: 1
+Gradient accumulation steps: 4
+Effective train batch size: 4
+Eval batch size: 1
+Learning rate: 2e-05
+Max length: 128
+LoRA r: 8
+LoRA alpha: 16
+LoRA dropout: 0.1
+Optimizer: torch.optim.AdamW (trainable parameters only)
+Scheduler: none
+Loss: weighted CrossEntropyLoss
+Quantization: not used
+Mixed precision: not used
+Gradient checkpointing: not used
+Resume status: checkpoint yok; sıradaki epoch=1
+Resume checkpoint: ./models/xlmr-sentiment-v3-lora-weighted/resume
+Best checkpoint: ./models/xlmr-sentiment-v3-lora-weighted/best
+Stage 0 complete. No model training was run.
+
+STAGE 0B — CONFIG VALIDATION ONLY
+Training started: NO
+LoRA r (from LoraConfig): 8
+LoRA alpha (from LoraConfig): 16
+LoRA dropout (from LoraConfig): 0.1
+LoRA target modules (from LoraConfig): ['query', 'value']
+Learning rate: 2e-05
+Experiment 03 learning-rate check: MATCH: Experiment 03 and Experiment 05 both use 2e-5
+Physical train batch size: 1
+Gradient accumulation steps: 4
+Effective batch size: 4
+Eval batch size: 1
+Max length: 128
+Optimizer: torch.optim.AdamW (trainable parameters only)
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Class-weight tensor order: [negative, neutral, positive]
+Train class counts:
+  negative: 1050
+  neutral: 93
+  positive: 2173
+Class weights:
+  negative (id=0): 1.05269841
+  neutral (id=1): 11.88530466
+  positive (id=2): 0.50866697
+Next epoch: 1
+Resume checkpoint status: checkpoint yok; sıradaki epoch=1
+
+APPROXIMATE FP32 MEMORY
+Assumption: 4 bytes per FP32 value. Activations and temporary buffers excluded.
+Trainable parameters (887,811): 3.39 MiB
+Gradients: 3.39 MiB
+AdamW first moment: 3.39 MiB
+AdamW second moment: 3.39 MiB
+Trainable params + gradients + two AdamW moments: 13.55 MiB
+Frozen base weights (278,045,955 FP32 params): 1060.66 MiB (1.036 GiB)
+These are approximate tensor-only values, not total MPS process memory.
+Stage 0B complete. No smoke test or model training was run.
+Training device: mps
+
+SMOKE TEST — ONE PHYSICAL BATCH ONLY
+Full epoch started: NO
+Checkpoint writing: DISABLED
+Physical batch size: 1
+Learning rate: 2e-05
+Class weights [negative, neutral, positive]: [1.05269841, 11.88530466, 0.50866697]
+Train class counts: {'positive': 2173, 'neutral': 93, 'negative': 1050}
+LoRA config: r=8, alpha=16, dropout=0.1, targets=['query', 'value']
+Smoke-test weighted loss: 1.128981
+SMOKE TEST: PASSED
+Smoke-test state discarded. completed_epoch unchanged; no resume/best checkpoint created.
+
+STAGE 0C — CHUNKED TRAINING VALIDATION ONLY
+Training started: NO
+Total training examples: 3316
+Micro-batches per epoch: 3316
+Gradient accumulation: 4
+Optimizer steps per epoch: 829
+Max optimizer steps per run: 50
+Estimated runs/chunks per epoch: 17
+Examples per full chunk: approximately 200
+Next epoch: 1
+Next optimizer step: 0
+Next microbatch position: 0
+Resume checkpoint status: checkpoint yok; sıradaki epoch=1
+Deterministic shuffle strategy:
+  epoch_seed = random_seed + epoch_number - 1 (epoch 1 uses seed 42)
+  torch.randperm is created once for the whole epoch
+  the full permutation and SHA256 are stored in the resume state
+  resume slices the stored permutation from microbatch/sample position
+  checkpoints are written only at gradient-accumulation boundaries
+Initial permutation SHA256 for epoch 1: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+Resume state fields:
+  adapter model (LoRA + classifier modules_to_save)
+  optimizer_state_dict
+  scheduler_state_dict=None
+  completed_epoch
+  current_epoch
+  optimizer_steps_in_epoch
+  microbatch_position
+  sample_position
+  micro_batches_accumulated=0
+  gradient_accumulation_steps
+  epoch_permutation
+  permutation_sha256
+  epoch_seed
+  epoch_loss_sum
+  epoch_microbatches_seen
+  Python/NumPy/Torch/MPS RNG states
+  best_macro_f1
+  best_epoch
+  last_epoch_metrics
+Atomic checkpoint strategy: alternating slot_a/slot_b; current.json pointer is updated last.
+Stage 0C complete. No smoke test, chunk, or epoch training was run.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 0
+Target optimizer step: 50
+Remaining optimizer steps in epoch: 829
+Max optimizer steps this run: 50
+Starting microbatch position: 0
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 50
+Epoch progress percentage: 6.03%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 50
+Target optimizer step: 100
+Remaining optimizer steps in epoch: 779
+Max optimizer steps this run: 50
+Starting microbatch position: 200
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 100
+Epoch progress percentage: 12.06%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 100
+Target optimizer step: 150
+Remaining optimizer steps in epoch: 729
+Max optimizer steps this run: 50
+Starting microbatch position: 400
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 150
+Epoch progress percentage: 18.09%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 150
+Target optimizer step: 200
+Remaining optimizer steps in epoch: 679
+Max optimizer steps this run: 50
+Starting microbatch position: 600
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 200
+Epoch progress percentage: 24.13%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 200
+Target optimizer step: 250
+Remaining optimizer steps in epoch: 629
+Max optimizer steps this run: 50
+Starting microbatch position: 800
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 250
+Epoch progress percentage: 30.16%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 250
+Target optimizer step: 300
+Remaining optimizer steps in epoch: 579
+Max optimizer steps this run: 50
+Starting microbatch position: 1000
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 300
+Epoch progress percentage: 36.19%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 300
+Target optimizer step: 350
+Remaining optimizer steps in epoch: 529
+Max optimizer steps this run: 50
+Starting microbatch position: 1200
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 350
+Epoch progress percentage: 42.22%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 350
+Target optimizer step: 400
+Remaining optimizer steps in epoch: 479
+Max optimizer steps this run: 50
+Starting microbatch position: 1400
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 400
+Epoch progress percentage: 48.25%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 400
+Target optimizer step: 450
+Remaining optimizer steps in epoch: 429
+Max optimizer steps this run: 50
+Starting microbatch position: 1600
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 450
+Epoch progress percentage: 54.28%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 450
+Target optimizer step: 500
+Remaining optimizer steps in epoch: 379
+Max optimizer steps this run: 50
+Starting microbatch position: 1800
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 500
+Epoch progress percentage: 60.31%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 500
+Target optimizer step: 550
+Remaining optimizer steps in epoch: 329
+Max optimizer steps this run: 50
+Starting microbatch position: 2000
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 550
+Epoch progress percentage: 66.34%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 550
+Target optimizer step: 600
+Remaining optimizer steps in epoch: 279
+Max optimizer steps this run: 50
+Starting microbatch position: 2200
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 600
+Epoch progress percentage: 72.38%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 600
+Target optimizer step: 650
+Remaining optimizer steps in epoch: 229
+Max optimizer steps this run: 50
+Starting microbatch position: 2400
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 650
+Epoch progress percentage: 78.41%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 650
+Target optimizer step: 700
+Remaining optimizer steps in epoch: 179
+Max optimizer steps this run: 50
+Starting microbatch position: 2600
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 700
+Epoch progress percentage: 84.44%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 700
+Target optimizer step: 750
+Remaining optimizer steps in epoch: 129
+Max optimizer steps this run: 50
+Starting microbatch position: 2800
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 750
+Epoch progress percentage: 90.47%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 750
+Target optimizer step: 800
+Remaining optimizer steps in epoch: 79
+Max optimizer steps this run: 50
+Starting microbatch position: 3000
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 50
+Current optimizer step: 800
+Epoch progress percentage: 96.50%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_b
+Epoch finished: False
+Training chunk complete.
+No additional chunk was started automatically.
+Training device: mps
+
+TRAINING CHUNK START
+Device: mps
+Epoch: 1/3
+Starting optimizer step: 800
+Target optimizer step: 829
+Remaining optimizer steps in epoch: 29
+Max optimizer steps this run: 50
+Starting microbatch position: 3200
+Deterministic epoch seed: 42
+Permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+
+TRAINING CHUNK RESULT
+Epoch: 1/3
+Optimizer steps completed this run: 29
+Current optimizer step: 829
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/xlmr-sentiment-v3-lora-weighted/resume/slot_a
+Epoch finished: True
+Dev Accuracy: 0.6548
+Dev Macro F1: 0.2784
+Best epoch: 1
+Best Macro F1: 0.2784
+Training chunk complete.
+No additional chunk was started automatically.
+Evaluation safety check: PEFT classifier parameters were explicitly frozen before inference; no prediction or training occurred before this correction.
+
+EPOCH 1 BEST CHECKPOINT — DEV DIAGNOSTIC EVALUATION
+Training/backward/optimizer step: NOT RUN
+Evaluation device: cpu
+Best epoch: 1
+Accuracy: 0.6548
+Macro F1: 0.2784
+
+SENTIMENT METRICS
+positive: precision=0.6547 | recall=0.9966 | F1=0.7903 | support=586
+neutral: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=57
+negative: precision=0.6667 | recall=0.0233 | F1=0.0449 | support=258
+
+PREDICTION COUNTS
+predicted positive: 892
+predicted neutral: 0
+predicted negative: 9
+
+CONFUSION MATRIX
+Order: positive / neutral / negative
+Rows=actual, columns=predicted
+                 positive  neutral  negative
+positive              584        0         2
+neutral                56        0         1
+negative              252        0         6
+
+NEUTRAL BEHAVIOR
+Actual neutral count: 57
+Predicted neutral count: 0
+Actual positive predicted as neutral: 0
+Actual negative predicted as neutral: 0
+
+ASPECT METRICS
+taste: accuracy=0.7530 | macro F1=0.2864
+atmosphere: accuracy=0.8222 | macro F1=0.3008
+service: accuracy=0.4915 | macro F1=0.2257
+value: accuracy=0.4234 | macro F1=0.2410
+
+LANGUAGE METRICS
+TR: accuracy=0.6533 | macro F1=0.2708
+EN: accuracy=0.6611 | macro F1=0.2935
+ES: accuracy=0.6500 | macro F1=0.2704
+
+COMPARISON
+TF-IDF + Logistic Regression: accuracy=0.7603 | macro F1=0.5891 | neutral F1=0.2529
+Vanilla XLM-R best: accuracy=0.8457 | macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820
+Experiment 05 LoRA weighted Epoch 1: accuracy=0.6548 | macro F1=0.2784 | positive F1=0.7903 | neutral F1=0.0000 | negative F1=0.0449
+Evaluation complete. No training was run. Test split was not used.
+Training device: mps
+
+GRADIENT AUDIT — ONE PHYSICAL BATCH ONLY
+Training state mutation: DISABLED
+Optimizer step: DISABLED
+Checkpoint writing: DISABLED
+Labels passed to HF model: False
+Actual loss: criterion(outputs.logits, labels)
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Criterion weights [negative, neutral, positive]: [1.0526983737945557, 11.88530445098877, 0.5086669921875]
+LoRA trainable params: 294,912
+Classifier trainable params: 592,899
+Optimizer trainable params: 887,811
+Optimizer contains all LoRA: True
+Optimizer contains all classifier: True
+Optimizer contains frozen params: False
+Weight-effect sanity check (same logits):
+  negative: reduction=none unweighted=1.267950, weighted=1.334768, ratio=1.052698; batch1 mean unweighted=1.267950, weighted=1.267950
+  neutral: reduction=none unweighted=1.367949, weighted=16.258495, ratio=11.885303; batch1 mean unweighted=1.367949, weighted=1.367949
+  positive: reduction=none unweighted=0.767950, weighted=0.390631, ratio=0.508667; batch1 mean unweighted=0.767950, weighted=0.767950
+Diagnostic weighted loss: 0.483656
+LoRA gradients: 48/48 tensors, mean norm=0.04588331, max norm=0.25724754
+Classifier gradients: 4/4 tensors, mean norm=3.17361051, max norm=6.08387852
+Frozen base gradients: 0/201 tensors
+GRADIENT AUDIT: COMPLETE
+Audit state discarded. No optimizer step, checkpoint, or progress update was performed.
+
+LOSS PIPELINE AUDIT CONCLUSION
+HF labels argument used during training: False
+Actual training loss: criterion(outputs.logits, labels)
+Criterion type: weighted CrossEntropyLoss
+Criterion weight tensor order: [negative, neutral, positive]
+Weighted criterion configured: True
+Class weighting effective with physical batch size 1 and reduction=mean: False
+Critical finding: for a single target, PyTorch weighted mean CrossEntropyLoss
+divides the weighted loss by that same target weight. The class weight therefore
+cancels before gradient accumulation; accumulating four already-reduced losses
+does not restore the intended class weighting.
+Optimizer contains LoRA: True (294,912 parameters)
+Optimizer contains classifier: True (592,899 parameters)
+Optimizer total trainable parameters: 887,811
+LoRA gradient flow: OK (48/48 tensors)
+Classifier gradient flow: OK (4/4 tensors)
+Frozen base gradients: expected (0/201 tensors)
+Learning rate: 2e-5; identical to Experiment 03
+LR note: a LoRA-specific learning rate may be studied later only as a separate
+controlled experiment; no learning-rate change was made in this audit.
+Safe to continue current Experiment 05 training unchanged: NO
+Epoch 2 started: NO

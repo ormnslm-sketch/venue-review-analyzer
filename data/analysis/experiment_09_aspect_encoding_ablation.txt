@@ -1,0 +1,170 @@
+EXPERIMENT 09 — ASPECT ENCODING ABLATION
+
+Test split was not loaded or evaluated.
+Fixed class weights: {'positive': 0.54042031, 'neutral': 11.88530466, 'negative': 1.1184127}
+TF-IDF: ngram_range=(1, 2), min_df=2; other settings are sklearn defaults.
+LogisticRegression: max_iter=1000, random_state=42; default solver retained.
+Separate encoding verification: TF-IDF receives sentence text only; aspect is appended as four sparse one-hot columns.
+Condition C Experiment 07 reproduction: PASS.
+
+CONDITION A: old data + inline aspect
+Accuracy: 0.7625
+Macro F1: 0.5912
+positive: P=0.8703 | R=0.8242 | F1=0.8466 | support=586
+neutral: P=0.3793 | R=0.1930 | F1=0.2558 | support=57
+negative: P=0.6088 | R=0.7481 | F1=0.6713 | support=258
+Predicted: positive=555, neutral=29, negative=317
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              483        8        95
+neutral                17       11        29
+negative               55       10       193
+False-neutral: positive->neutral=8, negative->neutral=10, total=18
+False-neutral by language: TR=5, EN=6, ES=7
+False-neutral by aspect: taste=8, atmosphere=7, service=3, value=0
+
+CONDITION B: old data + separate one-hot aspect
+Accuracy: 0.7769
+Macro F1: 0.5875
+positive: P=0.8668 | R=0.8549 | F1=0.8608 | support=586
+neutral: P=0.3462 | R=0.1579 | F1=0.2169 | support=57
+negative: P=0.6397 | R=0.7364 | F1=0.6847 | support=258
+Predicted: positive=578, neutral=26, negative=297
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              501        7        78
+neutral                19        9        29
+negative               58       10       190
+False-neutral: positive->neutral=7, negative->neutral=10, total=17
+False-neutral by language: TR=7, EN=4, ES=6
+False-neutral by aspect: taste=8, atmosphere=7, service=2, value=0
+
+CONDITION C: expanded data + inline aspect
+Accuracy: 0.7159
+Macro F1: 0.5805
+positive: P=0.8948 | R=0.7696 | F1=0.8275 | support=586
+neutral: P=0.2066 | R=0.4386 | F1=0.2809 | support=57
+negative: P=0.6123 | R=0.6550 | F1=0.6330 | support=258
+Predicted: positive=504, neutral=121, negative=276
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              451       48        87
+neutral                12       25        20
+negative               41       48       169
+False-neutral: positive->neutral=48, negative->neutral=48, total=96
+False-neutral by language: TR=25, EN=31, ES=40
+False-neutral by aspect: taste=21, atmosphere=32, service=19, value=24
+
+CONDITION D: expanded data + separate one-hot aspect
+Accuracy: 0.7081
+Macro F1: 0.5476
+positive: P=0.8783 | R=0.7884 | F1=0.8309 | support=586
+neutral: P=0.1429 | R=0.2982 | F1=0.1932 | support=57
+negative: P=0.6211 | R=0.6163 | F1=0.6187 | support=258
+Predicted: positive=526, neutral=119, negative=256
+Confusion matrix (rows=actual, columns=predicted):
+                 positive  neutral  negative
+positive              462       53        71
+neutral                14       17        26
+negative               50       49       159
+False-neutral: positive->neutral=53, negative->neutral=49, total=102
+False-neutral by language: TR=25, EN=36, ES=41
+False-neutral by aspect: taste=22, atmosphere=37, service=16, value=27
+
+C -> D (expanded: separate minus inline)
+Delta Accuracy: -0.0078
+Delta Macro F1: -0.0329
+Delta Neutral precision: -0.0638
+Delta Neutral recall: -0.1404
+Delta Neutral F1: -0.0877
+Delta Pred Neutral: -2
+Delta False Neutral: +6
+Delta atmosphere false-neutral: +5
+
+A -> B (old: separate minus inline)
+Delta Accuracy: +0.0144
+Delta Macro F1: -0.0038
+Delta Neutral precision: -0.0332
+Delta Neutral recall: -0.0351
+Delta Neutral F1: -0.0389
+Delta Pred Neutral: -3
+Delta False Neutral: -1
+Delta atmosphere false-neutral: +0
+
+INLINE TOP 30 NEUTRAL COEFFICIENTS (Condition C)
+ 1. ortalama: +3.623722
+ 2. average: +3.453497
+ 3. normal: +2.668528
+ 4. masada: +2.402145
+ 5. şey değildi: +2.031414
+ 6. masaya: +1.994428
+ 7. yemekler: +1.983722
+ 8. nothing: +1.959069
+ 9. la: +1.943179
+10. ok: +1.924863
+11. bien: +1.912573
+12. table: +1.875083
+13. comida normal: +1.861974
+14. sonra: +1.858767
+15. girişte: +1.839146
+16. atmosphere sep: +1.759730
+17. aspect atmosphere: +1.759730
+18. the: +1.748428
+19. değildi: +1.746108
+20. sep food: +1.741812
+21. the table: +1.729894
+22. mesa: +1.665514
+23. promedio: +1.662559
+24. önce: +1.641721
+25. average food: +1.623666
+26. atmosphere: +1.601278
+27. was good: +1.585969
+28. en la: +1.584767
+29. at the: +1.562581
+30. nyc: +1.549002
+
+SEPARATE TOP 30 NEUTRAL SENTENCE FEATURES (Condition D)
+ 1. ortalama: +3.590725
+ 2. average: +3.447141
+ 3. normal: +2.788705
+ 4. masada: +2.280394
+ 5. masaya: +2.109759
+ 6. yemekler: +2.101141
+ 7. promedio: +2.096992
+ 8. şey değildi: +2.042652
+ 9. ok: +2.027738
+10. la: +2.007547
+11. table: +1.974663
+12. girişte: +1.974344
+13. bien: +1.971326
+14. nothing: +1.948970
+15. comida normal: +1.905950
+16. sonra: +1.879765
+17. the table: +1.815732
+18. mesa: +1.773171
+19. fiyatlar: +1.754436
+20. önce: +1.737141
+21. tezgahta: +1.726809
+22. değildi: +1.716087
+23. average food: +1.674131
+24. at the: +1.657265
+25. pero no: +1.640601
+26. the: +1.636675
+27. yemek fena: +1.590818
+28. en la: +1.578326
+29. was good: +1.560929
+30. nada: +1.540299
+
+SEPARATE NEUTRAL ASPECT COEFFICIENTS (Condition D)
+aspect=taste: -0.487463
+aspect=atmosphere: +0.604901
+aspect=service: -0.421233
+aspect=value: +0.256527
+
+DOES SEPARATE ASPECT ENCODING REDUCE THE ARTIFACT? NO
+Evidence criteria (Condition D vs C):
+neutral_precision_higher: False
+false_neutral_lower: False
+atmosphere_false_neutral_lower: False
+neutral_recall_not_lower: False
+macro_f1_not_lower: False

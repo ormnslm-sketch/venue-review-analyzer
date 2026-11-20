@@ -1,0 +1,107 @@
+EXPERIMENT 05B — CORRECTED WEIGHTED XLM-R LORA
+
+STAGE 0 — PREPARATION AND VALIDATION ONLY
+Training started: NO
+Base model: xlm-roberta-base
+Task: sequence classification
+Device available: mps unavailable in this process
+Training device requirement: mps; CPU fallback is blocked
+Transformers version: 4.57.6
+PEFT version: 0.17.1
+LoRA target modules: ['query', 'value']
+Target reason: XLM-R named_modules içinde her encoder katmanında attention.self.query ve attention.self.value gerçek nn.Linear projeksiyonları olarak doğrulandı.
+Attention Linear modules found: 48
+query targets found: 12
+value targets found: 12
+Base model params before LoRA: 278,045,955
+Total params after PEFT wrapping: 278,933,766
+Trainable params: 887,811
+Trainable %: 0.318287%
+  LoRA trainable params: 294,912
+  Classifier trainable params: 592,899
+Base model frozen: True
+Sequence-classification head trainable: True
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Weight tensor order: [negative, neutral, positive]
+Train class counts:
+  negative: 1050
+  neutral: 93
+  positive: 2173
+Class weights:
+  negative (id=0): 1.05269841
+  neutral (id=1): 11.88530466
+  positive (id=2): 0.50866697
+Physical train batch size: 1
+Gradient accumulation steps: 4
+Effective train batch size: 4
+Eval batch size: 1
+Learning rate: 2e-05
+Max length: 128
+LoRA r: 8
+LoRA alpha: 16
+LoRA dropout: 0.1
+Optimizer: torch.optim.AdamW (trainable parameters only)
+Scheduler: none
+Actual corrected loss formula: mean(cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Reduction behavior: mean over explicitly weighted per-example losses; no division by class-weight sum
+Gradient accumulation scaling: corrected_weighted_loss / 4 before backward
+SANITY CHECK — logits=[0, 0, 0]
+  negative raw / weighted: 1.09861231 / 1.15650737
+  neutral raw / weighted: 1.09861231 / 13.05734158
+  positive raw / weighted: 1.09861231 / 0.55882782
+Neutral / positive weighted-loss ratio: 23.36558984
+Sanity ordering neutral > negative > positive: True
+Quantization: not used
+Mixed precision: not used
+Gradient checkpointing: not used
+Resume status: checkpoint yok; sıradaki epoch=1
+Resume checkpoint: ./models/xlmr-sentiment-lora-weighted-corrected/resume
+Best checkpoint: ./models/xlmr-sentiment-lora-weighted-corrected/best
+Old invalid checkpoint reused: False
+New optimizer state: Fresh
+New experiment directory: ./models/xlmr-sentiment-lora-weighted-corrected
+New report: ./data/analysis/experiment_05b_lora_weighted_corrected.txt
+Stage 0 complete. No model training was run.
+
+STAGE 0C — CHUNKED TRAINING VALIDATION ONLY
+Training started: NO
+Total training examples: 3316
+Micro-batches per epoch: 3316
+Gradient accumulation: 4
+Optimizer steps per epoch: 829
+Max optimizer steps per run: 50
+Estimated runs/chunks per epoch: 17
+Examples per full chunk: approximately 200
+Next epoch: 1
+Next optimizer step: 0
+Next microbatch position: 0
+Resume checkpoint status: checkpoint yok; sıradaki epoch=1
+Deterministic shuffle strategy:
+  epoch_seed = random_seed + epoch_number - 1 (epoch 1 uses seed 42)
+  torch.randperm is created once for the whole epoch
+  the full permutation and SHA256 are stored in the resume state
+  resume slices the stored permutation from microbatch/sample position
+  checkpoints are written only at gradient-accumulation boundaries
+Initial permutation SHA256 for epoch 1: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+Resume state fields:
+  adapter model (LoRA + classifier modules_to_save)
+  optimizer_state_dict
+  scheduler_state_dict=None
+  completed_epoch
+  current_epoch
+  optimizer_steps_in_epoch
+  microbatch_position
+  sample_position
+  micro_batches_accumulated=0
+  gradient_accumulation_steps
+  epoch_permutation
+  permutation_sha256
+  epoch_seed
+  epoch_loss_sum
+  epoch_microbatches_seen
+  Python/NumPy/Torch/MPS RNG states
+  best_macro_f1
+  best_epoch
+  last_epoch_metrics
+Atomic checkpoint strategy: alternating slot_a/slot_b; current.json pointer is updated last.
+Stage 0C complete. No smoke test, chunk, or epoch training was run.

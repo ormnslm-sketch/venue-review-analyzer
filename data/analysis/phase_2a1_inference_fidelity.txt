@@ -1,0 +1,49 @@
+PHASE 2A.1 — FINAL CHECKPOINT INFERENCE FIDELITY CHECK
+
+Final checkpoint loaded: YES
+LoRA adapter restored: YES
+Classifier restored: YES
+Label mapping correct: YES
+Input format correct: YES
+Evaluation vs inference fidelity: PASS
+Max logit difference: 0
+Max probability difference: 0
+Public API probability difference: 0
+Tolerance: 1e-05
+Evaluation device: cpu
+Inference device: cpu
+
+CHECKPOINT TENSOR COMPARISON
+Classifier matched parameter count: 4
+Classifier mismatched parameter count: 0
+LoRA matched parameter count: 48
+LoRA mismatched parameter count: 0
+
+FIXED DEV SAMPLES
+1. true=positive | language=tr | aspect=taste
+   sentence: Harika, güler yüzlü servis, Hızlı oturma, Hızlı Teslimat, Mükemmel suşi.
+   evaluation logits: [-1.16085196, -0.51713032, 2.30990386]
+   inference logits: [-1.16085196, -0.51713032, 2.30990386]
+   evaluation probabilities: [0.0285188, 0.05428701, 0.91719425]
+   inference probabilities: [0.0285188, 0.05428701, 0.91719425]
+   prediction: positive / positive
+2. true=neutral | language=en | aspect=service
+   sentence: Our waitress was n't mean , but not especially warm or attentive either .
+   evaluation logits: [0.74367118, 0.28252777, -0.5195964]
+   inference logits: [0.74367118, 0.28252777, -0.5195964]
+   evaluation probabilities: [0.52265966, 0.32956946, 0.14777088]
+   inference probabilities: [0.52265966, 0.32956946, 0.14777088]
+   prediction: negative / negative
+3. true=negative | language=es | aspect=atmosphere
+   sentence: Si te gusta la música  a todo volumen y el sistema no es muy bueno y quieres pagar al menos 100 dólares botella como mínimo, entonces te encantará este lugar.
+   evaluation logits: [0.66451073, 0.97554624, -1.15502787]
+   inference logits: [0.66451073, 0.97554624, -1.15502787]
+   evaluation probabilities: [0.39573583, 0.54011518, 0.06414898]
+   inference probabilities: [0.39573583, 0.54011518, 0.06414898]
+   prediction: neutral / neutral
+
+HUGGING FACE WARNING
+Status: HARMLESS
+xlm-roberta-base has no trained task-specific sequence-classification head. Transformers therefore reports that the temporary base classifier is newly initialized. PeftModel.from_pretrained then restores the four trained Experiment 15 classifier tensors into the active modules_to_save.default classifier before the first inference forward pass.
+
+Phase 2A inference pipeline verified. Aspect Presence Detection aşamasına geçilebilir.

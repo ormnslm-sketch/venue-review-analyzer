@@ -1,0 +1,71 @@
+EXPERIMENT 14A — CORRECTED WEIGHTED LORA EPOCH 1
+
+Condition: clean
+Train: data/cleaned/train.csv
+Dev: data/cleaned/dev.csv
+Test: not loaded or evaluated
+Random seed: 42
+Epoch shuffle seed: 42
+Epoch permutation SHA256: 7ee60926a2af4afe6d2c6fd713508027543f5b547a36f0a78bedfa32c3352c15
+Config signature: 245a5c9a984a2546b57db1d0edca7763427d980b9ed3be79e66bab331ae083c2
+Loss: mean(F.cross_entropy(logits, labels, reduction='none') * class_weights[labels])
+Class weights [negative, neutral, positive]: (1.0526984126984127, 11.885304659498209, 0.5086669734621875)
+Sample weights: None
+Accuracy: 0.6526
+Macro F1: 0.2845
+Epoch train loss: 1.102520
+
+SENTIMENT
+positive: precision=0.6570 | recall=1.0000 | F1=0.7930 | support=586
+neutral: precision=0.2222 | recall=0.0351 | F1=0.0606 | support=57
+negative: precision=0.0000 | recall=0.0000 | F1=0.0000 | support=258
+
+PREDICTED COUNTS
+positive: 892
+neutral: 9
+negative: 0
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              586        0         0
+neutral                55        2         0
+negative              251        7         0
+
+NEUTRAL CONFUSION
+true neutral -> predicted neutral: 2
+positive -> neutral: 0
+negative -> neutral: 7
+total false-neutral: 7
+
+LANGUAGE — Macro F1 and neutral P/R/F1/support
+TR: Macro F1=0.2637 | Neutral=0.0000/0.0000/0.0000/19
+EN: Macro F1=0.2934 | Neutral=0.2000/0.0526/0.0833/19
+ES: Macro F1=0.2954 | Neutral=0.5000/0.0526/0.0952/19
+
+ASPECT — Macro F1 and neutral F1
+taste: Macro F1=0.2878 | Neutral F1=0.0000
+atmosphere: Macro F1=0.3008 | Neutral F1=0.0000
+service: Macro F1=0.2184 | Neutral F1=0.0000
+value: Macro F1=0.2715 | Neutral F1=0.2353
+
+Historical vanilla full XLM-R cleaned reference (different architecture):
+Accuracy=0.8457 | Macro F1=0.5651 | positive F1=0.9134 | neutral F1=0.0000 | negative F1=0.7820 | neutral predictions=0
+This reference is background only, not architecture-controlled.
+Epoch 2 was not started automatically.
+
+TRAINING CHUNK RESULT
+Epoch: 1/1
+Optimizer steps completed this run: 29
+Current optimizer step: 829
+Epoch progress percentage: 100.00%
+Resume checkpoint saved: ./models/experiment_14a_lora_clean_weighted/resume/slot_a
+Epoch finished: True
+Dev Accuracy: 0.6526
+Dev Macro F1: 0.2845
+Best epoch: 1
+Best Macro F1: 0.2845
+Best checkpoint: ./models/experiment_14a_lora_clean_weighted/best/epoch_1
+Epoch 2 was not started automatically.
+Training chunk complete.
+No additional chunk was started automatically.

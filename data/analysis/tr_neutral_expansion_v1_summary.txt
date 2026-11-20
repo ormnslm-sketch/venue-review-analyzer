@@ -1,0 +1,30 @@
+TR_NEUTRAL_EXPANSION_V1 = COMPLETE
+
+Original M-ABSA TR neutral counts:
+taste: 15
+atmosphere: 7
+service: 3
+value: 6
+
+Human-verified translated additions:
+taste: 10
+atmosphere: 18
+service: 22
+value: 19
+total: 69
+
+Final verified TR neutral coverage:
+taste: 25
+atmosphere: 25
+service: 25
+value: 25
+
+Direct accepts: 50
+Revised-then-accepted translations: 19
+
+Provenance:
+human-authored English sources translated to TR: 55
+human-reviewed MAMS gold sources translated to TR: 14
+Parallel source-group IDs and original source/license fields were preserved.
+No automatically accepted translations were added.
+The cleaned training dataset was not modified.

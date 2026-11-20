@@ -1,0 +1,13 @@
+Verified TR coverage:
+taste: 18
+atmosphere: 12
+service: 9
+value: 11
+Remaining TR gap:
+taste: 7
+atmosphere: 13
+service: 16
+value: 14
+TR Batch 2 size: 20
+Batch 2 human decisions assigned: 0
+training rows added: 0

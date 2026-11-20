@@ -1,0 +1,88 @@
+ASPECT PRESENCE — FINAL TEST EVALUATION
+========================================================================================
+
+FINAL MODEL
+Model: Aspect Presence V2 Classical Calibrated
+Artifact: models/aspect_presence_logreg_v2/
+Vectorizer/classifiers refit: NO
+Threshold tuning on TEST: NO
+Transformer TEST evaluation: NO
+Model artifact hashes unchanged after evaluation: YES
+
+FINAL THRESHOLDS — SELECTED ON DEV
+taste: 0.50
+atmosphere: 0.55
+service: 0.50
+value: 0.60
+
+TEST DATA SANITY
+Total rows: 1623
+TR rows: 540
+EN rows: 543
+ES rows: 540
+taste positive: 680
+atmosphere positive: 165
+service positive: 363
+value positive: 123
+All-zero rows: 496
+
+LEAKAGE AND DUPLICATES — EXACT SENTENCE + LANGUAGE
+Train-Test exact leakage: 0
+Dev-Test exact leakage: 0
+Test duplicate excess rows: 0
+
+TEST OVERALL
+Macro F1: 0.6825
+Micro F1: 0.7292
+Exact Match: 0.6322
+Hamming Loss: 0.1089
+
+ASPECT METRICS
+taste: P=0.7515 | R=0.7603 | F1=0.7558 | support=680 | TP=517 FP=171 FN=163 TN=772
+atmosphere: P=0.6533 | R=0.5939 | F1=0.6222 | support=165 | TP=98 FP=52 FN=67 TN=1406
+service: P=0.7637 | R=0.7658 | F1=0.7648 | support=363 | TP=278 FP=86 FN=85 TN=1174
+value: P=0.7564 | R=0.4797 | F1=0.5871 | support=123 | TP=59 FP=19 FN=64 TN=1481
+
+ALL-ZERO TEST
+Support: 496
+Correct 0/0/0/0: 353
+Exact accuracy: 0.7117
+False-positive aspect total: 160
+taste false positive: 88
+atmosphere false positive: 26
+service false positive: 38
+value false positive: 8
+
+TARGET-CONTAINING TEST
+Support: 1127
+Macro F1: 0.7261
+Micro F1: 0.7768
+Exact Match: 0.5972
+
+LANGUAGE BREAKDOWN
+TR: rows=540 | Macro F1=0.6737 | Micro F1=0.7233 | Exact Match=0.6241 | All-zero exact=0.7134 (support=164)
+EN: rows=543 | Macro F1=0.6853 | Micro F1=0.7298 | Exact Match=0.6280 | All-zero exact=0.7066 (support=167)
+ES: rows=540 | Macro F1=0.6880 | Micro F1=0.7346 | Exact Match=0.6444 | All-zero exact=0.7152 (support=165)
+
+TEST MINUS DEV
+Macro F1 delta: -0.0333
+Micro F1 delta: -0.0413
+Exact Match delta: -0.0185
+Hamming Loss delta: +0.0033
+All-zero exact delta: -0.0666
+taste F1 delta: -0.0653
+atmosphere F1 delta: -0.0588
+service F1 delta: -0.0266
+value F1 delta: +0.0174
+
+LIMITATIONS
+- All-zero rejection is not perfect.
+- Value detection may remain weaker than other aspects.
+- Multilingual performance varies by language.
+- The source ontology can be ambiguous for some natural sentences.
+- Thresholds were selected on DEV.
+- TEST was used only for this final unbiased estimate, not tuning.
+
+POST-TEST POLICY
+Model, thresholds, training configuration, and selection remain frozen.
+No TEST-driven tuning or model change was performed.

@@ -1,0 +1,110 @@
+FINAL MODEL TEST EVALUATION — EXPERIMENT 15 EPOCH 2
+
+FINAL SELECTED MODEL
+Experiment 15 Epoch 2
+Checkpoint: models/experiment_15_lora_expanded_balanced/best/epoch_2
+Base model: xlm-roberta-base
+Training scope: TR + EN + ES, Expanded Neutral v1
+Adapter: LoRA query/value, r=8, alpha=16, dropout=0.1
+Evaluation only: torch.inference_mode(); no optimizer; no parameter updates
+Evaluation device: cpu
+Checkpoint unchanged: True
+Test used for tuning or model selection: NO
+
+TEST DATA
+Rows: 1316
+Languages: {'tr': 439, 'en': 439, 'es': 438}
+Sentiments: {'negative': 324, 'positive': 923, 'neutral': 69}
+Aspects: {'service': 363, 'atmosphere': 162, 'taste': 668, 'value': 123}
+Test SHA256: a8d13d28daa57947e4dd8f3f9b56c49ddbeefd6d36581e2b26b757166e9c30e4
+
+AUDIT
+Train duplicates: 0
+Dev duplicates: 0
+Test duplicates: 0
+Train conflicts: 0
+Dev conflicts: 0
+Test conflicts: 0
+Train-test exact leakage: 0
+Dev-test exact leakage: 0
+
+TRANSFORMER TEST — OVERALL
+Accuracy: 0.8055
+Macro F1: 0.6236
+
+SENTIMENT
+positive: P=0.9518 | R=0.8765 | F1=0.9126 | support=923
+neutral: P=0.1790 | R=0.4203 | F1=0.2511 | support=69
+negative: P=0.7303 | R=0.6852 | F1=0.7070 | support=324
+
+PREDICTED COUNTS
+positive: 850
+neutral: 162
+negative: 304
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              809       54        60
+neutral                18       29        22
+negative               23       79       222
+
+NEUTRAL ANALYSIS
+Precision: 0.1790
+Recall: 0.4203
+F1: 0.2511
+True neutral -> neutral: 29
+Positive -> neutral: 54
+Negative -> neutral: 79
+False-neutral total: 133
+
+LANGUAGE BREAKDOWN
+TR: n=439 | Accuracy=0.7722 | Macro F1=0.6053 | Neutral P/R/F1=0.1781/0.5652/0.2708
+EN: n=439 | Accuracy=0.8314 | Macro F1=0.6271 | Neutral P/R/F1=0.1667/0.2609/0.2034
+ES: n=438 | Accuracy=0.8128 | Macro F1=0.6322 | Neutral P/R/F1=0.1887/0.4348/0.2632
+
+ASPECT BREAKDOWN
+taste: n=668 | Macro F1=0.6394 | Neutral F1=0.3175
+atmosphere: n=162 | Macro F1=0.4592 | Neutral F1=0.2759
+service: n=363 | Macro F1=0.6353 | Neutral F1=0.1867
+value: n=123 | Macro F1=0.4862 | Neutral F1=0.2500
+
+TEST MINUS DEV
+Accuracy delta: +0.0152
+Macro F1 delta: +0.0086
+positive F1 delta: -0.0011
+neutral F1 delta: +0.0349
+negative F1 delta: -0.0079
+
+HISTORICAL CLASSICAL BASELINE TEST
+Artifact status: serialized model not found; refit on data/cleaned/train.csv
+Configuration: inline aspect; TF-IDF ngram_range=(1,2), min_df=2; LogisticRegression class_weight=balanced, max_iter=1000, random_state=42
+Accuracy: 0.7941
+Macro F1: 0.6147
+Neutral F1: 0.2772
+
+CLASSICAL VS TRANSFORMER
+Classical TEST Macro F1: 0.6147
+Transformer TEST Macro F1: 0.6236
+Macro F1 delta (Transformer - Classical): +0.0089
+Classical Neutral F1: 0.2772
+Transformer Neutral F1: 0.2511
+Neutral F1 delta (Transformer - Classical): -0.0261
+
+FINAL SUMMARY
+FINAL SELECTED MODEL: Experiment 15 Epoch 2
+DEV Macro F1: 0.6149
+TEST Macro F1: 0.6236
+DEV Neutral F1: 0.2162
+TEST Neutral F1: 0.2511
+TR TEST Macro F1: 0.6053
+EN TEST Macro F1: 0.6271
+ES TEST Macro F1: 0.6322
+
+LIMITATIONS
+- Neutral remains the hardest class and has much lower support than positive/negative.
+- Atmosphere/value neutral performance may be weaker than other aspects.
+- Multilingual performance varies by language.
+- Original M-ABSA lacks a reliable language-independent source ID; zero original cross-language semantic leakage cannot be proven.
+- Test was evaluated once for final unbiased estimation and was not used for tuning or model selection.
+- No post-test hyperparameter, threshold, dataset, loss, or checkpoint change was made.

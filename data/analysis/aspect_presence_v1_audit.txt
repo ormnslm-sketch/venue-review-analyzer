@@ -1,0 +1,72 @@
+ASPECT PRESENCE V1 DATASET AUDIT
+========================================================================================
+
+SOURCE DECISION
+Source: data/processed/{train,dev,test}.csv
+Reason: processed data retains reliable mapped aspect annotations before sentiment-conflict removal. Presence labels ignore sentiment.
+data/cleaned was not used because its conflict removal can erase a present aspect. data/expanded_neutral_v1 was not used because added target-aspect rows do not establish reliable absent labels for the other aspects.
+Reliable category mapping:
+  food quality -> taste
+  drinks quality -> taste
+  ambience general -> atmosphere
+  service general -> service
+  food prices -> value
+  restaurant prices -> value
+  drinks prices -> value
+
+SOURCE FILES
+train: rows=4350, sha256=8d268c9313afd854564ce421c0d53088e1166afa1c55fb5ebbd68a392f629e5f
+dev: rows=1182, sha256=b6b8fb74cf5869a52b70629adbf5585c474a72a6d836775c5f350268ef989856
+test: rows=1686, sha256=c9ef44f11ea14935b9110db0103c0baaa7734c9db1a64330ddfcef42c300ae59
+
+SENTIMENT-CONFLICT PRESENCE PRESERVATION
+train: conflicting sentence+language+aspect keys preserved as present=78; affected sentence+language keys=78
+dev: conflicting sentence+language+aspect keys preserved as present=21; affected sentence+language keys=21
+test: conflicting sentence+language+aspect keys preserved as present=15; affected sentence+language keys=15
+
+SPLIT SUMMARY
+
+TRAIN
+Sentence count: 2722
+Language counts: tr=906, en=908, es=908
+Aspect positive counts: taste=1627, atmosphere=510, service=873, value=384
+Aspect prevalence: taste=0.5977 (59.77%), atmosphere=0.1874 (18.74%), service=0.3207 (32.07%), value=0.1411 (14.11%)
+Mean multi-label cardinality: 1.2469
+Cardinality counts: 0 aspect=0, 1 aspect=2146, 2 aspect=486, 3 aspect=84, 4 aspect=6
+All-zero count: 0
+Duplicate sentence+language rows: 0
+Collapsed duplicate annotation excess: 956
+
+DEV
+Sentence count: 730
+Language counts: tr=243, en=244, es=243
+Aspect positive counts: taste=439, atmosphere=135, service=237, value=111
+Aspect prevalence: taste=0.6014 (60.14%), atmosphere=0.1849 (18.49%), service=0.3247 (32.47%), value=0.1521 (15.21%)
+Mean multi-label cardinality: 1.2630
+Cardinality counts: 0 aspect=0, 1 aspect=562, 2 aspect=147, 3 aspect=18, 4 aspect=3
+All-zero count: 0
+Duplicate sentence+language rows: 0
+Collapsed duplicate annotation excess: 258
+
+TEST
+Sentence count: 1127
+Language counts: tr=376, en=376, es=375
+Aspect positive counts: taste=680, atmosphere=165, service=363, value=123
+Aspect prevalence: taste=0.6034 (60.34%), atmosphere=0.1464 (14.64%), service=0.3221 (32.21%), value=0.1091 (10.91%)
+Mean multi-label cardinality: 1.1810
+Cardinality counts: 0 aspect=0, 1 aspect=947, 2 aspect=156, 3 aspect=24, 4 aspect=0
+All-zero count: 0
+Duplicate sentence+language rows: 0
+Collapsed duplicate annotation excess: 352
+
+EXACT SAME-LANGUAGE SENTENCE LEAKAGE
+Before priority cleanup: train-dev=2, train-test=3, dev-test=0
+Removed with train > dev > test priority: train=0, dev=2, test=3
+Final leakage: train-dev=0, train-test=0, dev-test=0
+
+LIMITATIONS
+All-zero samples are absent because the repository's processed source contains only annotations mapped to the four target aspects. No synthetic all-zero negatives were added.
+Cross-language semantic leakage cannot be fully verified because the source files do not contain a reliable language-independent source_example_id. Only exact sentence+language leakage is proven zero.
+
+AUDIT RESULT
+PASS

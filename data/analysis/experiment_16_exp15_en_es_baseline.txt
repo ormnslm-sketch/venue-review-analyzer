@@ -1,0 +1,40 @@
+EXP15_EN_ES_BASELINE
+
+Accuracy: 0.8070
+Macro F1: 0.6363
+
+SENTIMENT
+positive: P=0.9367 | R=0.9079 | F1=0.9221 | support=391
+neutral: P=0.1852 | R=0.3947 | F1=0.2521 | support=38
+negative: P=0.8156 | R=0.6686 | F1=0.7348 | support=172
+
+PREDICTED COUNTS
+positive: 379
+neutral: 81
+negative: 141
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted; order=positive, neutral, negative
+                 positive  neutral  negative
+positive              355       22        14
+neutral                11       15        12
+negative               13       44       115
+
+NEUTRAL CONFUSION
+true neutral -> neutral: 15
+positive -> neutral: 22
+negative -> neutral: 44
+false-neutral total: 66
+
+LANGUAGE
+EN: Macro F1=0.6500 | Neutral P/R/F1=0.2000/0.3684/0.2593
+ES: Macro F1=0.6224 | Neutral P/R/F1=0.1739/0.4211/0.2462
+
+ASPECT
+taste: Macro F1=0.6948 | Neutral F1=0.3125
+atmosphere: Macro F1=0.5459 | Neutral F1=0.2222
+service: Macro F1=0.6271 | Neutral F1=0.2927
+value: Macro F1=0.5740 | Neutral F1=0.1429
+
+Training run: NO
+Test used: NO

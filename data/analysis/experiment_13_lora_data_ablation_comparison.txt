@@ -1,0 +1,30 @@
+EXPERIMENT 13 — CONTROLLED LORA DATA ABLATION COMPARISON
+
+13B minus 13A after Epoch 1; test split was not used.
+Architecture, seeds, loss, optimizer, and training settings are identical.
+Only the training dataset differs.
+
+Accuracy delta: +0.0022
+Macro F1 delta: +0.0053
+positive F1 delta: +0.0016
+neutral F1 delta: +0.0000
+negative F1 delta: +0.0143
+Neutral precision delta: +0.0000
+Neutral recall delta: +0.0000
+Predicted neutral count delta: +0
+
+LANGUAGE MACRO F1 DELTAS
+TR: +0.0080
+EN: +0.0076
+ES: +0.0000
+
+ASPECT MACRO F1 DELTAS
+taste: +0.0083
+atmosphere: +0.0000
+service: +0.0000
+value: +0.0109
+
+DECISION CHECKS
+13B predicts neutral at all: False
+13B Neutral F1 > 13A Neutral F1: False
+Epoch 2 was not started automatically for either condition.

@@ -1,0 +1,75 @@
+{
+  "artifact_version": "aspect_presence_logreg_v2",
+  "task": "multi-label aspect presence detection with natural all-zero coverage",
+  "aspects": [
+    "taste",
+    "atmosphere",
+    "service",
+    "value"
+  ],
+  "threshold": 0.5,
+  "input": "sentence only",
+  "source_dataset": "data/aspect_presence_v2/train.csv",
+  "raw_source": "Multilingual-NLP/M-ABSA",
+  "raw_snapshot_commit": "521ab96c3fc0acb4f844205d0e05382734fc89f2",
+  "test_evaluated": false,
+  "random_seed": 42,
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2
+  },
+  "classifier": {
+    "type": "LogisticRegression",
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "solver": "lbfgs",
+    "default_probability_threshold": 0.5,
+    "probability_thresholds": {
+      "taste": 0.5,
+      "atmosphere": 0.55,
+      "service": 0.5,
+      "value": 0.6
+    }
+  },
+  "train_sentence_count": 3775,
+  "dev_sentence_count": 942,
+  "sklearn_version": "1.6.1",
+  "default_threshold": 0.5,
+  "thresholds": {
+    "taste": 0.5,
+    "atmosphere": 0.55,
+    "service": 0.5,
+    "value": 0.6
+  },
+  "threshold_selection_split": "dev",
+  "threshold_selection_test_used": false,
+  "threshold_selection_candidates": [
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7
+  ],
+  "threshold_selection_guardrail_macro_f1": 0.7141,
+  "threshold_selection_rule": "Macro F1 guardrail; Exact Match within one DEV example of maximum; then highest all-zero exact accuracy; then Macro F1; then minimum total distance from 0.50",
+  "threshold_selection_combination_count": 6561,
+  "dev_metrics_default_thresholds": {
+    "macro_f1": 0.7240779872959745,
+    "micro_f1": 0.7696597880646961,
+    "exact_match": 0.643312101910828,
+    "hamming_loss": 0.10960721868365181
+  },
+  "dev_metrics_calibrated_thresholds": {
+    "macro_f1": 0.7158075548372872,
+    "micro_f1": 0.7704728950403691,
+    "exact_match": 0.6507430997876857,
+    "hamming_loss": 0.10562632696390659
+  }
+}

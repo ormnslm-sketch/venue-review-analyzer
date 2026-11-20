@@ -1,0 +1,115 @@
+EXPERIMENT 03 RERUN — XLM-ROBERTA-BASE SENTIMENT CLASSIFICATION
+
+Model: xlm-roberta-base
+PyTorch version: 2.8.0
+Transformers version: 4.57.6
+Device: cpu
+Device note: CPU selected to reproduce the prior successful CPU run after verified MPS out-of-memory
+Train rows: 3316
+Dev rows: 901
+Test split: not loaded or evaluated
+Label mapping: {'negative': 0, 'neutral': 1, 'positive': 2}
+Hyperparameters: epochs=3, learning_rate=2e-05, max_length=128, train_batch_size=4, eval_batch_size=8, random_seed=42
+Train sentiment distribution: {'positive': 2173, 'neutral': 93, 'negative': 1050}
+Class weighting / resampling: not used
+Batch size note: 4 selected after batch size 8 exceeded MPS memory
+Gradient checkpointing: not needed on CPU
+Epoch 1/3 | step 100/829 | running_train_loss=0.7478
+Epoch 1/3 | step 200/829 | running_train_loss=0.7516
+Epoch 1/3 | step 300/829 | running_train_loss=0.7530
+Epoch 1/3 | step 400/829 | running_train_loss=0.7200
+Epoch 1/3 | step 500/829 | running_train_loss=0.6930
+Epoch 1/3 | step 600/829 | running_train_loss=0.6747
+Epoch 1/3 | step 700/829 | running_train_loss=0.6452
+Epoch 1/3 | step 800/829 | running_train_loss=0.6232
+Epoch 1/3 | step 829/829 | running_train_loss=0.6174
+Epoch 1/3 | train_loss=0.6174 | dev_accuracy=0.8257 | dev_precision_macro=0.5305 | dev_recall_macro=0.5700 | dev_macro_f1=0.5495
+New best checkpoint | epoch=1 | dev_macro_f1=0.5495 | path=./models/xlmr-sentiment-v1-best
+Epoch 2/3 | step 100/829 | running_train_loss=0.4578
+Epoch 2/3 | step 200/829 | running_train_loss=0.4326
+Epoch 2/3 | step 300/829 | running_train_loss=0.4306
+Epoch 2/3 | step 400/829 | running_train_loss=0.4108
+Epoch 2/3 | step 500/829 | running_train_loss=0.3920
+Epoch 2/3 | step 600/829 | running_train_loss=0.3962
+Epoch 2/3 | step 700/829 | running_train_loss=0.3911
+Epoch 2/3 | step 800/829 | running_train_loss=0.3875
+Epoch 2/3 | step 829/829 | running_train_loss=0.3892
+Epoch 2/3 | train_loss=0.3892 | dev_accuracy=0.8457 | dev_precision_macro=0.5476 | dev_recall_macro=0.5839 | dev_macro_f1=0.5651
+New best checkpoint | epoch=2 | dev_macro_f1=0.5651 | path=./models/xlmr-sentiment-v1-best
+Epoch 3/3 | step 100/829 | running_train_loss=0.2899
+Epoch 3/3 | step 200/829 | running_train_loss=0.2857
+Epoch 3/3 | step 300/829 | running_train_loss=0.2973
+Epoch 3/3 | step 400/829 | running_train_loss=0.2991
+Epoch 3/3 | step 500/829 | running_train_loss=0.2995
+Epoch 3/3 | step 600/829 | running_train_loss=0.3051
+Epoch 3/3 | step 700/829 | running_train_loss=0.3084
+Epoch 3/3 | step 800/829 | running_train_loss=0.3119
+Epoch 3/3 | step 829/829 | running_train_loss=0.3087
+Epoch 3/3 | train_loss=0.3087 | dev_accuracy=0.7736 | dev_precision_macro=0.5132 | dev_recall_macro=0.4876 | dev_macro_f1=0.4865
+Best epoch: 2 | best dev Macro F1: 0.5651
+
+BEST CHECKPOINT DEV EVALUATION
+Device: cpu
+Completed epochs: 3
+Best epoch: 2
+Tracked best Macro F1: 0.5651
+
+OVERALL
+Accuracy: 0.8457
+Macro F1: 0.5651
+Macro precision: 0.5476
+Macro recall: 0.5839
+
+SENTIMENT METRICS
+positive:
+  precision: 0.8836
+  recall: 0.9454
+  F1: 0.9134
+  support: 586
+neutral:
+  precision: 0.0000
+  recall: 0.0000
+  F1: 0.0000
+  support: 57
+negative:
+  precision: 0.7591
+  recall: 0.8062
+  F1: 0.7820
+  support: 258
+
+CONFUSION MATRIX
+Rows=actual, columns=predicted
+                 positive  neutral  negative
+positive              554        0        32
+neutral                23        0        34
+negative               50        0       208
+
+LANGUAGE METRICS
+Turkish: n=300 | accuracy=0.8367 | macro F1=0.5574
+English: n=301 | accuracy=0.8505 | macro F1=0.5690
+Spanish: n=300 | accuracy=0.8500 | macro F1=0.5689
+
+ASPECT METRICS
+taste: n=421 | accuracy=0.8670 | macro F1=0.5581
+atmosphere: n=135 | accuracy=0.8741 | macro F1=0.5275
+service: n=234 | accuracy=0.7906 | macro F1=0.5471
+value: n=111 | accuracy=0.8468 | macro F1=0.5856
+
+TF-IDF + LOGISTIC REGRESSION VS XLM-R
+Accuracy: baseline=0.7603 | XLM-R=0.8457 | difference=+0.0854
+Macro F1: baseline=0.5891 | XLM-R=0.5651 | difference=-0.0240
+positive F1: baseline=0.8453 | XLM-R=0.9134 | difference=+0.0681
+neutral F1: baseline=0.2529 | XLM-R=0.0000 | difference=-0.2529
+negative F1: baseline=0.6690 | XLM-R=0.7820 | difference=+0.1130
+taste macro F1: baseline=0.5902 | XLM-R=0.5581 | difference=-0.0321
+atmosphere macro F1: baseline=0.3210 | XLM-R=0.5275 | difference=+0.2065
+service macro F1: baseline=0.5251 | XLM-R=0.5471 | difference=+0.0220
+value macro F1: baseline=0.6988 | XLM-R=0.5856 | difference=-0.1132
+
+KEY CHECKS
+Best epoch: 2
+Neutral prediction count: 0
+Neutral F1: 0.0000
+Atmosphere macro F1: 0.5275
+Value macro F1: 0.5856
+Best model and tokenizer saved to: ./models/xlmr-sentiment-v1-best
