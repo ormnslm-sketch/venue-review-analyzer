@@ -5,6 +5,10 @@ Turkish, English, and Spanish. The system detects supported aspects in long
 reviews and predicts sentiment only for the evidence sentences where those
 aspects are present.
 
+## Demo
+
+![Venue Review Analyzer demo](docs/images/demo.png)
+
 ## Key features
 
 - Review analysis in Turkish, English, and Spanish
@@ -76,26 +80,30 @@ Source: [`data/analysis/aspect_presence_final_test_evaluation.txt`](data/analysi
 git clone https://github.com/ormnslm-sketch/venue-review-analyzer.git
 cd venue-review-analyzer
 
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 
-python -m pip install -r requirements.txt
-python -m pip install -r backend/requirements.txt
-python scripts/download_base_model.py
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r backend/requirements.txt
+.venv/bin/python scripts/download_base_model.py
 
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-On Windows PowerShell, activate the environment with:
+On Windows PowerShell, create and activate the environment with:
 
 ```powershell
+py -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
+
+After activation on Windows, use `python` in place of `.venv/bin/python` in
+the commands below.
 
 In a second terminal, start the static frontend:
 
 ```bash
-python -m http.server 5500 --directory frontend
+.venv/bin/python -m http.server 5500 --directory frontend
 ```
 
 Open `http://127.0.0.1:5500/`. PostgreSQL is not needed for `POST /analyze-review`.
@@ -133,13 +141,13 @@ aspect=<aspect> [SEP] <evidence sentence>
 Download the exact base-model files required by the frozen local inference loader:
 
 ```bash
-python scripts/download_base_model.py
+.venv/bin/python scripts/download_base_model.py
 ```
 
 Check an existing cache without network access:
 
 ```bash
-python scripts/download_base_model.py --check
+.venv/bin/python scripts/download_base_model.py --check
 ```
 
 Historical full XLM-R checkpoints and resumable training states are
@@ -200,7 +208,7 @@ differences may occur across supported inference devices.
 Command-line inference is also available:
 
 ```bash
-python src/analyze_review.py \
+.venv/bin/python src/analyze_review.py \
   --text "The pasta was delicious. The service was very slow." \
   --json
 ```
@@ -278,7 +286,7 @@ usage notes.
 Run the Python tests:
 
 ```bash
-python -m unittest discover -s tests -p "test_*.py" -v
+.venv/bin/python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
 Run the dependency-free frontend smoke test:
